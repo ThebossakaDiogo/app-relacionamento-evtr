@@ -10,6 +10,20 @@ import {
 } from '../types';
 
 const STORAGE_KEYS = {
+  USER_PROFILE: 'florecer_user_profile',
+  COMPLETED_LESSONS: 'florecer_completed_lessons',
+  CURRENT_DAY: 'florecer_current_day',
+  DAILY_CHECKINS: 'florecer_daily_checkins',
+  TIMELINE_EVENTS: 'florecer_timeline_events',
+  JOURNAL_ENTRIES: 'florecer_journal_entries',
+  MESSAGE_DRAFTS: 'florecer_message_drafts',
+  FAVORITES: 'florecer_favorites',
+  CHECKLIST_PROGRESS: 'florecer_checklist_progress',
+  QUICK_EVENT: 'florecer_today_quick_event',
+  PURCHASE_VERIFIED: 'florecer_purchase_verified',
+};
+
+const LEGACY_STORAGE_KEYS = {
   USER_PROFILE: 'magnetica_user_profile',
   COMPLETED_LESSONS: 'magnetica_completed_lessons',
   CURRENT_DAY: 'magnetica_current_day',
@@ -133,19 +147,19 @@ export const StorageService = {
   // --- Perfil & Autenticação de Compra ---
   getUserProfile(): UserProfile {
     try {
-      // 1. Tenta recuperar do LocalStorage
-      const localData = localStorage.getItem(STORAGE_KEYS.USER_PROFILE);
+      // 1. Tenta recuperar do LocalStorage (chave nova ou antiga)
+      const localData = localStorage.getItem(STORAGE_KEYS.USER_PROFILE) || localStorage.getItem(LEGACY_STORAGE_KEYS.USER_PROFILE);
       if (localData) {
         const parsed = JSON.parse(localData);
         // Sincroniza nos cookies em background
         CookieHelper.set(STORAGE_KEYS.USER_PROFILE, localData);
-        if (parsed.email) CookieHelper.set('magnetica_auth_email', parsed.email);
-        if (parsed.isPurchased) CookieHelper.set('magnetica_is_purchased', 'true');
+        if (parsed.email) CookieHelper.set('florecer_auth_email', parsed.email);
+        if (parsed.isPurchased) CookieHelper.set('florecer_is_purchased', 'true');
         return parsed;
       }
 
       // 2. Fallback resiliente: recupera dos Cookies
-      const cookieData = CookieHelper.get(STORAGE_KEYS.USER_PROFILE);
+      const cookieData = CookieHelper.get(STORAGE_KEYS.USER_PROFILE) || CookieHelper.get(LEGACY_STORAGE_KEYS.USER_PROFILE);
       if (cookieData) {
         const parsed = JSON.parse(cookieData);
         localStorage.setItem(STORAGE_KEYS.USER_PROFILE, cookieData);
@@ -153,8 +167,8 @@ export const StorageService = {
       }
 
       // 3. Fallback de cookie simples de compra
-      const cookieEmail = CookieHelper.get('magnetica_auth_email');
-      const cookiePurchased = CookieHelper.get('magnetica_is_purchased') === 'true';
+      const cookieEmail = CookieHelper.get('florecer_auth_email') || CookieHelper.get('magnetica_auth_email');
+      const cookiePurchased = CookieHelper.get('florecer_is_purchased') === 'true' || CookieHelper.get('magnetica_is_purchased') === 'true';
       if (cookieEmail) {
         return {
           name: cookieEmail.split('@')[0],
@@ -186,16 +200,16 @@ export const StorageService = {
 
     // Salva em Cookies (365 dias)
     CookieHelper.set(STORAGE_KEYS.USER_PROFILE, raw);
-    if (profile.email) CookieHelper.set('magnetica_auth_email', profile.email);
-    if (profile.isPurchased) CookieHelper.set('magnetica_is_purchased', 'true');
-    if (profile.licenseCode) CookieHelper.set('magnetica_license_code', profile.licenseCode);
+    if (profile.email) CookieHelper.set('florecer_auth_email', profile.email);
+    if (profile.isPurchased) CookieHelper.set('florecer_is_purchased', 'true');
+    if (profile.licenseCode) CookieHelper.set('florecer_license_code', profile.licenseCode);
   },
 
   // Confirmação e Ativação de Compra por E-mail
   confirmPurchase(email: string, name?: string): UserProfile {
     const current = this.getUserProfile();
     const cleanEmail = email.trim().toLowerCase();
-    const generatedLicense = `MAG-${Math.floor(10000 + Math.random() * 90000)}-VIP`;
+    const generatedLicense = `FLO-${Math.floor(10000 + Math.random() * 90000)}-VIP`;
 
     const updatedProfile: UserProfile = {
       ...current,
@@ -207,10 +221,10 @@ export const StorageService = {
     };
 
     this.saveUserProfile(updatedProfile);
-    CookieHelper.set('magnetica_auth_email', cleanEmail);
-    CookieHelper.set('magnetica_is_purchased', 'true');
-    CookieHelper.set('magnetica_purchase_date', updatedProfile.purchaseDate!);
-    CookieHelper.set('magnetica_license_code', updatedProfile.licenseCode!);
+    CookieHelper.set('florecer_auth_email', cleanEmail);
+    CookieHelper.set('florecer_is_purchased', 'true');
+    CookieHelper.set('florecer_purchase_date', updatedProfile.purchaseDate!);
+    CookieHelper.set('florecer_license_code', updatedProfile.licenseCode!);
 
     return updatedProfile;
   },
@@ -218,10 +232,10 @@ export const StorageService = {
   // --- Lições da Jornada ---
   getCompletedLessons(): number[] {
     try {
-      const local = localStorage.getItem(STORAGE_KEYS.COMPLETED_LESSONS);
+      const local = localStorage.getItem(STORAGE_KEYS.COMPLETED_LESSONS) || localStorage.getItem(LEGACY_STORAGE_KEYS.COMPLETED_LESSONS);
       if (local) return JSON.parse(local);
 
-      const cookieVal = CookieHelper.get(STORAGE_KEYS.COMPLETED_LESSONS);
+      const cookieVal = CookieHelper.get(STORAGE_KEYS.COMPLETED_LESSONS) || CookieHelper.get(LEGACY_STORAGE_KEYS.COMPLETED_LESSONS);
       if (cookieVal) {
         localStorage.setItem(STORAGE_KEYS.COMPLETED_LESSONS, cookieVal);
         return JSON.parse(cookieVal);
@@ -302,7 +316,7 @@ export const StorageService = {
     const raw = JSON.stringify(list);
     localStorage.setItem(STORAGE_KEYS.DAILY_CHECKINS, raw);
     // Salva também nos cookies o último checkin e lista
-    CookieHelper.set('magnetica_last_checkin', JSON.stringify(fullCheckin));
+    CookieHelper.set('florecer_last_checkin', JSON.stringify(fullCheckin));
     CookieHelper.set(STORAGE_KEYS.DAILY_CHECKINS, raw);
     return fullCheckin;
   },
@@ -509,6 +523,13 @@ export const StorageService = {
       localStorage.removeItem(key);
       CookieHelper.delete(key);
     });
+    Object.values(LEGACY_STORAGE_KEYS).forEach((key) => {
+      localStorage.removeItem(key);
+      CookieHelper.delete(key);
+    });
+    CookieHelper.delete('florecer_auth_email');
+    CookieHelper.delete('florecer_is_purchased');
+    CookieHelper.delete('florecer_license_code');
     CookieHelper.delete('magnetica_auth_email');
     CookieHelper.delete('magnetica_is_purchased');
     CookieHelper.delete('magnetica_license_code');

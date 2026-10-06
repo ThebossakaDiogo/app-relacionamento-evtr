@@ -64,7 +64,7 @@ export const AppShell: React.FC<AppShellProps> = ({
               lineHeight: 1,
             }}
           >
-            magnética
+            florecer
           </div>
           <small
             style={{
@@ -194,7 +194,7 @@ export const AppShell: React.FC<AppShellProps> = ({
                 letterSpacing: '-0.02em',
               }}
             >
-              magnética
+              florecer
             </span>
             <span
               className="pill pill-outline"

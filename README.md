@@ -1,6 +1,6 @@
-# Florecer - Aplicativo Magnética 2.0
+# Florecer — Aplicativo PWA
 
-Aplicativo PWA mobile-first desenvolvido com base nos PRDs e especificações da metodologia **Magnética 2.0** ("Clareza para o próximo passo").
+Aplicativo PWA mobile-first desenvolvido para guiar o processo pós-término com base na metodologia de clareza ("Clareza para o próximo passo").
 
 ---
 

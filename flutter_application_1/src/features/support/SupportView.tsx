@@ -345,7 +345,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
             </div>
             <div>
               <span className="eyebrow" style={{ color: '#8B4513' }}>
-                MAGNÉTICA PLUS
+                FLORECER PLUS
               </span>
               <h3 style={{ margin: 0, fontSize: '18px' }}>Assistente de Clareza</h3>
             </div>
@@ -990,7 +990,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
         isOpen={activeModal === 'assistente-plus'}
         onClose={() => setActiveModal(null)}
         title="Assistente de Clareza"
-        eyebrow="MAGNÉTICA PLUS"
+        eyebrow="FLORECER PLUS"
       >
         <div>
           <div

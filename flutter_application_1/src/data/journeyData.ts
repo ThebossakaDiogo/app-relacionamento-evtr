@@ -504,7 +504,7 @@ A não-reciprocidade dele não é um atestado de defeito em você. É apenas a c
     title: 'Seu próximo ciclo: clareza e autonomia',
     objective: 'Celebrar a conclusão do plano de 28 dias e assumir as rédeas do seu próprio destino.',
     durationMinutes: 5,
-    bodyText: `Você completou o seu plano de 28 dias de pós-término no Magnética 2.0!
+    bodyText: `Você completou o seu plano de 28 dias de pós-término no Florecer!
 
 Olhe para onde você estava no Dia 1 e olhe para a mulher que você é agora: mais consciente, mais firme, com domínio dos seus pensamentos e muito mais conectada com o que merece.
 
@@ -513,7 +513,7 @@ Seja decidindo tentar um recomeço consciente e sem ingenuidade, seja decidindo 
 Você não precisa mais agir no desespero. Você aprendeu a respirar, a separar fatos de medos e a escolher a si mesma.`,
     example: 'Sentir uma paz no peito e saber que o seu futuro é luminoso e pertence exclusivamente a você.',
     exercise: 'Revise todas as suas conquistas nas estatísticas da aba "Você" e leia suas primeiras anotações.',
-    action: 'Marque o 28º dia como concluído e continue usando o Magnética sempre que precisar de um ponto de apoio.',
+    action: 'Marque o 28º dia como concluído e continue usando o Florecer sempre que precisar de um ponto de apoio.',
     reflectionPrompt: 'Qual é a maior lição que levarei comigo dessa jornada de volta para mim mesma?',
     recommendedTool: 'Aba Você: Estatísticas',
   },

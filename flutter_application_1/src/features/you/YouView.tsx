@@ -164,7 +164,7 @@ export const YouView: React.FC<YouViewProps> = ({
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `magnetica_dados_${new Date().toISOString().split('T')[0]}.json`;
+    a.download = `florecer_dados_${new Date().toISOString().split('T')[0]}.json`;
     a.click();
     URL.revokeObjectURL(url);
     onShowToast('Seus dados foram exportados com segurança.');
@@ -600,12 +600,12 @@ export const YouView: React.FC<YouViewProps> = ({
             </div>
 
             <h3 style={{ margin: '0 0 8px', fontSize: '18px' }}>
-              {userProfile.isPurchased ? 'Plano Magnética 2.0 Desbloqueado' : 'Confirmar e-mail de compra'}
+              {userProfile.isPurchased ? 'Plano Florecer Desbloqueado' : 'Confirmar e-mail de compra'}
             </h3>
 
             <p style={{ fontSize: '14px', lineHeight: '1.6', marginBottom: '16px' }}>
               {userProfile.isPurchased
-                ? `Acesso vinculado ao e-mail ${userProfile.email || 'comprador'}. Sua licença (${userProfile.licenseCode || 'MAG-VIP'}) e todo o seu progresso estão salvos em cookies seguros de 365 dias no seu celular.`
+                ? `Acesso vinculado ao e-mail ${userProfile.email || 'comprador'}. Sua licença (${userProfile.licenseCode || 'FLO-VIP'}) e todo o seu progresso estão salvos em cookies seguros de 365 dias no seu celular.`
                 : 'Confirme o e-mail utilizado na compra para validar seu acesso vitalício e ativar a sincronização em cookies.'}
             </p>
 

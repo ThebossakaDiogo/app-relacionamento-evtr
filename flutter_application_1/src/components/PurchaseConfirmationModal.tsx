@@ -131,7 +131,7 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
 
     const t3 = setTimeout(() => {
       setVerificationProgress(90);
-      setStatusMessage('Desbloqueando os 28 Dias do Plano Magnética 2.0...');
+      setStatusMessage('Desbloqueando os 28 Dias do Plano Florecer...');
     }, 2200);
 
     const t4 = setTimeout(() => {
@@ -141,7 +141,7 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
       // Efetiva a compra no storage e nos cookies de 365 dias!
       const profile = StorageService.confirmPurchase(trimmed);
       setConfirmedProfile(profile);
-      setLicenseCode(profile.licenseCode || 'MAG-VIP-2026');
+      setLicenseCode(profile.licenseCode || 'FLO-VIP-2026');
 
       setTimeout(() => {
         setStep('confirmed');
@@ -260,7 +260,7 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
               </h2>
 
               <p style={{ fontSize: '14px', color: 'var(--text-muted)', lineHeight: 1.5 }}>
-                Digite o e-mail que você utilizou ao adquirir o Magnética 2.0 para desbloquear e sincronizar seu plano completo.
+                Digite o e-mail que você utilizou ao adquirir o Florecer para desbloquear e sincronizar seu plano completo.
               </p>
             </div>
 
@@ -382,7 +382,7 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
             </div>
 
             <span className="eyebrow" style={{ color: 'var(--primary)', marginBottom: '6px' }}>
-              SISTEMA DE SEGURANÇA MAGNÉTICA
+              SISTEMA DE SEGURANÇA FLORECER
             </span>
 
             <h3 style={{ fontSize: '22px', margin: '0 0 10px', color: 'var(--text)' }}>
@@ -494,7 +494,7 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
                     PASSAPORTE VIP
                   </span>
                   <div style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--primary)' }}>
-                    Magnética 2.0
+                    Florecer
                   </div>
                 </div>
                 <span

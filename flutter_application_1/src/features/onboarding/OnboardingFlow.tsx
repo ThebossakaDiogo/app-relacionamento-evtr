@@ -225,7 +225,7 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
             fontWeight: 600,
           }}
         >
-          magnética
+          florecer
         </span>
       </div>
 
@@ -258,7 +258,7 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
         {/* Step 0: Nome */}
         {step === 0 && (
           <div>
-            <span className="eyebrow">BEM-VINDA AO MAGNÉTICA</span>
+            <span className="eyebrow">BEM-VINDA AO FLORECER</span>
             <h1 style={{ fontSize: '32px', margin: '10px 0 16px' }}>
               Clareza para saber seu próximo passo.
             </h1>
