@@ -1,0 +1,297 @@
+:root {
+  /* Magnética 2.0 Color Palette */
+  --bg: #F7F3EF;
+  --surface: #FFFDFA;
+  --surface-elevated: #FFFFFF;
+  --text: #2E2529;
+  --text-muted: #6E6066;
+  --text-subtle: #96868E;
+  
+  --primary: #66384A;
+  --primary-hover: #512B3B;
+  --primary-active: #401F2D;
+  --on-primary: #FFFDFA;
+  --primary-soft: #EFE3E7;
+  --primary-soft-hover: #E7D5DC;
+  
+  --rose-decorative: #D5B7BE;
+  --gold-decorative: #A17C43;
+  --gold-soft: #F5EFE2;
+  
+  --border: #E6DDD9;
+  --border-light: #F0EAE7;
+  --input-border: #8D7C83;
+  
+  --success: #32634F;
+  --success-soft: #EAF1EA;
+  --warning: #7A5A23;
+  --warning-soft: #F5EFE2;
+  --error: #9F343E;
+  --error-soft: #F8E9E9;
+  --focus: #66384A;
+  
+  /* Radii */
+  --radius-card: 24px;
+  --radius-hero: 28px;
+  --radius-btn: 16px;
+  --radius-input: 14px;
+  --radius-chip: 999px;
+  --radius-modal: 28px;
+  
+  /* Shadows */
+  --shadow-card: 0 8px 28px rgba(46, 37, 41, 0.045);
+  --shadow-floating: 0 12px 40px rgba(46, 37, 41, 0.10);
+  --shadow-elevated: 0 4px 16px rgba(46, 37, 41, 0.03);
+  
+  /* Fonts */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Layout */
+  --bottom-nav-height: 72px;
+  --header-height: 64px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Typography Helpers */
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 1.22;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 1.28;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 12px 24px;
+  border-radius: var(--radius-btn);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+  box-shadow: 0 4px 14px rgba(102, 56, 74, 0.2);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-light {
+  background: var(--surface);
+  color: var(--primary);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.btn-light:hover {
+  background: #FFF9F7;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+}
+
+.btn-soft {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.btn-soft:hover {
+  background: var(--primary-soft-hover);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-sm {
+  min-height: 38px;
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 12px;
+}
+
+/* Form Inputs */
+input, textarea, select {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-input);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(102, 56, 74, 0.12);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+/* Card styles */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 22px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-interactive {
+  cursor: pointer;
+}
+
+.card-interactive:hover {
+  border-color: var(--rose-decorative);
+  box-shadow: var(--shadow-floating);
+  transform: translateY(-2px);
+}
+
+.card-interactive:active {
+  transform: translateY(0);
+}
+
+/* Pills & Chips */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: var(--radius-chip);
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.pill-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.pill-success {
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.pill-gold {
+  background: var(--gold-soft);
+  color: var(--gold-decorative);
+}
+
+/* Scrollbar clean */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(102, 56, 74, 0.15);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(102, 56, 74, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

@@ -1,0 +1,371 @@
+{
+  "schemaVersion": "2.0",
+  "product": "Magnética",
+  "updatedAt": "2026-10-02",
+  "locale": "pt-BR",
+  "designIntent": "Editorial feminino contemporâneo, elegante, acolhedor e prático. Deve transmitir clareza em momentos emocionalmente confusos. Uma decisão principal por tela.",
+  "positioning": "Plano Personalizado Pós-Término",
+  "colors": {
+    "background": "#F7F3EF",
+    "surface": "#FFFDFA",
+    "text": "#2E2529",
+    "textMuted": "#6E6066",
+    "primary": "#66384A",
+    "primaryHover": "#512B3B",
+    "onPrimary": "#FFFDFA",
+    "primarySoft": "#EFE3E7",
+    "roseDecorative": "#D5B7BE",
+    "goldDecorative": "#A17C43",
+    "border": "#E6DDD9",
+    "inputBorder": "#8D7C83",
+    "success": "#32634F",
+    "successSoft": "#EAF1EA",
+    "warning": "#7A5A23",
+    "warningSoft": "#F5EFE2",
+    "error": "#9F343E",
+    "errorSoft": "#F8E9E9",
+    "focus": "#66384A"
+  },
+  "typography": {
+    "display": {
+      "family": "Cormorant Garamond",
+      "fallback": "Georgia, serif",
+      "weights": [
+        500,
+        600
+      ]
+    },
+    "body": {
+      "family": "Manrope",
+      "fallback": "system-ui, sans-serif",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ]
+    },
+    "maxReadingWidth": "680px",
+    "scale": {
+      "displayDesktop": {
+        "size": 48,
+        "lineHeight": 1.12
+      },
+      "displayMobile": {
+        "size": 36,
+        "lineHeight": 1.15
+      },
+      "h2": {
+        "size": 28,
+        "lineHeight": 1.2
+      },
+      "h3": {
+        "size": 22,
+        "lineHeight": 1.25
+      },
+      "body": {
+        "size": 16,
+        "lineHeight": 1.6
+      },
+      "label": {
+        "size": 14,
+        "lineHeight": 1.4,
+        "weight": 600
+      },
+      "caption": {
+        "size": 12,
+        "lineHeight": 1.5
+      }
+    }
+  },
+  "spacing": {
+    "unit": 4,
+    "scale": [
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      32,
+      40,
+      48,
+      64
+    ],
+    "mobileGutter": 20,
+    "desktopGutter": 40,
+    "cardPadding": 24,
+    "cardGap": 16
+  },
+  "radii": {
+    "card": 24,
+    "hero": 28,
+    "button": 16,
+    "input": 14,
+    "chip": 999,
+    "modal": 28
+  },
+  "shadows": {
+    "card": "0 8px 28px rgba(46,37,41,0.045)",
+    "floating": "0 12px 40px rgba(46,37,41,0.10)"
+  },
+  "breakpoints": {
+    "mobile": {
+      "min": 360,
+      "max": 767
+    },
+    "tablet": {
+      "min": 768,
+      "max": 1023
+    },
+    "desktop": {
+      "min": 1024
+    }
+  },
+  "layout": {
+    "maxWidth": 1120,
+    "sidebarWidth": 240,
+    "mobileNavHeight": 76,
+    "safeArea": true,
+    "mobileContentBottomPadding": "calc(96px + env(safe-area-inset-bottom))"
+  },
+  "navigation": [
+    {
+      "label": "Hoje",
+      "icon": "House",
+      "route": "/app/hoje"
+    },
+    {
+      "label": "Jornada",
+      "icon": "Route",
+      "route": "/app/jornada"
+    },
+    {
+      "label": "Apoio",
+      "icon": "MessagesSquare",
+      "route": "/app/apoio"
+    },
+    {
+      "label": "Biblioteca",
+      "icon": "BookOpen",
+      "route": "/app/biblioteca"
+    },
+    {
+      "label": "Você",
+      "icon": "UserRound",
+      "route": "/app/voce"
+    }
+  ],
+  "home": {
+    "sections": [
+      "greeting",
+      "phaseAndDay",
+      "primaryMission",
+      "whatChanged",
+      "checkIn",
+      "situationalShortcuts",
+      "contextualRecommendation"
+    ],
+    "primaryQuestion": "O que faz sentido fazer hoje?",
+    "eventOptions": [
+      "Ele me chamou",
+      "Eu mandei mensagem",
+      "Não houve contato",
+      "Tivemos uma conversa",
+      "Nada mudou"
+    ]
+  },
+  "supportTools": [
+    {
+      "id": "talk-now",
+      "label": "Quero falar com ele agora",
+      "icon": "TimerReset"
+    },
+    {
+      "id": "should-message",
+      "label": "Devo mandar mensagem?",
+      "icon": "MessageCircleQuestion"
+    },
+    {
+      "id": "he-contacted",
+      "label": "Ele me chamou",
+      "icon": "MessagesSquare"
+    },
+    {
+      "id": "message-lab",
+      "label": "Encontre as palavras",
+      "icon": "PenLine"
+    },
+    {
+      "id": "fact-or-interpretation",
+      "label": "Fato ou interpretação?",
+      "icon": "SearchCheck"
+    },
+    {
+      "id": "prepare-talk",
+      "label": "Preparar uma conversa",
+      "icon": "ListChecks"
+    },
+    {
+      "id": "ai-plus",
+      "label": "Assistente de Clareza",
+      "icon": "Sparkles",
+      "badge": "PLUS"
+    }
+  ],
+  "components": {
+    "button": {
+      "height": 52,
+      "minTouchTarget": 44,
+      "fontWeight": 600,
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "loading",
+        "disabled"
+      ]
+    },
+    "input": {
+      "height": 52,
+      "border": "inputBorder",
+      "labelPosition": "above",
+      "placeholderIsNotLabel": true
+    },
+    "card": {
+      "background": "surface",
+      "border": "1px solid border",
+      "radius": 24,
+      "padding": 24,
+      "shadow": "card"
+    },
+    "missionHero": {
+      "background": "primary",
+      "text": "onPrimary",
+      "radius": 28,
+      "content": [
+        "fase e dia",
+        "título",
+        "descrição",
+        "duração",
+        "CTA",
+        "progresso"
+      ]
+    },
+    "decisionResult": {
+      "variants": [
+        "wait",
+        "prepare",
+        "conversation",
+        "safety"
+      ],
+      "mustExplainWhy": true,
+      "neverUseScore": true
+    },
+    "timelineEvent": {
+      "fields": [
+        "date",
+        "type",
+        "description",
+        "feeling",
+        "interpretation"
+      ],
+      "editable": true
+    },
+    "messageEditor": {
+      "autosend": false,
+      "actions": [
+        "save",
+        "copy",
+        "clear"
+      ],
+      "warning": "O app nunca envia mensagens automaticamente."
+    },
+    "audioPlayer": {
+      "autoplay": false,
+      "transcriptRequired": true,
+      "speeds": [
+        0.75,
+        1,
+        1.25,
+        1.5
+      ]
+    },
+    "chat": {
+      "persistentLabel": "Assistente virtual",
+      "historyOptIn": true,
+      "diaryAutoContext": false
+    },
+    "dialog": {
+      "mobile": "bottom-sheet",
+      "desktop": "centered modal",
+      "focusTrap": true,
+      "escapeToClose": true
+    }
+  },
+  "motion": {
+    "durationMs": 180,
+    "maxDurationMs": 220,
+    "easing": "cubic-bezier(0.2,0.8,0.2,1)",
+    "respectReducedMotion": true,
+    "continuousAnimation": false
+  },
+  "imagery": {
+    "approach": "Tipografia e formas vetoriais editoriais",
+    "avoid": [
+      "Fotos clichês de casal",
+      "Neon",
+      "Excesso de corações",
+      "Símbolos esotéricos",
+      "Stock em todos os cards"
+    ]
+  },
+  "accessibility": {
+    "target": "WCAG AA",
+    "textContrastMinimum": 4.5,
+    "largeTextContrastMinimum": 3,
+    "uiBoundaryContrastMinimum": 3,
+    "touchTargetPx": 44,
+    "keyboardNavigation": true,
+    "visibleFocus": true,
+    "audioTranscripts": true,
+    "zoom200Percent": true,
+    "statusLiveRegion": true,
+    "colorOnlyInformation": false
+  },
+  "tone": {
+    "voice": "Próxima, calma, adulta, clara e sem julgamento",
+    "examples": [
+      "Vamos olhar para o que aconteceu.",
+      "Você não precisa decidir isso agora.",
+      "Antes de responder, entenda sua intenção.",
+      "Observe o que acontece depois."
+    ],
+    "avoid": [
+      "Faça ele implorar",
+      "Ative o cérebro masculino",
+      "Resultado garantido",
+      "87% de chance dele voltar",
+      "Seja irresistível"
+    ]
+  },
+  "safety": {
+    "relationshipRiskMode": true,
+    "triggers": [
+      "ameaça",
+      "coerção",
+      "perseguição",
+      "medo",
+      "violência"
+    ],
+    "behavior": "Interromper fluxos de reconciliação e priorizar segurança."
+  },
+  "implementation": {
+    "framework": "React + TypeScript",
+    "backend": "Supabase",
+    "components": "shadcn/ui ou equivalentes acessíveis",
+    "icons": "Lucide",
+    "css": "tokens CSS; evitar cores soltas",
+    "productionMode": "Sem fixtures, preços inventados ou integrações simuladas como reais"
+  }
+}

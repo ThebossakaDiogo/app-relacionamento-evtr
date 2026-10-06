@@ -1,0 +1,16 @@
+Construa o Magnética 2.0 usando todos os arquivos anexados.
+
+Fonte de verdade:
+1. 01_PRD_MAGNETICA_2.md
+2. 02_DESIGN_MAGNETICA_2.json
+3. 03_CONTEUDO_INICIAL_MAGNETICA_2.md
+4. 04_ARQUITETURA_E_DADOS.md
+5. 05_DATABASE_STARTER.sql
+6. 06_PROMPTS_LOVABLE.md
+7. 07_PROTOTIPO_MAGNETICA_2.html apenas como referência visual.
+
+O produto é um infoapp mobile-first de pós-término e clareza, não uma landing page e não um curso genérico.
+
+Comece pela Fase 1 visual e de navegação. Não simule Auth, pagamentos ou IA como se fossem reais. Use fixtures marcadas apenas até conectar Supabase.
+
+No fim de cada fase, liste o que está realmente pronto, o que está simulado e o próximo passo. Preserve privacidade, RLS, acessibilidade e uma ação principal por tela.

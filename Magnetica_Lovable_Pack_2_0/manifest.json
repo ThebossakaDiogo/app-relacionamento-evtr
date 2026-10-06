@@ -1,0 +1,27 @@
+{
+  "product": "Magnética 2.0",
+  "date": "2026-10-02",
+  "files": [
+    "00_README_START_HERE.md",
+    "01_PRD_MAGNETICA_2.md",
+    "02_DESIGN_MAGNETICA_2.json",
+    "03_CONTEUDO_INICIAL_MAGNETICA_2.md",
+    "04_ARQUITETURA_E_DADOS.md",
+    "05_DATABASE_STARTER.sql",
+    "06_PROMPTS_LOVABLE.md",
+    "07_PROTOTIPO_MAGNETICA_2.html",
+    "08_MASTER_PROMPT.txt"
+  ],
+  "recommended_backend": "Supabase",
+  "recommended_order": [
+    "00_README_START_HERE.md",
+    "01_PRD_MAGNETICA_2.md",
+    "02_DESIGN_MAGNETICA_2.json",
+    "03_CONTEUDO_INICIAL_MAGNETICA_2.md",
+    "04_ARQUITETURA_E_DADOS.md",
+    "05_DATABASE_STARTER.sql",
+    "06_PROMPTS_LOVABLE.md",
+    "07_PROTOTIPO_MAGNETICA_2.html",
+    "08_MASTER_PROMPT.txt"
+  ]
+}
