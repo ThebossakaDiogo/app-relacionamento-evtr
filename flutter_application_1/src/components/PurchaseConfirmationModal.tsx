@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { StorageService } from '../services/storageService';
 import { UserProfile } from '../types';
+import { GoldenLotusIcon } from './GoldenLotusIcon';
 
 interface PurchaseConfirmationModalProps {
   isOpen: boolean;
@@ -234,21 +235,8 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
         {step === 'input' && (
           <div style={{ padding: '36px 28px 32px' }} className="animate-fade-in">
             <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-              <div
-                style={{
-                  width: '60px',
-                  height: '60px',
-                  borderRadius: '20px',
-                  backgroundColor: 'var(--primary-soft)',
-                  color: 'var(--primary)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 16px',
-                  boxShadow: '0 4px 16px rgba(102, 56, 74, 0.15)',
-                }}
-              >
-                <Sparkles size={28} />
+              <div style={{ marginBottom: '10px' }}>
+                <GoldenLotusIcon size={46} />
               </div>
 
               <span className="eyebrow" style={{ color: 'var(--gold-decorative)' }}>
@@ -489,12 +477,15 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
                   marginBottom: '12px',
                 }}
               >
-                <div>
-                  <span style={{ fontSize: '10px', textTransform: 'uppercase', letterSpacing: '1.5px', color: 'var(--gold-decorative)', fontWeight: 700 }}>
-                    PASSAPORTE VIP
-                  </span>
-                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', fontWeight: 600, color: 'var(--primary)' }}>
-                    Florecer
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <GoldenLotusIcon size={26} />
+                  <div>
+                    <span style={{ fontSize: '10px', textTransform: 'uppercase', letterSpacing: '1.5px', color: 'var(--gold-decorative)', fontWeight: 700 }}>
+                      PASSAPORTE VIP
+                    </span>
+                    <div style={{ fontFamily: 'var(--font-brand)', fontStyle: 'italic', fontSize: '19px', fontWeight: 600, color: 'var(--primary)' }}>
+                      Florecer
+                    </div>
                   </div>
                 </div>
                 <span

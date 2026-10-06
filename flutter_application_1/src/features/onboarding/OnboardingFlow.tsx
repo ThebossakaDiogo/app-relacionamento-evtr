@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, ShieldAlert, CheckCircle2, Sparkles, HeartHandsh
 import { OnboardingAnswers, UserProfile } from '../../types';
 import { computeRelationshipContext, StorageService } from '../../services/storageService';
 import { PurchaseConfirmationModal } from '../../components/PurchaseConfirmationModal';
+import { GoldenLotusIcon } from '../../components/GoldenLotusIcon';
 
 interface OnboardingFlowProps {
   onComplete: (profile: UserProfile) => void;
@@ -258,12 +259,41 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
         {/* Step 0: Nome */}
         {step === 0 && (
           <div>
-            <span className="eyebrow">BEM-VINDA AO FLORECER</span>
-            <h1 style={{ fontSize: '32px', margin: '10px 0 16px' }}>
-              Clareza para saber seu próximo passo.
+            <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+              <GoldenLotusIcon size={52} />
+              <div
+                style={{
+                  fontFamily: 'var(--font-brand)',
+                  fontStyle: 'italic',
+                  fontSize: '36px',
+                  color: 'var(--primary)',
+                  fontWeight: 600,
+                  marginTop: '4px',
+                }}
+              >
+                Florecer
+              </div>
+              <small
+                style={{
+                  display: 'block',
+                  color: 'var(--gold-decorative)',
+                  fontSize: '13px',
+                  fontStyle: 'italic',
+                  fontWeight: 600,
+                }}
+              >
+                Do fim, para um novo florescer ♡
+              </small>
+            </div>
+
+            <span className="eyebrow" style={{ display: 'block', textAlign: 'center' }}>
+              SEU GUIA DE CLAREZA PARA O PÓS-TÉRMINO
+            </span>
+            <h1 style={{ fontSize: '28px', margin: '8px 0 14px', textAlign: 'center' }}>
+              O acolhimento que você precisa para recomeçar.
             </h1>
-            <p style={{ marginBottom: '28px', fontSize: '15px' }}>
-              Este não é um curso genérico nem uma receita mágica para controlar sentimentos de ninguém. É um plano prático, passo a passo, para você saber o que fazer agora — sem agir no desespero.
+            <p style={{ marginBottom: '24px', fontSize: '14px', textAlign: 'center', lineHeight: '1.6' }}>
+              Um espaço confidencial para tirar você do modo desespero, acalmar a urgência e devolver o seu equilíbrio, passo a passo.
             </p>
 
             <label htmlFor="user-name">Como podemos te chamar?</label>

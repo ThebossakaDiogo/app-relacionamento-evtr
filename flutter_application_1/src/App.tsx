@@ -110,12 +110,26 @@ export default function App() {
         />
       )}
 
+      {currentTab === 'diario' && (
+        <YouView
+          key="diario-view"
+          initialTab="diario"
+          userProfile={userProfile}
+          completedDays={completedDays}
+          onResetOnboarding={handleResetOnboarding}
+          onShowToast={showToast}
+          onProfileUpdated={(updated) => setUserProfile(updated)}
+        />
+      )}
+
       {currentTab === 'biblioteca' && (
         <LibraryView onShowToast={showToast} />
       )}
 
       {currentTab === 'voce' && (
         <YouView
+          key="voce-view"
+          initialTab="conta"
           userProfile={userProfile}
           completedDays={completedDays}
           onResetOnboarding={handleResetOnboarding}

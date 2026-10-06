@@ -31,6 +31,7 @@ interface YouViewProps {
   onResetOnboarding: () => void;
   onShowToast: (msg: string) => void;
   onProfileUpdated?: (updated: UserProfile) => void;
+  initialTab?: 'diario' | 'timeline' | 'rascunhos' | 'conta';
 }
 
 export const YouView: React.FC<YouViewProps> = ({
@@ -39,8 +40,9 @@ export const YouView: React.FC<YouViewProps> = ({
   onResetOnboarding,
   onShowToast,
   onProfileUpdated,
+  initialTab = 'diario',
 }) => {
-  const [activeTab, setActiveTab] = useState<'diario' | 'timeline' | 'rascunhos' | 'conta'>('diario');
+  const [activeTab, setActiveTab] = useState<'diario' | 'timeline' | 'rascunhos' | 'conta'>(initialTab);
   const [isPurchaseModalOpen, setIsPurchaseModalOpen] = useState<boolean>(false);
 
 

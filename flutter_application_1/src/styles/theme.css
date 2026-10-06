@@ -1,50 +1,59 @@
 :root {
-  /* Magnética 2.0 Color Palette */
-  --bg: #F7F3EF;
-  --surface: #FFFDFA;
+  /* Florecer Dopaminergic Color Palette */
+  --bg: #FDF4F2;
+  --bg-gradient: radial-gradient(130% 90% at 50% 0%, #FFF2F4 0%, #FDF4F2 45%, #FAF0EE 100%);
+  --surface: #FFFFFF;
   --surface-elevated: #FFFFFF;
-  --text: #2E2529;
-  --text-muted: #6E6066;
-  --text-subtle: #96868E;
+  --surface-glass: rgba(255, 255, 255, 0.90);
+  --text: #2B1D24;
+  --text-muted: #6E535E;
+  --text-subtle: #9B7F8C;
   
-  --primary: #66384A;
-  --primary-hover: #512B3B;
-  --primary-active: #401F2D;
-  --on-primary: #FFFDFA;
-  --primary-soft: #EFE3E7;
-  --primary-soft-hover: #E7D5DC;
+  --primary: #9C2A47;
+  --primary-hover: #82203A;
+  --primary-active: #6A182E;
+  --on-primary: #FFFFFF;
+  --primary-soft: #FDE8EC;
+  --primary-soft-hover: #F8D3DC;
   
-  --rose-decorative: #D5B7BE;
-  --gold-decorative: #A17C43;
-  --gold-soft: #F5EFE2;
+  --rose-vibrant: #E2587A;
+  --rose-decorative: #E8A8B7;
+  --rose-glow: rgba(226, 88, 122, 0.24);
   
-  --border: #E6DDD9;
-  --border-light: #F0EAE7;
-  --input-border: #8D7C83;
+  --gold-decorative: #CBA358;
+  --gold-glow: #F2C96D;
+  --gold-soft: #FCF6EA;
   
-  --success: #32634F;
-  --success-soft: #EAF1EA;
-  --warning: #7A5A23;
-  --warning-soft: #F5EFE2;
-  --error: #9F343E;
-  --error-soft: #F8E9E9;
-  --focus: #66384A;
+  --border: #F3DFE4;
+  --border-light: #F9EDF1;
+  --input-border: #D8B7C1;
+  
+  --success: #357B52;
+  --success-soft: #E8F5ED;
+  --warning: #8C6226;
+  --warning-soft: #FCF5E8;
+  --error: #B52F3C;
+  --error-soft: #FDECEC;
+  --focus: #9C2A47;
   
   /* Radii */
-  --radius-card: 24px;
-  --radius-hero: 28px;
-  --radius-btn: 16px;
-  --radius-input: 14px;
+  --radius-card: 26px;
+  --radius-hero: 30px;
+  --radius-btn: 18px;
+  --radius-input: 16px;
   --radius-chip: 999px;
-  --radius-modal: 28px;
+  --radius-modal: 30px;
   
-  /* Shadows */
-  --shadow-card: 0 8px 28px rgba(46, 37, 41, 0.045);
-  --shadow-floating: 0 12px 40px rgba(46, 37, 41, 0.10);
-  --shadow-elevated: 0 4px 16px rgba(46, 37, 41, 0.03);
+  /* Dopaminergic Shadows */
+  --shadow-card: 0 10px 30px rgba(156, 42, 71, 0.055), 0 2px 6px rgba(0, 0, 0, 0.02);
+  --shadow-card-hover: 0 16px 40px rgba(156, 42, 71, 0.12), 0 4px 10px rgba(0, 0, 0, 0.03);
+  --shadow-floating: 0 16px 48px rgba(156, 42, 71, 0.15);
+  --shadow-elevated: 0 4px 18px rgba(156, 42, 71, 0.04);
+  --shadow-glow: 0 0 24px rgba(226, 88, 122, 0.35);
   
   /* Fonts */
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-brand: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
   /* Layout */
@@ -295,3 +304,112 @@ label {
 .animate-fade-in {
   animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* Dopaminergic Brand Elements */
+.brand-title {
+  font-family: var(--font-brand);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+}
+
+.card-dopamine {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 16px 18px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-dopamine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(226, 88, 122, 0.4), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-dopamine:hover {
+  transform: translateY(-2px);
+  border-color: var(--rose-decorative);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card-dopamine:hover::before {
+  opacity: 1;
+}
+
+.card-dopamine:active {
+  transform: scale(0.985);
+}
+
+/* Round arrow circle action button (matching mockup) */
+.dopamine-arrow-btn {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(156, 42, 71, 0.28);
+  transition: all 0.2s ease;
+}
+
+.card-dopamine:hover .dopamine-arrow-btn {
+  transform: translateX(2px) scale(1.05);
+  background-color: var(--primary-hover);
+}
+
+/* Floating Petals background effect */
+.petals-backdrop {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.petal {
+  position: absolute;
+  width: 14px;
+  height: 18px;
+  background: radial-gradient(circle at 30% 30%, #FADCE4, #F098AD);
+  border-radius: 50% 0 50% 50%;
+  opacity: 0.45;
+  filter: blur(0.2px);
+  animation: fallPetal linear infinite;
+}
+
+@keyframes fallPetal {
+  0% {
+    transform: translate(0, -20px) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.55;
+  }
+  85% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(60px, 105vh) rotate(360deg) scale(1);
+    opacity: 0;
+  }
+}
+

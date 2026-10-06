@@ -1,8 +1,9 @@
 import React from 'react';
-import { House, Route, MessagesSquare, BookOpen, User, Sparkles } from 'lucide-react';
+import { House, Sprout, Heart, BookOpen, User, Sparkles } from 'lucide-react';
 import { UserProfile } from '../types';
+import { GoldenLotusIcon } from './GoldenLotusIcon';
 
-export type NavTab = 'hoje' | 'jornada' | 'apoio' | 'biblioteca' | 'voce';
+export type NavTab = 'hoje' | 'jornada' | 'apoio' | 'diario' | 'biblioteca' | 'voce';
 
 interface AppShellProps {
   currentTab: NavTab;
@@ -18,10 +19,10 @@ export const AppShell: React.FC<AppShellProps> = ({
   children,
 }) => {
   const navItems = [
-    { key: 'hoje' as NavTab, label: 'Hoje', icon: House },
-    { key: 'jornada' as NavTab, label: 'Jornada', icon: Route },
-    { key: 'apoio' as NavTab, label: 'Apoio', icon: MessagesSquare },
-    { key: 'biblioteca' as NavTab, label: 'Biblioteca', icon: BookOpen },
+    { key: 'hoje' as NavTab, label: 'Início', icon: House },
+    { key: 'jornada' as NavTab, label: 'Jornada', icon: Sprout },
+    { key: 'apoio' as NavTab, label: 'SOS', icon: Heart },
+    { key: 'diario' as NavTab, label: 'Diário', icon: BookOpen },
     { key: 'voce' as NavTab, label: 'Você', icon: User },
   ];
 
@@ -34,14 +35,32 @@ export const AppShell: React.FC<AppShellProps> = ({
         display: 'flex',
         minHeight: '100vh',
         backgroundColor: 'var(--bg)',
+        backgroundImage: 'var(--bg-gradient)',
+        position: 'relative',
       }}
     >
+      {/* Gentle Floating Petals Backdrop */}
+      <div className="petals-backdrop" aria-hidden="true">
+        {[12, 28, 44, 60, 75, 88].map((leftPos, i) => (
+          <div
+            key={i}
+            className="petal"
+            style={{
+              left: `${leftPos}%`,
+              animationDelay: `${i * 2.2}s`,
+              animationDuration: `${11 + (i % 3) * 3}s`,
+            }}
+          />
+        ))}
+      </div>
+
       {/* Desktop Sidebar (visible on >= 1024px) */}
       <aside
         className="desktop-sidebar"
         style={{
           width: '260px',
-          backgroundColor: 'var(--surface)',
+          backgroundColor: 'rgba(255, 255, 255, 0.95)',
+          backdropFilter: 'blur(16px)',
           borderRight: '1px solid var(--border)',
           display: 'none',
           flexDirection: 'column',
@@ -51,12 +70,17 @@ export const AppShell: React.FC<AppShellProps> = ({
           bottom: 0,
           left: 0,
           zIndex: 100,
+          boxShadow: 'var(--shadow-card)',
         }}
       >
-        <div style={{ marginBottom: '40px' }}>
+        <div style={{ marginBottom: '36px', textAlign: 'center' }}>
+          <div style={{ marginBottom: '8px' }}>
+            <GoldenLotusIcon size={44} />
+          </div>
           <div
             style={{
-              fontFamily: 'var(--font-serif)',
+              fontFamily: 'var(--font-brand)',
+              fontStyle: 'italic',
               fontSize: '34px',
               fontWeight: 600,
               color: 'var(--primary)',
@@ -74,7 +98,7 @@ export const AppShell: React.FC<AppShellProps> = ({
               letterSpacing: '2.5px',
               textTransform: 'uppercase',
               color: 'var(--text-muted)',
-              marginTop: '4px',
+              marginTop: '6px',
               fontWeight: 700,
             }}
           >
@@ -87,16 +111,16 @@ export const AppShell: React.FC<AppShellProps> = ({
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '6px',
-                backgroundColor: 'rgba(197, 160, 89, 0.15)',
+                backgroundColor: 'rgba(203, 163, 88, 0.16)',
                 color: 'var(--gold-decorative)',
                 border: '1px solid var(--gold-decorative)',
                 borderRadius: '99px',
-                padding: '3px 10px',
+                padding: '4px 12px',
                 fontSize: '11px',
                 fontWeight: 700,
               }}
             >
-              <Sparkles size={12} /> Acesso VIP Vitalício
+              <Sparkles size={12} /> Acesso VIP Ativo
             </div>
           )}
         </div>
@@ -172,8 +196,8 @@ export const AppShell: React.FC<AppShellProps> = ({
         <header
           style={{
             height: 'var(--header-height)',
-            backgroundColor: 'rgba(247, 243, 239, 0.92)',
-            backdropFilter: 'blur(8px)',
+            backgroundColor: 'rgba(255, 248, 246, 0.94)',
+            backdropFilter: 'blur(12px)',
             borderBottom: '1px solid var(--border)',
             position: 'sticky',
             top: 0,
@@ -182,12 +206,15 @@ export const AppShell: React.FC<AppShellProps> = ({
             alignItems: 'center',
             justifyContent: 'space-between',
             padding: '0 20px',
+            boxShadow: '0 2px 14px rgba(156, 42, 71, 0.03)',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <GoldenLotusIcon size={26} />
             <span
               style={{
-                fontFamily: 'var(--font-serif)',
+                fontFamily: 'var(--font-brand)',
+                fontStyle: 'italic',
                 fontSize: '24px',
                 fontWeight: 600,
                 color: 'var(--primary)',
@@ -211,7 +238,7 @@ export const AppShell: React.FC<AppShellProps> = ({
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '4px',
-                  backgroundColor: 'rgba(197, 160, 89, 0.15)',
+                  backgroundColor: 'rgba(203, 163, 88, 0.16)',
                   color: 'var(--gold-decorative)',
                   border: '1px solid var(--gold-decorative)',
                   borderRadius: '99px',
