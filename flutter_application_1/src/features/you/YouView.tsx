@@ -13,6 +13,10 @@ import {
   ArrowRight,
   BookmarkCheck,
   CheckCircle2,
+  Trophy,
+  Flame,
+  Lock,
+  Heart,
 } from 'lucide-react';
 import {
   UserProfile,
@@ -22,6 +26,7 @@ import {
   TimelineEventType,
 } from '../../types';
 import { StorageService } from '../../services/storageService';
+import { SELF_CARE_BADGES } from '../../data/selfCareData';
 import { Modal } from '../../components/Modal';
 import { PurchaseConfirmationModal } from '../../components/PurchaseConfirmationModal';
 
@@ -31,7 +36,7 @@ interface YouViewProps {
   onResetOnboarding: () => void;
   onShowToast: (msg: string) => void;
   onProfileUpdated?: (updated: UserProfile) => void;
-  initialTab?: 'diario' | 'timeline' | 'rascunhos' | 'conta';
+  initialTab?: 'diario' | 'timeline' | 'rascunhos' | 'conquistas' | 'conta';
 }
 
 export const YouView: React.FC<YouViewProps> = ({
@@ -42,7 +47,7 @@ export const YouView: React.FC<YouViewProps> = ({
   onProfileUpdated,
   initialTab = 'diario',
 }) => {
-  const [activeTab, setActiveTab] = useState<'diario' | 'timeline' | 'rascunhos' | 'conta'>(initialTab);
+  const [activeTab, setActiveTab] = useState<'diario' | 'timeline' | 'rascunhos' | 'conquistas' | 'conta'>(initialTab);
   const [isPurchaseModalOpen, setIsPurchaseModalOpen] = useState<boolean>(false);
 
 
@@ -232,6 +237,7 @@ export const YouView: React.FC<YouViewProps> = ({
         }}
       >
         {[
+          { key: 'conquistas', label: 'Conquistas & Soberania' },
           { key: 'diario', label: 'Diário Privado' },
           { key: 'timeline', label: 'Linha do Tempo' },
           { key: 'rascunhos', label: `Rascunhos (${drafts.length})` },
@@ -576,6 +582,225 @@ export const YouView: React.FC<YouViewProps> = ({
           </div>
         </div>
       )}
+
+      {/* ABA: CONQUISTAS E SOBERANIA */}
+      {activeTab === 'conquistas' && (() => {
+        const stats = StorageService.getSelfCareStats();
+        const noContactDays = StorageService.getNoContactDays();
+        const noContactBest = StorageService.getNoContactBest();
+        const favorites = StorageService.getFavoriteAffirmations();
+
+        const isUnlocked = (badgeId: string): boolean => {
+          switch (badgeId) {
+            case 'badge-inicio':
+              return completedDays.length > 0 || userProfile.hasCompletedOnboarding;
+            case 'badge-respiro':
+              return stats.breathSessions > 0;
+            case 'badge-carta':
+              return stats.lettersReleased > 0;
+            case 'badge-habitos':
+              return stats.habitsDone > 0;
+            case 'badge-3dias':
+              return noContactDays >= 3 || noContactBest >= 3;
+            case 'badge-7dias':
+              return noContactDays >= 7 || noContactBest >= 7;
+            case 'badge-guardia':
+              return favorites.length >= 3;
+            default:
+              return false;
+          }
+        };
+
+        const unlockedCount = SELF_CARE_BADGES.filter((b) => isUnlocked(b.id)).length;
+        const progressPercent = Math.round((unlockedCount / SELF_CARE_BADGES.length) * 100);
+
+        return (
+          <div className="animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            {/* Header de Conquistas */}
+            <div
+              style={{
+                padding: '22px',
+                borderRadius: 'var(--radius-hero)',
+                background: 'var(--pink-gradient)',
+                color: '#FFFFFF',
+                boxShadow: 'var(--shadow-floating)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}
+            >
+              <div>
+                <span style={{ fontSize: '11px', letterSpacing: '1.5px', textTransform: 'uppercase', opacity: 0.95, fontWeight: 800 }}>
+                  Galeria de Soberania Feminina
+                </span>
+                <h2 style={{ margin: '4px 0 2px', fontSize: '24px', color: '#FFFFFF', fontFamily: 'var(--font-brand)' }}>
+                  {unlockedCount} de {SELF_CARE_BADGES.length} Conquistas
+                </h2>
+                <small style={{ opacity: 0.9 }}>
+                  Cada medalha representa um momento em que você se colocou em 1º lugar.
+                </small>
+              </div>
+
+              <div
+                style={{
+                  width: '60px',
+                  height: '60px',
+                  borderRadius: '50%',
+                  background: 'rgba(255, 255, 255, 0.22)',
+                  border: '2px solid rgba(255, 255, 255, 0.7)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '16px',
+                  fontWeight: 800,
+                  flexShrink: 0,
+                }}
+              >
+                {progressPercent}%
+              </div>
+            </div>
+
+            {/* 4 Cards de Métricas de Autocuidado */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px' }}>
+              <div className="card" style={{ padding: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{ width: '42px', height: '42px', borderRadius: '14px', background: 'var(--primary-soft)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Flame size={22} />
+                </div>
+                <div>
+                  <div style={{ fontFamily: 'var(--font-brand)', fontSize: '22px', fontWeight: 700, color: 'var(--primary)', lineHeight: 1 }}>
+                    {noContactDays}d
+                  </div>
+                  <small style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Sem contato (recorde: {Math.max(noContactBest, noContactDays)}d)</small>
+                </div>
+              </div>
+
+              <div className="card" style={{ padding: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{ width: '42px', height: '42px', borderRadius: '14px', background: '#FFE4EE', color: 'var(--rose-vibrant)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  🫁
+                </div>
+                <div>
+                  <div style={{ fontFamily: 'var(--font-brand)', fontSize: '22px', fontWeight: 700, color: 'var(--rose-vibrant)', lineHeight: 1 }}>
+                    {stats.breathSessions}
+                  </div>
+                  <small style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Respirações guiadas</small>
+                </div>
+              </div>
+
+              <div className="card" style={{ padding: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{ width: '42px', height: '42px', borderRadius: '14px', background: '#FFF6E6', color: 'var(--gold-decorative)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  ✉️
+                </div>
+                <div>
+                  <div style={{ fontFamily: 'var(--font-brand)', fontSize: '22px', fontWeight: 700, color: 'var(--gold-decorative)', lineHeight: 1 }}>
+                    {stats.lettersReleased}
+                  </div>
+                  <small style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Cartas soltas</small>
+                </div>
+              </div>
+
+              <div className="card" style={{ padding: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{ width: '42px', height: '42px', borderRadius: '14px', background: 'var(--primary-soft)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Heart size={20} fill="var(--primary)" />
+                </div>
+                <div>
+                  <div style={{ fontFamily: 'var(--font-brand)', fontSize: '22px', fontWeight: 700, color: 'var(--primary)', lineHeight: 1 }}>
+                    {favorites.length}
+                  </div>
+                  <small style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Afirmações salvas</small>
+                </div>
+              </div>
+            </div>
+
+            {/* Galeria de Medalhas */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <span className="eyebrow" style={{ color: 'var(--primary)' }}>
+                MEDALHAS DESBLOQUEADAS
+              </span>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                {SELF_CARE_BADGES.map((badge) => {
+                  const unlocked = isUnlocked(badge.id);
+                  return (
+                    <div
+                      key={badge.id}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '14px',
+                        padding: '16px',
+                        borderRadius: '18px',
+                        border: unlocked ? '1.5px solid var(--rose-vibrant)' : '1px solid var(--border)',
+                        background: unlocked ? '#FFFFFF' : 'rgba(255,255,255,0.45)',
+                        opacity: unlocked ? 1 : 0.65,
+                        boxShadow: unlocked ? 'var(--shadow-card)' : 'none',
+                        transition: 'all 0.2s ease',
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: '50px',
+                          height: '50px',
+                          borderRadius: '18px',
+                          background: unlocked ? badge.color : 'var(--border-light)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          fontSize: '24px',
+                          flexShrink: 0,
+                          boxShadow: unlocked ? '0 4px 12px rgba(233, 30, 99, 0.12)' : 'none',
+                        }}
+                      >
+                        {badge.icon}
+                      </div>
+
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <h4 style={{ margin: 0, fontSize: '15px', color: 'var(--text)', fontWeight: 700 }}>
+                            {badge.title}
+                          </h4>
+                          {unlocked ? (
+                            <span
+                              style={{
+                                background: 'var(--success-soft)',
+                                color: 'var(--success)',
+                                fontSize: '10px',
+                                fontWeight: 800,
+                                padding: '2px 8px',
+                                borderRadius: '99px',
+                              }}
+                            >
+                              CONQUISTADA
+                            </span>
+                          ) : (
+                            <span
+                              style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '3px',
+                                background: 'var(--border-light)',
+                                color: 'var(--text-subtle)',
+                                fontSize: '10px',
+                                fontWeight: 700,
+                                padding: '2px 8px',
+                                borderRadius: '99px',
+                              }}
+                            >
+                              <Lock size={10} /> BLOQUEADA
+                            </span>
+                          )}
+                        </div>
+                        <p style={{ margin: '4px 0 0', fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.4 }}>
+                          {badge.description}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        );
+      })()}
 
       {/* ABA 4: PRIVACIDADE E CONTA */}
       {activeTab === 'conta' && (

@@ -21,6 +21,11 @@ const STORAGE_KEYS = {
   CHECKLIST_PROGRESS: 'florecer_checklist_progress',
   QUICK_EVENT: 'florecer_today_quick_event',
   PURCHASE_VERIFIED: 'florecer_purchase_verified',
+  NO_CONTACT_START: 'florecer_no_contact_start',
+  NO_CONTACT_BEST: 'florecer_no_contact_best',
+  SELFCARE_HABITS: 'florecer_selfcare',
+  FAVORITE_AFFIRMATIONS: 'florecer_fav_affirmations',
+  SELFCARE_STATS: 'florecer_selfcare_stats',
 };
 
 const LEGACY_STORAGE_KEYS = {
@@ -515,6 +520,96 @@ export const StorageService = {
     localStorage.setItem(key, raw);
     CookieHelper.set(key, raw);
     return updated;
+  },
+
+  // --- Contador de dias sem contato ---
+  getNoContactStart(): string | null {
+    return localStorage.getItem(STORAGE_KEYS.NO_CONTACT_START) || CookieHelper.get(STORAGE_KEYS.NO_CONTACT_START);
+  },
+
+  getNoContactDays(): number {
+    const start = this.getNoContactStart();
+    if (!start) return 0;
+    const diff = Date.now() - new Date(start).getTime();
+    return Math.max(0, Math.floor(diff / 864e5));
+  },
+
+  getNoContactBest(): number {
+    const raw = localStorage.getItem(STORAGE_KEYS.NO_CONTACT_BEST) || CookieHelper.get(STORAGE_KEYS.NO_CONTACT_BEST);
+    return raw ? Number(raw) || 0 : 0;
+  },
+
+  startNoContact(): void {
+    const iso = new Date().toISOString();
+    localStorage.setItem(STORAGE_KEYS.NO_CONTACT_START, iso);
+    CookieHelper.set(STORAGE_KEYS.NO_CONTACT_START, iso);
+  },
+
+  resetNoContact(): void {
+    const current = this.getNoContactDays();
+    if (current > this.getNoContactBest()) {
+      localStorage.setItem(STORAGE_KEYS.NO_CONTACT_BEST, String(current));
+      CookieHelper.set(STORAGE_KEYS.NO_CONTACT_BEST, String(current));
+    }
+    this.startNoContact();
+  },
+
+  // --- Hábitos de autocuidado diários ---
+  getSelfCareHabits(date: string): string[] {
+    const key = `${STORAGE_KEYS.SELFCARE_HABITS}_${date}`;
+    try {
+      const raw = localStorage.getItem(key) || CookieHelper.get(key);
+      return raw ? JSON.parse(raw) : [];
+    } catch {
+      return [];
+    }
+  },
+
+  toggleSelfCareHabit(date: string, habitId: string): string[] {
+    const current = this.getSelfCareHabits(date);
+    const updated = current.includes(habitId) ? current.filter((h) => h !== habitId) : [...current, habitId];
+    const key = `${STORAGE_KEYS.SELFCARE_HABITS}_${date}`;
+    const raw = JSON.stringify(updated);
+    localStorage.setItem(key, raw);
+    // Cookie com validade curta (30 dias) para não acumular um cookie por dia
+    CookieHelper.set(key, raw, 30);
+    return updated;
+  },
+
+  // --- Afirmações favoritas ---
+  getFavoriteAffirmations(): number[] {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEYS.FAVORITE_AFFIRMATIONS) || CookieHelper.get(STORAGE_KEYS.FAVORITE_AFFIRMATIONS);
+      return raw ? JSON.parse(raw) : [];
+    } catch {
+      return [];
+    }
+  },
+
+  toggleFavoriteAffirmation(index: number): number[] {
+    const current = this.getFavoriteAffirmations();
+    const updated = current.includes(index) ? current.filter((i) => i !== index) : [...current, index];
+    const raw = JSON.stringify(updated);
+    localStorage.setItem(STORAGE_KEYS.FAVORITE_AFFIRMATIONS, raw);
+    CookieHelper.set(STORAGE_KEYS.FAVORITE_AFFIRMATIONS, raw);
+    return updated;
+  },
+
+  // --- Estatísticas de autocuidado (para conquistas) ---
+  getSelfCareStats(): { breathSessions: number; lettersReleased: number; habitsDone: number } {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEYS.SELFCARE_STATS) || CookieHelper.get(STORAGE_KEYS.SELFCARE_STATS);
+      if (raw) return { breathSessions: 0, lettersReleased: 0, habitsDone: 0, ...JSON.parse(raw) };
+    } catch {}
+    return { breathSessions: 0, lettersReleased: 0, habitsDone: 0 };
+  },
+
+  incrementSelfCareStat(stat: 'breathSessions' | 'lettersReleased' | 'habitsDone', amount = 1): void {
+    const stats = this.getSelfCareStats();
+    stats[stat] = Math.max(0, stats[stat] + amount);
+    const raw = JSON.stringify(stats);
+    localStorage.setItem(STORAGE_KEYS.SELFCARE_STATS, raw);
+    CookieHelper.set(STORAGE_KEYS.SELFCARE_STATS, raw);
   },
 
   // Limpeza total de dados (Cookies + LocalStorage)

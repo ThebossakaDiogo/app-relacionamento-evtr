@@ -1,40 +1,42 @@
 :root {
-  /* Florecer Dopaminergic Color Palette */
-  --bg: #FDF4F2;
-  --bg-gradient: radial-gradient(130% 90% at 50% 0%, #FFF2F4 0%, #FDF4F2 45%, #FAF0EE 100%);
+  /* Florecer Pink Dopaminergic Palette */
+  --bg: #FFF1F6;
+  --bg-gradient: radial-gradient(120% 80% at 50% 0%, #FFD9E8 0%, #FFEAF2 40%, #FFF4F8 100%);
   --surface: #FFFFFF;
   --surface-elevated: #FFFFFF;
-  --surface-glass: rgba(255, 255, 255, 0.90);
-  --text: #2B1D24;
-  --text-muted: #6E535E;
-  --text-subtle: #9B7F8C;
+  --surface-glass: rgba(255, 255, 255, 0.88);
+  --text: #3A1A2B;
+  --text-muted: #7D4E64;
+  --text-subtle: #A57B90;
   
-  --primary: #9C2A47;
-  --primary-hover: #82203A;
-  --primary-active: #6A182E;
+  --primary: #C2185B;
+  --primary-hover: #A3134C;
+  --primary-active: #880E4F;
   --on-primary: #FFFFFF;
-  --primary-soft: #FDE8EC;
-  --primary-soft-hover: #F8D3DC;
+  --primary-soft: #FFE1EC;
+  --primary-soft-hover: #FFCCE0;
+  --pink-gradient: linear-gradient(135deg, #F06292 0%, #E91E63 55%, #C2185B 100%);
+  --pink-gradient-soft: linear-gradient(135deg, #FFE4EE 0%, #FFD1E3 100%);
   
-  --rose-vibrant: #E2587A;
-  --rose-decorative: #E8A8B7;
-  --rose-glow: rgba(226, 88, 122, 0.24);
+  --rose-vibrant: #EC407A;
+  --rose-decorative: #F8A5C2;
+  --rose-glow: rgba(236, 64, 122, 0.28);
   
-  --gold-decorative: #CBA358;
+  --gold-decorative: #C99A4B;
   --gold-glow: #F2C96D;
-  --gold-soft: #FCF6EA;
+  --gold-soft: #FFF6E6;
   
-  --border: #F3DFE4;
-  --border-light: #F9EDF1;
-  --input-border: #D8B7C1;
+  --border: #FAD2E1;
+  --border-light: #FDE6EF;
+  --input-border: #F0A9C4;
   
-  --success: #357B52;
-  --success-soft: #E8F5ED;
+  --success: #2E7D57;
+  --success-soft: #E6F6EC;
   --warning: #8C6226;
-  --warning-soft: #FCF5E8;
+  --warning-soft: #FFF5E6;
   --error: #B52F3C;
   --error-soft: #FDECEC;
-  --focus: #9C2A47;
+  --focus: #C2185B;
   
   /* Radii */
   --radius-card: 26px;
@@ -45,11 +47,11 @@
   --radius-modal: 30px;
   
   /* Dopaminergic Shadows */
-  --shadow-card: 0 10px 30px rgba(156, 42, 71, 0.055), 0 2px 6px rgba(0, 0, 0, 0.02);
-  --shadow-card-hover: 0 16px 40px rgba(156, 42, 71, 0.12), 0 4px 10px rgba(0, 0, 0, 0.03);
-  --shadow-floating: 0 16px 48px rgba(156, 42, 71, 0.15);
-  --shadow-elevated: 0 4px 18px rgba(156, 42, 71, 0.04);
-  --shadow-glow: 0 0 24px rgba(226, 88, 122, 0.35);
+  --shadow-card: 0 10px 30px rgba(194, 24, 91, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
+  --shadow-card-hover: 0 16px 40px rgba(194, 24, 91, 0.16), 0 4px 10px rgba(0, 0, 0, 0.03);
+  --shadow-floating: 0 16px 48px rgba(194, 24, 91, 0.20);
+  --shadow-elevated: 0 4px 18px rgba(194, 24, 91, 0.06);
+  --shadow-glow: 0 0 24px rgba(236, 64, 122, 0.40);
   
   /* Fonts */
   --font-brand: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
@@ -143,13 +145,14 @@ p {
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: var(--pink-gradient);
   color: var(--on-primary);
-  box-shadow: 0 4px 14px rgba(102, 56, 74, 0.2);
+  box-shadow: 0 6px 18px rgba(233, 30, 99, 0.32);
 }
 
 .btn-primary:hover {
-  background: var(--primary-hover);
+  filter: brightness(1.06);
+  box-shadow: 0 8px 24px rgba(233, 30, 99, 0.42);
 }
 
 .btn-light {
@@ -367,7 +370,8 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(156, 42, 71, 0.28);
+  background: var(--pink-gradient);
+  box-shadow: 0 4px 14px rgba(233, 30, 99, 0.35);
   transition: all 0.2s ease;
 }
 
@@ -410,6 +414,129 @@ label {
   100% {
     transform: translate(60px, 105vh) rotate(360deg) scale(1);
     opacity: 0;
+  }
+}
+
+/* ---------- Novas funções: animações ---------- */
+
+/* Grid de ferramentas de autocuidado */
+.tool-tile {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 22px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-family: var(--font-sans);
+  color: var(--text);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.tool-tile:hover {
+  transform: translateY(-3px);
+  border-color: var(--rose-decorative);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.tool-tile:active {
+  transform: scale(0.97);
+}
+
+.tool-tile-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  background: var(--pink-gradient);
+  box-shadow: 0 6px 16px rgba(233, 30, 99, 0.3);
+}
+
+/* Círculo de respiração */
+.breath-circle {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 35% 30%, #FFC1D9 0%, #F06292 55%, #C2185B 100%);
+  box-shadow: 0 0 0 14px rgba(240, 98, 146, 0.15), 0 0 0 28px rgba(240, 98, 146, 0.08), 0 18px 40px rgba(194, 24, 91, 0.35);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 18px;
+  transition: transform linear;
+}
+
+/* Carta queimando / se transformando em pétalas */
+@keyframes letterRelease {
+  0% { transform: scale(1) rotate(0deg); opacity: 1; filter: blur(0); }
+  40% { transform: scale(0.96) rotate(-1deg); opacity: 0.9; filter: blur(0.5px) sepia(0.4); }
+  100% { transform: scale(0.4) translateY(-120px) rotate(-8deg); opacity: 0; filter: blur(6px); }
+}
+
+.letter-releasing {
+  animation: letterRelease 2.2s cubic-bezier(0.55, 0, 0.45, 1) forwards;
+}
+
+@keyframes petalBurst {
+  0% { transform: translate(0, 0) rotate(0deg) scale(0.6); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)) rotate(540deg) scale(1); opacity: 0; }
+}
+
+.petal-burst {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 14px;
+  height: 18px;
+  border-radius: 50% 0 50% 50%;
+  background: radial-gradient(circle at 30% 30%, #FFD6E5, #EC407A);
+  animation: petalBurst 2.4s ease-out forwards;
+  pointer-events: none;
+}
+
+/* Pop de conquista desbloqueada */
+@keyframes badgePop {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.12); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.badge-pop {
+  animation: badgePop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* Chama do contador de dias */
+@keyframes softPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.soft-pulse {
+  animation: softPulse 2.2s ease-in-out infinite;
+}
+
+/* Acessibilidade: respeita quem desativou animações no celular */
+@media (prefers-reduced-motion: reduce) {
+  .petal,
+  .petal-burst,
+  .soft-pulse,
+  .letter-releasing,
+  .badge-pop {
+    animation: none !important;
+  }
+  .breath-circle {
+    transition: none !important;
   }
 }
 

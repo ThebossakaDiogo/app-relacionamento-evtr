@@ -13,6 +13,7 @@ import { StorageService } from '../../services/storageService';
 import { JOURNEY_DAYS } from '../../data/journeyData';
 import { GoldenLotusIcon } from '../../components/GoldenLotusIcon';
 import { Modal } from '../../components/Modal';
+import { SelfCareSection } from '../selfcare/SelfCareSection';
 
 // --- Thumbnails em SVG correspondentes ao Mockup ---
 
@@ -438,6 +439,12 @@ export const TodayView: React.FC<TodayViewProps> = ({
           </div>
         </div>
       </div>
+
+      {/* 🌸 ESPAÇO DE AUTOCUIDADO & SOBERANIA (Dopaminérgico) */}
+      <SelfCareSection
+        onShowToast={onShowToast}
+        onOpenSupportTool={onOpenSupportTool}
+      />
 
       {/* 💭 CHECK-IN EMOCIONAL INTERATIVO (Termômetro do Coração) */}
       <div
