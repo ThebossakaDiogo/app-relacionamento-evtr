@@ -81,59 +81,90 @@ export const CookieHelper = {
   },
 };
 
-// Motor de Personalização Determinística (PRD Seção 11 e Arquitetura)
+// Motor de Personalização Determinística
 export function computeRelationshipContext(answers: OnboardingAnswers): RelationshipContext {
   if (answers.safetyFlag) {
     return {
       phase: 'safety',
-      phaseName: 'Cuidado e Segurança',
-      focus: 'Proteger seu bem-estar físico e emocional.',
-      firstStep: 'Buscar apoio profissional e manter distância segura de qualquer situação de risco.',
-      explanation: 'Identificamos relatos que exigem prioridade máxima na sua segurança. O plano foca em limites firmes e autocuidado.',
+      phaseName: 'Cuidado y Seguridad',
+      focus: 'Proteger tu bienestar físico y emocional.',
+      firstStep: 'Buscar apoyo profesional y mantener distancia segura de cualquier situación de riesgo.',
+      explanation: 'Identificamos situaciones que exigen máxima prioridad en tu seguridad. El plan se enfoca en límites firmes y autocuidado.',
       ruleVersion: 'v1.0',
     };
   }
 
-  if (answers.elapsedTime === 'Menos de 7 dias' || answers.mainDifficulty.includes('Resistir') || answers.mainDifficulty.includes('Medo')) {
+  const elapsed = answers.elapsedTime || '';
+  const diff = answers.mainDifficulty || '';
+  const contact = answers.contactPattern || '';
+  const lastInt = answers.lastInteraction || '';
+  const outcome = answers.desiredOutcome || '';
+  const sit = answers.situation || '';
+
+  if (
+    elapsed === 'Menos de 7 dias' ||
+    elapsed === 'Menos de 7 días' ||
+    diff.includes('Resistir') ||
+    diff.includes('Medo') ||
+    diff.includes('Miedo')
+  ) {
     return {
       phase: 'stabilize',
       phaseName: 'Fase 1: Estabilizar',
-      focus: 'Não buscar uma resposta imediata para tudo e reduzir impulsos.',
-      firstStep: '24 horas sem decisões impulsivas de contato ou checagem de telefone.',
-      explanation: 'Você está vivenciando o impacto imediato ou momentos de alta incerteza. Seu plano começa acalmando a urgência e separando fatos de expectativas.',
+      focus: 'No buscar una respuesta inmediata para todo y reducir impulsos.',
+      firstStep: '24 horas sin decisiones impulsivas de contacto o revisión del teléfono.',
+      explanation: 'Estás viviendo el impacto inmediato o momentos de alta incertidumbre. Tu plan comienza calmando la urgencia y separando hechos de expectativas.',
       ruleVersion: 'v1.0',
     };
   }
 
-  if (answers.contactPattern === 'Nenhum contato' || answers.elapsedTime === '1–3 meses' || answers.desiredOutcome === 'Seguir em frente') {
+  if (
+    contact.includes('Nenhum contato') ||
+    contact.includes('Sin contacto') ||
+    elapsed === '1–3 meses' ||
+    outcome.includes('Seguir em frente') ||
+    outcome.includes('Seguir adelante')
+  ) {
     return {
       phase: 'reposition',
       phaseName: 'Fase 2: Reposicionar',
-      focus: 'Retomar a sua rotina, autonomia e observar padrões reais.',
-      firstStep: 'Definir uma prioridade pessoal para esta semana que não dependa dele.',
-      explanation: 'O momento pede recuperação da sua rotina e fortalecimento da sua independência emocional antes de qualquer passo de comunicação.',
+      focus: 'Retomar tu rutina, autonomía y observar patrones reales.',
+      firstStep: 'Definir una prioridad personal para esta semana que no dependa de él.',
+      explanation: 'El momento pide recuperar tu rutina y fortalecer tu independencia emocional antes de cualquier paso de comunicación.',
       ruleVersion: 'v1.0',
     };
   }
 
-  if (answers.lastInteraction.includes('procurou') || answers.lastInteraction.includes('Conversa carinhosa') || answers.contactPattern.includes('Ainda conversamos')) {
+  if (
+    lastInt.includes('procurou') ||
+    lastInt.includes('buscó') ||
+    lastInt.includes('Conversa carinhosa') ||
+    lastInt.includes('Conversación cariñosa') ||
+    contact.includes('Ainda conversamos') ||
+    contact.includes('Seguimos hablando')
+  ) {
     return {
       phase: 'contact',
-      phaseName: 'Fase 3: Contato com Intenção',
-      focus: 'Decidir se, por que e como manter ou responder à comunicação.',
-      firstStep: 'Esclarecer o objetivo concreto de qualquer mensagem antes de digitar.',
-      explanation: 'Há abertura ou interações recentes acontecendo. O foco é responder com propósito e maturidade, sem criar significado antecipado.',
+      phaseName: 'Fase 3: Contacto con Intención',
+      focus: 'Decidir si, por qué y cómo mantener o responder a la comunicación.',
+      firstStep: 'Aclarar el objetivo concreto de cualquier mensaje antes de escribir.',
+      explanation: 'Hay apertura o interacciones recientes ocurriendo. El enfoque es responder con propósito y madurez, sin crear significado anticipado.',
       ruleVersion: 'v1.0',
     };
   }
 
-  if (answers.desiredOutcome.includes('reconstruir') || answers.situation.includes('recomeçar')) {
+  if (
+    outcome.includes('reconstruir') ||
+    sit.includes('recomeçar') ||
+    sit.includes('recomenzar') ||
+    sit.includes('empezar de nuevo')
+  ) {
     return {
       phase: 'reciprocity',
-      phaseName: 'Fase 4: Reciprocidade e Decisão',
-      focus: 'Avaliar consistência, mudanças concretas e limites mútuos.',
-      firstStep: 'Usar o checklist "Antes de Recomeçar" para analisar atitudes reais versus palavras.',
-      explanation: 'Existe intenção ou possibilidade de recomeço. É fundamental analisar se há responsabilidade mútua antes de reabrir o relacionamento.',
+      phaseName: 'Fase 4: Reciprocidad y Decisión',
+      focus: 'Evaluar consistencia, cambios concretos y límites mutuos.',
+      firstStep: 'Usar el checklist "Antes de Recomenzar" para analizar actitudes reales versus palabras.',
+      explanation: 'Existe intención o posibilidad de recomenzar. Es fundamental analizar si hay responsabilidad mutua antes de reabrir la relación.',
       ruleVersion: 'v1.0',
     };
   }
@@ -141,9 +172,9 @@ export function computeRelationshipContext(answers: OnboardingAnswers): Relation
   return {
     phase: 'stabilize',
     phaseName: 'Fase 1: Estabilizar',
-    focus: 'Clareza passo a passo, um dia de cada vez.',
-    firstStep: 'Organizar seus sentimentos e ler a primeira lição de 4 minutos.',
-    explanation: 'Seu plano foi configurado para oferecer apoio estruturado e descomplicado.',
+    focus: 'Claridad paso a paso, un día a la vez.',
+    firstStep: 'Organizar tus sentimientos y leer la primera lección de 4 minutos.',
+    explanation: 'Tu plan fue configurado para ofrecer apoyo estructurado y sin complicaciones.',
     ruleVersion: 'v1.0',
   };
 }
@@ -190,7 +221,7 @@ export const StorageService = {
     }
 
     return {
-      name: 'Você',
+      name: 'Tú',
       hasCompletedOnboarding: false,
       onboardingAnswers: null,
       relationshipContext: null,
@@ -218,7 +249,7 @@ export const StorageService = {
 
     const updatedProfile: UserProfile = {
       ...current,
-      name: name && name.trim() ? name.trim() : (current.name && current.name !== 'Você' ? current.name : cleanEmail.split('@')[0]),
+      name: name && name.trim() ? name.trim() : (current.name && current.name !== 'Você' && current.name !== 'Tú' ? current.name : cleanEmail.split('@')[0]),
       email: cleanEmail,
       isPurchased: true,
       purchaseDate: new Date().toISOString(),
@@ -452,7 +483,7 @@ export const StorageService = {
         id,
         title: draft.title,
         content: draft.content,
-        category: draft.category || 'Geral',
+        category: draft.category || 'General',
         notes: draft.notes,
         createdAt: now,
         updatedAt: now,

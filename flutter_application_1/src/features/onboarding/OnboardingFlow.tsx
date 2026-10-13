@@ -28,7 +28,7 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
 
   const [showResult, setShowResult] = useState<boolean>(false);
 
-  // Total steps: Name (step 0), 8 questions (steps 1 to 8)
+  // Total de pasos: Nombre (paso 0), 8 preguntas (pasos 1 a 8)
   const totalQuestions = 8;
 
   const handleSelectOption = (key: keyof OnboardingAnswers, value: any) => {
@@ -67,7 +67,7 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
     onComplete(profile);
   };
 
-  // Se o resultado do mapa já foi calculado
+  // Si el resultado del mapa ya fue calculado
   if (showResult) {
     const context = computeRelationshipContext(answers);
     const isSafety = context.phase === 'safety';
@@ -102,12 +102,12 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
           >
             {isSafety ? <ShieldAlert size={32} /> : <Sparkles size={32} />}
           </div>
-          <span className="eyebrow">SEU MAPA DO MOMENTO</span>
+          <span className="eyebrow">TU MAPA DEL MOMENTO</span>
           <h1 style={{ fontSize: '32px', margin: '8px 0 12px' }}>
-            {name ? `${name}, seu plano está pronto` : 'Seu plano está pronto'}
+            {name ? `${name}, tu plan está listo` : 'Tu plan está listo'}
           </h1>
           <p style={{ fontSize: '15px' }}>
-            Organizamos o seu momento atual para que você saiba qual é o seu próximo passo consciente.
+            Organizamos tu momento actual para que sepas cuál es tu próximo paso consciente.
           </p>
         </div>
 
@@ -129,7 +129,7 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
                 marginBottom: '8px',
               }}
             >
-              Fase atual: {context.phaseName}
+              Fase actual: {context.phaseName}
             </span>
             <p style={{ fontSize: '15px', color: 'var(--text)', marginTop: '8px', lineHeight: '1.6' }}>
               {context.explanation}
@@ -145,7 +145,7 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
             }}
           >
             <strong style={{ display: 'block', fontSize: '13px', color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>
-              Foco agora:
+              Foco ahora:
             </strong>
             <p style={{ margin: 0, fontSize: '14px', color: 'var(--text)' }}>
               {context.focus}
@@ -160,7 +160,7 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
             }}
           >
             <strong style={{ display: 'block', fontSize: '13px', color: 'var(--gold-decorative)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>
-              Primeiro passo:
+              Primer paso:
             </strong>
             <p style={{ margin: 0, fontSize: '14px', color: 'var(--text)' }}>
               {context.firstStep}
@@ -169,13 +169,13 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
         </div>
 
         <button className="btn btn-primary btn-block" onClick={handleFinish} style={{ fontSize: '16px' }}>
-          Começar meu plano <ArrowRight size={18} />
+          Comenzar mi plan <ArrowRight size={18} />
         </button>
       </div>
     );
   }
 
-  // Passos do Onboarding
+  // Pasos del Onboarding
   return (
     <div
       style={{
@@ -211,11 +211,11 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
             fontWeight: '600',
           }}
         >
-          <ArrowLeft size={18} /> Voltar
+          <ArrowLeft size={18} /> Volver
         </button>
 
         <span style={{ fontSize: '12px', fontWeight: '700', color: 'var(--text-muted)' }}>
-          {step === 0 ? 'Início' : `${step} de ${totalQuestions}`}
+          {step === 0 ? 'Inicio' : `${step} de ${totalQuestions}`}
         </span>
 
         <span
@@ -256,7 +256,7 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
         }}
         className="animate-fade-in"
       >
-        {/* Step 0: Nome */}
+        {/* Step 0: Nombre */}
         {step === 0 && (
           <div>
             <div style={{ textAlign: 'center', marginBottom: '16px' }}>
@@ -282,25 +282,25 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
                   fontWeight: 600,
                 }}
               >
-                Do fim, para um novo florescer ♡
+                Del fin, hacia un nuevo florecer ♡
               </small>
             </div>
 
             <span className="eyebrow" style={{ display: 'block', textAlign: 'center' }}>
-              SEU GUIA DE CLAREZA PARA O PÓS-TÉRMINO
+              TU GUÍA DE CLARIDAD PARA EL POST-RUPTURA
             </span>
             <h1 style={{ fontSize: '28px', margin: '8px 0 14px', textAlign: 'center' }}>
-              O acolhimento que você precisa para recomeçar.
+              El acompañamiento que necesitas para volver a empezar.
             </h1>
             <p style={{ marginBottom: '24px', fontSize: '14px', textAlign: 'center', lineHeight: '1.6' }}>
-              Um espaço confidencial para tirar você do modo desespero, acalmar a urgência e devolver o seu equilíbrio, passo a passo.
+              Un espacio confidencial para salirte del modo desesperación, calmar la urgencia y devolverte el equilibrio, paso a paso.
             </p>
 
-            <label htmlFor="user-name">Como podemos te chamar?</label>
+            <label htmlFor="user-name">¿Cómo podemos llamarte?</label>
             <input
               id="user-name"
               type="text"
-              placeholder="Digite seu primeiro nome"
+              placeholder="Escribe tu primer nombre"
               value={name}
               onChange={(e) => setName(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && name.trim() && handleNext()}
@@ -314,7 +314,7 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
               disabled={!name.trim()}
               style={{ opacity: name.trim() ? 1 : 0.6, marginBottom: '14px' }}
             >
-              Iniciar Mapa do Momento <ArrowRight size={18} />
+              Iniciar Mapa del Momento <ArrowRight size={18} />
             </button>
 
             <button
@@ -336,26 +336,26 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
                 textUnderlineOffset: '4px',
               }}
             >
-              <Sparkles size={14} color="var(--gold-decorative)" /> Já comprou? Confirmar e-mail e ativar acesso
+              <Sparkles size={14} color="var(--gold-decorative)" /> ¿Ya compraste? Confirmar correo y activar acceso
             </button>
           </div>
         )}
 
 
-        {/* Step 1: O que está acontecendo? */}
+        {/* Step 1: ¿Qué está pasando? */}
         {step === 1 && (
           <div>
-            <span className="eyebrow">PERGUNTA 1 DE 8</span>
-            <h2 style={{ margin: '10px 0 24px', fontSize: '26px' }}>O que está acontecendo entre vocês agora?</h2>
+            <span className="eyebrow">PREGUNTA 1 DE 8</span>
+            <h2 style={{ margin: '10px 0 24px', fontSize: '26px' }}>¿Qué está pasando entre ustedes ahora?</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
-                'Terminamos recentemente',
-                'Ele pediu espaço',
-                'Estamos totalmente afastados',
-                'Ainda conversamos com frequência',
-                'Voltamos a conversar depois do término',
-                'Estamos tentando recomeçar',
-                'Não sei exatamente onde estamos',
+                'Terminamos recientemente',
+                'Él pidió espacio',
+                'Estamos totalmente alejados',
+                'Todavía hablamos con frecuencia',
+                'Volvimos a hablar después de la ruptura',
+                'Estamos intentando volver a empezar',
+                'No sé exactamente dónde estamos',
               ].map((opt) => (
                 <button
                   key={opt}
@@ -381,17 +381,17 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
           </div>
         )}
 
-        {/* Step 2: Quem tomou a decisão? */}
+        {/* Step 2: ¿Quién tomó la decisión? */}
         {step === 2 && (
           <div>
-            <span className="eyebrow">PERGUNTA 2 DE 8</span>
-            <h2 style={{ margin: '10px 0 24px', fontSize: '26px' }}>Quem tomou a decisão principal do término ou afastamento?</h2>
+            <span className="eyebrow">PREGUNTA 2 DE 8</span>
+            <h2 style={{ margin: '10px 0 24px', fontSize: '26px' }}>¿Quién tomó la decisión principal de la ruptura o el alejamiento?</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
-                'Ele decidiu',
-                'Eu decidi',
-                'Ambos decidimos em comum acordo',
-                'Não houve um término claro (afastamento tácito)',
+                'Él decidió',
+                'Yo decidí',
+                'Ambos decidimos de común acuerdo',
+                'No hubo una ruptura clara (alejamiento tácito)',
               ].map((opt) => (
                 <button
                   key={opt}
@@ -416,18 +416,18 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
           </div>
         )}
 
-        {/* Step 3: Há quanto tempo? */}
+        {/* Step 3: ¿Cuánto tiempo hace? */}
         {step === 3 && (
           <div>
-            <span className="eyebrow">PERGUNTA 3 DE 8</span>
-            <h2 style={{ margin: '10px 0 24px', fontSize: '26px' }}>Há quanto tempo isso aconteceu?</h2>
+            <span className="eyebrow">PREGUNTA 3 DE 8</span>
+            <h2 style={{ margin: '10px 0 24px', fontSize: '26px' }}>¿Hace cuánto tiempo pasó esto?</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
-                'Menos de 7 dias',
+                'Menos de 7 días',
                 '1–2 semanas',
                 '2–4 semanas',
                 '1–3 meses',
-                'Mais de 3 meses',
+                'Más de 3 meses',
               ].map((opt) => (
                 <button
                   key={opt}
@@ -452,20 +452,20 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
           </div>
         )}
 
-        {/* Step 4: Como está o contato? */}
+        {/* Step 4: ¿Cómo está el contacto? */}
         {step === 4 && (
           <div>
-            <span className="eyebrow">PERGUNTA 4 DE 8</span>
-            <h2 style={{ margin: '10px 0 24px', fontSize: '26px' }}>Como está o padrão de contato entre vocês hoje?</h2>
+            <span className="eyebrow">PREGUNTA 4 DE 8</span>
+            <h2 style={{ margin: '10px 0 24px', fontSize: '26px' }}>¿Cómo está el patrón de contacto entre ustedes hoy?</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
-                'Nenhum contato (contato zero)',
-                'Apenas questões práticas essenciais',
-                'Conversas ocasionais',
-                'Conversamos quase todos os dias',
-                'Ele aparece e desaparece (inconstante)',
-                'Eu procuro mais do que ele',
-                'Ele procura mais do que eu',
+                'Sin contacto (cero contacto)',
+                'Solo cuestiones prácticas esenciales',
+                'Conversaciones ocasionales',
+                'Hablamos casi todos los días',
+                'Él aparece y desaparece (inconstante)',
+                'Yo busco más que él',
+                'Él busca más que yo',
               ].map((opt) => (
                 <button
                   key={opt}
@@ -490,20 +490,20 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
           </div>
         )}
 
-        {/* Step 5: Última interação */}
+        {/* Step 5: Última interacción */}
         {step === 5 && (
           <div>
-            <span className="eyebrow">PERGUNTA 5 DE 8</span>
-            <h2 style={{ margin: '10px 0 24px', fontSize: '26px' }}>Como foi a última interação de vocês?</h2>
+            <span className="eyebrow">PREGUNTA 5 DE 8</span>
+            <h2 style={{ margin: '10px 0 24px', fontSize: '26px' }}>¿Cómo fue la última interacción de ustedes?</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
-                'Sem contato há algum tempo',
-                'Conversa normal e amigável',
-                'Discussão ou desentendimento',
-                'Resposta fria ou monossilábica dele',
-                'Conversa carinhosa ou com saudade',
-                'Ele me procurou primeiro',
-                'Eu procurei primeiro e fiquei no vácuo',
+                'Sin contacto por un tiempo',
+                'Conversación normal y amigable',
+                'Discusión o malentendido',
+                'Respuesta fría o monosilábica de él',
+                'Conversación cariñosa o con nostalgia',
+                'Él me buscó primero',
+                'Yo lo busqué primero y me dejó en visto',
               ].map((opt) => (
                 <button
                   key={opt}
@@ -528,21 +528,21 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
           </div>
         )}
 
-        {/* Step 6: Maior dificuldade */}
+        {/* Step 6: Mayor dificultad */}
         {step === 6 && (
           <div>
-            <span className="eyebrow">PERGUNTA 6 DE 8</span>
-            <h2 style={{ margin: '10px 0 24px', fontSize: '26px' }}>Qual tem sido a sua maior dificuldade agora?</h2>
+            <span className="eyebrow">PREGUNTA 6 DE 8</span>
+            <h2 style={{ margin: '10px 0 24px', fontSize: '26px' }}>¿Cuál ha sido tu mayor dificultad ahora?</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
-                'Resistir à vontade urgente de mandar mensagem',
-                'Saber se devo esperar ou seguir em frente',
-                'Interpretar atitudes e sinais virtuais',
-                'Saber exatamente o que responder',
-                'Medo desesperador de ser esquecida',
-                'Medo de perder de vez a relação',
-                'Saber se ainda existe espaço para uma conversa',
-                'Conseguir voltar a focar na minha própria rotina',
+                'Resistir las ganas urgentes de enviar un mensaje',
+                'Saber si debo esperar o seguir adelante',
+                'Interpretar actitudes y señales virtuales',
+                'Saber exactamente qué responder',
+                'Miedo desesperador de ser olvidada',
+                'Miedo de perder definitivamente la relación',
+                'Saber si todavía hay espacio para una conversación',
+                'Lograr volver a enfocarme en mi propia rutina',
               ].map((opt) => (
                 <button
                   key={opt}
@@ -570,15 +570,15 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
         {/* Step 7: Objetivo */}
         {step === 7 && (
           <div>
-            <span className="eyebrow">PERGUNTA 7 DE 8</span>
-            <h2 style={{ margin: '10px 0 24px', fontSize: '26px' }}>O que você mais gostaria de alcançar com este plano?</h2>
+            <span className="eyebrow">PREGUNTA 7 DE 8</span>
+            <h2 style={{ margin: '10px 0 24px', fontSize: '26px' }}>¿Qué te gustaría lograr más con este plan?</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
-                'Entender se podemos conversar com maturidade',
-                'Tentar reconstruir a relação com novas bases',
-                'Avaliar se existe reciprocidade real',
-                'Ainda não sei, quero apenas ter clareza',
-                'Seguir em frente e resgatar a minha paz',
+                'Entender si podemos hablar con madurez',
+                'Intentar reconstruir la relación con nuevas bases',
+                'Evaluar si existe reciprocidad real',
+                'Todavía no sé, solo quiero tener claridad',
+                'Seguir adelante y recuperar mi paz',
               ].map((opt) => (
                 <button
                   key={opt}
@@ -603,15 +603,15 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
           </div>
         )}
 
-        {/* Step 8: Pergunta de Segurança */}
+        {/* Step 8: Pregunta de Seguridad */}
         {step === 8 && (
           <div>
-            <span className="eyebrow">PERGUNTA 8 DE 8 · SEGURANÇA</span>
+            <span className="eyebrow">PREGUNTA 8 DE 8 · SEGURIDAD</span>
             <h2 style={{ margin: '10px 0 16px', fontSize: '26px' }}>
-              Existe alguma situação de ameaça, coerção, perseguição ou medo físico/emocional?
+              ¿Existe alguna situación de amenaza, coacción, acoso o miedo físico/emocional?
             </h2>
             <p style={{ fontSize: '14px', marginBottom: '24px' }}>
-              Esta pergunta nos ajuda a calibrar as orientações com total responsabilidade ética. Seus dados são 100% privados e salvos apenas no seu aparelho.
+              Esta pregunta nos ayuda a calibrar las orientaciones con total responsabilidad ética. Tus datos son 100% privados y guardados solo en tu dispositivo.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <button
@@ -627,7 +627,7 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
                   fontSize: '15px',
                 }}
               >
-                Não, não há nenhuma situação de risco ou ameaça.
+                No, no hay ninguna situación de riesgo o amenaza.
               </button>
 
               <button
@@ -647,7 +647,7 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
                   fontWeight: 600,
                 }}
               >
-                Sim, existe ou existiu ameaça ou medo.
+                Sí, existe o existió amenaza o miedo.
               </button>
 
               <button
@@ -663,7 +663,7 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
                   fontSize: '15px',
                 }}
               >
-                Prefiro não responder neste momento.
+                Prefiero no responder en este momento.
               </button>
             </div>
           </div>
@@ -675,10 +675,10 @@ export const OnboardingFlow: React.FC<OnboardingFlowProps> = ({ onComplete }) =>
         onClose={() => setIsPurchaseModalOpen(false)}
         initialEmail=""
         onSuccess={(confirmed) => {
-          if (confirmed.name && confirmed.name !== 'Você') {
+          if (confirmed.name && confirmed.name !== 'Tú') {
             setName(confirmed.name);
           }
-          // Avança para o mapa ou conclui
+          // Avanza al mapa o concluye
           setIsPurchaseModalOpen(false);
           setStep(1);
         }}

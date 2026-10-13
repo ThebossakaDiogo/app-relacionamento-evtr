@@ -37,20 +37,20 @@ export const DailyAffirmationsCard: React.FC<DailyAffirmationsCardProps> = ({ on
     const updated = StorageService.toggleFavoriteAffirmation(currentIndex);
     setFavorites(updated);
     if (!isFavorite) {
-      onShowToast('Afirmação guardada nas suas favoritas! 💗');
+      onShowToast('¡Afirmación guardada en tus favoritas! 💗');
     } else {
-      onShowToast('Afirmação removida das favoritas.');
+      onShowToast('Afirmación eliminada de favoritas.');
     }
   };
 
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(
-        `"${currentAffirmation}" — Florescendo com o Florecer 🌸`
+        `"${currentAffirmation}" — Floreciendo con Florecer 🌸`
       );
-      onShowToast('Afirmação copiada com carinho para você compartilhar!');
+      onShowToast('¡Afirmación copiada con cariño para que la compartas!');
     } catch {
-      onShowToast('Selecione e copie o texto manualmente.');
+      onShowToast('Selecciona y copia el texto manualmente.');
     }
   };
 
@@ -95,10 +95,10 @@ export const DailyAffirmationsCard: React.FC<DailyAffirmationsCardProps> = ({ on
                   color: 'var(--primary)',
                 }}
               >
-                Pílula de Amor-Próprio
+                Píldora de Amor Propio
               </span>
               <h4 style={{ margin: 0, fontSize: '15px', color: 'var(--text)' }}>
-                Afirmação Para o Seu Coração
+                Afirmación Para Tu Corazón
               </h4>
             </div>
           </div>
@@ -118,7 +118,7 @@ export const DailyAffirmationsCard: React.FC<DailyAffirmationsCardProps> = ({ on
                 gap: '4px',
               }}
             >
-              <Bookmark size={13} /> {favorites.length} salvas
+              <Bookmark size={13} /> {favorites.length} guardadas
             </button>
           )}
         </div>
@@ -160,7 +160,7 @@ export const DailyAffirmationsCard: React.FC<DailyAffirmationsCardProps> = ({ on
           <div style={{ display: 'flex', gap: '8px' }}>
             <button
               onClick={handleToggleFavorite}
-              title={isFavorite ? 'Remover dos favoritos' : 'Salvar afirmação'}
+              title={isFavorite ? 'Eliminar de favoritas' : 'Guardar afirmación'}
               style={{
                 width: '38px',
                 height: '38px',
@@ -184,7 +184,7 @@ export const DailyAffirmationsCard: React.FC<DailyAffirmationsCardProps> = ({ on
 
             <button
               onClick={handleCopy}
-              title="Copiar para compartilhar"
+              title="Copiar para compartir"
               style={{
                 width: '38px',
                 height: '38px',
@@ -220,7 +220,7 @@ export const DailyAffirmationsCard: React.FC<DailyAffirmationsCardProps> = ({ on
               transition: 'all 0.2s ease',
             }}
           >
-            Outra afirmação <ChevronRight size={14} />
+            Otra afirmación <ChevronRight size={14} />
           </button>
         </div>
       </div>
@@ -229,16 +229,16 @@ export const DailyAffirmationsCard: React.FC<DailyAffirmationsCardProps> = ({ on
       <Modal
         isOpen={isFavoritesModalOpen}
         onClose={() => setIsFavoritesModalOpen(false)}
-        title="Suas Afirmações Salvas 💗"
+        title="Tus Afirmaciones Guardadas 💗"
       >
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           <p style={{ fontSize: '13px', color: 'var(--text-muted)', margin: 0 }}>
-            Palavras de verdade e dignidade que você guardou para reler sempre que a mente vacilar.
+            Palabras de verdad y dignidad que guardaste para releer siempre que tu mente dude.
           </p>
 
           {favorites.length === 0 ? (
             <div style={{ textAlign: 'center', padding: '24px 0', color: 'var(--text-subtle)' }}>
-              Nenhuma afirmação favoritada ainda.
+              Ninguna afirmación guardada todavía.
             </div>
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxHeight: '380px', overflowY: 'auto' }}>
@@ -269,7 +269,7 @@ export const DailyAffirmationsCard: React.FC<DailyAffirmationsCardProps> = ({ on
                     <button
                       onClick={() => {
                         navigator.clipboard.writeText(`"${AFFIRMATIONS[favIdx]}"`);
-                        onShowToast('Copiada!');
+                        onShowToast('¡Copiada!');
                       }}
                       style={{
                         background: 'transparent',
@@ -285,7 +285,7 @@ export const DailyAffirmationsCard: React.FC<DailyAffirmationsCardProps> = ({ on
                       onClick={() => {
                         const updated = StorageService.toggleFavoriteAffirmation(favIdx);
                         setFavorites(updated);
-                        onShowToast('Removida.');
+                        onShowToast('Eliminada.');
                       }}
                       style={{
                         background: 'transparent',
@@ -295,7 +295,7 @@ export const DailyAffirmationsCard: React.FC<DailyAffirmationsCardProps> = ({ on
                         cursor: 'pointer',
                       }}
                     >
-                      Remover
+                      Eliminar
                     </button>
                   </div>
                 </div>

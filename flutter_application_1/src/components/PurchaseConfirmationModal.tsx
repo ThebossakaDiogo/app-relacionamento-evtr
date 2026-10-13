@@ -31,7 +31,7 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
   const [email, setEmail] = useState<string>(initialEmail);
   const [step, setStep] = useState<'input' | 'verifying' | 'confirmed'>('input');
   const [verificationProgress, setVerificationProgress] = useState<number>(0);
-  const [statusMessage, setStatusMessage] = useState<string>('Conectando ao sistema...');
+  const [statusMessage, setStatusMessage] = useState<string>('Conectando al sistema...');
   const [licenseCode, setLicenseCode] = useState<string>('');
   const [confirmedProfile, setConfirmedProfile] = useState<UserProfile | null>(null);
 
@@ -44,7 +44,7 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
     }
   }, [initialEmail]);
 
-  // Efeito de confetes no canvas quando confirmada a compra
+  // Efecto de confeti en canvas al confirmar la compra
   useEffect(() => {
     if (step !== 'confirmed' || !canvasRef.current) return;
 
@@ -84,7 +84,7 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
         ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
         ctx.restore();
 
-        // Reposicionar se sair da tela nos primeiros segundos
+        // Reposicionar si sale de la pantalla en los primeros segundos
         if (p.y > canvas.height && frame < 180) {
           p.y = -20;
           p.x = Math.random() * canvas.width;
@@ -111,35 +111,35 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
   const handleStartVerification = () => {
     const trimmed = email.trim();
     if (!trimmed || !trimmed.includes('@')) {
-      alert('Por favor, digite um endereço de e-mail válido.');
+      alert('Por favor, ingresa un correo electrónico válido.');
       return;
     }
 
     setStep('verifying');
     setVerificationProgress(5);
-    setStatusMessage('Localizando dados da compra no servidor seguro...');
+    setStatusMessage('Localizando datos de la compra en el servidor seguro...');
 
-    // Timeline da animação cinematográfica
+    // Timeline de la animación cinematográfica
     const t1 = setTimeout(() => {
       setVerificationProgress(30);
-      setStatusMessage('Pagamento identificado: Acesso Vitalício Aprovado...');
+      setStatusMessage('Pago identificado: Acceso Vitalicio Aprobado...');
     }, 700);
 
     const t2 = setTimeout(() => {
       setVerificationProgress(65);
-      setStatusMessage('Validando chave de licença nos cookies seguros...');
+      setStatusMessage('Validando clave de licencia en cookies seguros...');
     }, 1500);
 
     const t3 = setTimeout(() => {
       setVerificationProgress(90);
-      setStatusMessage('Desbloqueando os 28 Dias do Plano Florecer...');
+      setStatusMessage('Desbloqueando los 28 Días del Plan Florecer...');
     }, 2200);
 
     const t4 = setTimeout(() => {
       setVerificationProgress(100);
-      setStatusMessage('Tudo pronto! Seu acesso está 100% confirmado.');
+      setStatusMessage('¡Todo listo! Tu acceso está 100% confirmado.');
 
-      // Efetiva a compra no storage e nos cookies de 365 dias!
+      // Efectiva la compra en storage y cookies de 365 días
       const profile = StorageService.confirmPurchase(trimmed);
       setConfirmedProfile(profile);
       setLicenseCode(profile.licenseCode || 'FLO-VIP-2026');
@@ -195,7 +195,7 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
           maxHeight: '92vh',
         }}
       >
-        {/* Canvas de Confetes transparente sobreposto */}
+        {/* Canvas de Confetti transparente sobrepuesto */}
         <canvas
           ref={canvasRef}
           style={{
@@ -206,10 +206,10 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
           }}
         />
 
-        {/* Botão de Fechar */}
+        {/* Botón de Cerrar */}
         <button
           onClick={onClose}
-          aria-label="Fechar"
+          aria-label="Cerrar"
           style={{
             position: 'absolute',
             top: '16px',
@@ -231,7 +231,7 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
           <X size={18} />
         </button>
 
-        {/* ESTADO 1: FORMULÁRIO DE DIGITAÇÃO DO E-MAIL */}
+        {/* ESTADO 1: FORMULARIO DE INGRESO DEL CORREO */}
         {step === 'input' && (
           <div style={{ padding: '36px 28px 32px' }} className="animate-fade-in">
             <div style={{ textAlign: 'center', marginBottom: '24px' }}>
@@ -240,21 +240,21 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
               </div>
 
               <span className="eyebrow" style={{ color: 'var(--gold-decorative)' }}>
-                CONFIRMAÇÃO DE ACESSO VIP
+                CONFIRMACIÓN DE ACCESO VIP
               </span>
 
               <h2 style={{ fontSize: '26px', margin: '8px 0 10px', lineHeight: 1.2 }}>
-                Confirmar compra e e-mail
+                Confirmar compra y correo
               </h2>
 
               <p style={{ fontSize: '14px', color: 'var(--text-muted)', lineHeight: 1.5 }}>
-                Digite o e-mail que você utilizou ao adquirir o Florecer para desbloquear e sincronizar seu plano completo.
+                Ingresa el correo que usaste al adquirir Florecer para desbloquear y sincronizar tu plan completo.
               </p>
             </div>
 
             <div style={{ marginBottom: '20px' }}>
               <label htmlFor="purchase-email" style={{ marginBottom: '8px', fontSize: '13px', fontWeight: 600 }}>
-                Seu e-mail cadastrado na compra:
+                Tu correo registrado en la compra:
               </label>
 
               <div style={{ position: 'relative' }}>
@@ -271,7 +271,7 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
                 <input
                   id="purchase-email"
                   type="email"
-                  placeholder="exemplo: seuemail@gmail.com"
+                  placeholder="ejemplo: tucorreo@gmail.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   onKeyDown={(e) => e.key === 'Enter' && handleStartVerification()}
@@ -295,7 +295,7 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
                 }}
               >
                 <ShieldCheck size={15} />
-                <span>Seus dados são salvos em cookies criptografados de 365 dias no seu celular.</span>
+                <span>Tus datos se guardan en cookies cifrados de 365 días en tu dispositivo.</span>
               </div>
             </div>
 
@@ -304,12 +304,12 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
               onClick={handleStartVerification}
               style={{ fontSize: '15px', padding: '14px 20px' }}
             >
-              Verificar e Desbloquear Acesso <ArrowRight size={17} />
+              Verificar y Desbloquear Acceso <ArrowRight size={17} />
             </button>
           </div>
         )}
 
-        {/* ESTADO 2: ANIMAÇÃO DE VERIFICAÇÃO EM ANDAMENTO */}
+        {/* ESTADO 2: ANIMACIÓN DE VERIFICACIÓN EN CURSO */}
         {step === 'verifying' && (
           <div
             style={{
@@ -370,18 +370,18 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
             </div>
 
             <span className="eyebrow" style={{ color: 'var(--primary)', marginBottom: '6px' }}>
-              SISTEMA DE SEGURANÇA FLORECER
+              SISTEMA DE SEGURIDAD FLORECER
             </span>
 
             <h3 style={{ fontSize: '22px', margin: '0 0 10px', color: 'var(--text)' }}>
-              Verificando sua compra...
+              Verificando tu compra...
             </h3>
 
             <p style={{ fontSize: '14px', color: 'var(--text-muted)', marginBottom: '24px', minHeight: '40px' }}>
               {statusMessage}
             </p>
 
-            {/* Barra de progresso animada */}
+            {/* Barra de progreso animada */}
             <div
               style={{
                 width: '100%',
@@ -405,16 +405,16 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
             </div>
 
             <small style={{ color: 'var(--primary)', fontWeight: 700, fontSize: '12px' }}>
-              {verificationProgress}% Concluído
+              {verificationProgress}% Completado
             </small>
           </div>
         )}
 
-        {/* ESTADO 3: CELEBRAÇÃO DE COMPRA CONFIRMADA COM SUCESSO */}
+        {/* ESTADO 3: CELEBRACIÓN DE COMPRA CONFIRMADA CON ÉXITO */}
         {step === 'confirmed' && (
           <div style={{ padding: '36px 24px 32px' }} className="animate-fade-in">
             <div style={{ textAlign: 'center', marginBottom: '22px' }}>
-              {/* Ícone de Sucesso com Brilho */}
+              {/* Ícono de Éxito con Brillo */}
               <div
                 style={{
                   width: '68px',
@@ -443,19 +443,19 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
                   marginBottom: '6px',
                 }}
               >
-                ★ COMPRA CONFIRMADA COM SUCESSO ★
+                ★ COMPRA CONFIRMADA CON ÉXITO ★
               </span>
 
               <h2 style={{ fontSize: '26px', margin: '8px 0 6px', color: 'var(--text)' }}>
-                Acesso Vitalício Liberado!
+                ¡Acceso Vitalicio Liberado!
               </h2>
 
               <p style={{ fontSize: '14px', color: 'var(--text-muted)', margin: 0 }}>
-                O seu e-mail foi validado e sincronizado com os cookies do seu aparelho.
+                Tu correo fue validado y sincronizado con las cookies de tu dispositivo.
               </p>
             </div>
 
-            {/* Cartão de Membro VIP / Comprovante Digital */}
+            {/* Tarjeta de Miembro VIP / Comprobante Digital */}
             <div
               style={{
                 backgroundColor: 'var(--surface)',
@@ -481,7 +481,7 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
                   <GoldenLotusIcon size={26} />
                   <div>
                     <span style={{ fontSize: '10px', textTransform: 'uppercase', letterSpacing: '1.5px', color: 'var(--gold-decorative)', fontWeight: 700 }}>
-                      PASSAPORTE VIP
+                      PASAPORTE VIP
                     </span>
                     <div style={{ fontFamily: 'var(--font-brand)', fontStyle: 'italic', fontSize: '19px', fontWeight: 600, color: 'var(--primary)' }}>
                       Florecer
@@ -501,29 +501,29 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
                     gap: '4px',
                   }}
                 >
-                  <Check size={13} /> Ativo
+                  <Check size={13} /> Activo
                 </span>
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', fontSize: '13px' }}>
                 <div>
-                  <small style={{ color: 'var(--text-muted)', display: 'block', fontSize: '11px' }}>E-mail da Compradora:</small>
+                  <small style={{ color: 'var(--text-muted)', display: 'block', fontSize: '11px' }}>Correo de la Compradora:</small>
                   <strong style={{ color: 'var(--text)', wordBreak: 'break-all' }}>{email}</strong>
                 </div>
 
                 <div>
-                  <small style={{ color: 'var(--text-muted)', display: 'block', fontSize: '11px' }}>Código da Licença:</small>
+                  <small style={{ color: 'var(--text-muted)', display: 'block', fontSize: '11px' }}>Código de Licencia:</small>
                   <strong style={{ color: 'var(--primary)', fontFamily: 'monospace' }}>{licenseCode}</strong>
                 </div>
 
                 <div>
-                  <small style={{ color: 'var(--text-muted)', display: 'block', fontSize: '11px' }}>Plano:</small>
-                  <span style={{ color: 'var(--text)', fontWeight: 600 }}>Plano Personalizado 28 Dias</span>
+                  <small style={{ color: 'var(--text-muted)', display: 'block', fontSize: '11px' }}>Plan:</small>
+                  <span style={{ color: 'var(--text)', fontWeight: 600 }}>Plan Personalizado 28 Días</span>
                 </div>
 
                 <div>
-                  <small style={{ color: 'var(--text-muted)', display: 'block', fontSize: '11px' }}>Sincronização:</small>
-                  <span style={{ color: 'var(--success)', fontWeight: 600 }}>Cookies Ativos (365 dias)</span>
+                  <small style={{ color: 'var(--text-muted)', display: 'block', fontSize: '11px' }}>Sincronización:</small>
+                  <span style={{ color: 'var(--success)', fontWeight: 600 }}>Cookies Activas (365 días)</span>
                 </div>
               </div>
             </div>
@@ -533,7 +533,7 @@ export const PurchaseConfirmationModal: React.FC<PurchaseConfirmationModalProps>
               onClick={handleFinish}
               style={{ fontSize: '15px', padding: '14px 22px' }}
             >
-              Acessar Meu Plano Agora <ArrowRight size={17} />
+              Acceder a Mi Plan Ahora <ArrowRight size={17} />
             </button>
           </div>
         )}

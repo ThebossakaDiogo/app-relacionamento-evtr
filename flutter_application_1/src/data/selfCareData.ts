@@ -1,34 +1,34 @@
-// Conteúdo das ferramentas de autocuidado do Florecer
+// Contenido de las herramientas de autocuidado de Florecer
 
 export const AFFIRMATIONS: string[] = [
-  'Eu mereço um amor que não me faça duvidar do meu valor.',
-  'Hoje eu escolho a minha paz antes de qualquer resposta.',
-  'O meu valor não diminui pela incapacidade de alguém de enxergá-lo.',
-  'Eu posso sentir saudade e ainda assim escolher o que é melhor para mim.',
-  'Cada dia que eu me respeito é um dia de vitória.',
-  'Não preciso de pressa. Meu coração está se reorganizando no tempo certo.',
-  'Eu sou inteira, mesmo quando me sinto em pedaços.',
-  'O que é meu encontra o caminho até mim sem que eu precise implorar.',
-  'Eu me permito florescer, mesmo depois do inverno.',
-  'Minha história não termina aqui. Este é só um novo capítulo.',
-  'Eu escolho agir com dignidade, não com desespero.',
-  'Sou suficiente exatamente como sou.',
-  'Hoje eu cuido de mim como eu cuidaria de quem eu amo.',
-  'A clareza chega quando eu paro de correr atrás de respostas.',
-  'Eu solto o que não posso controlar e abraço o que depende de mim.',
-  'Meu brilho não depende da presença de ninguém.',
-  'Eu sou a pessoa mais importante da minha própria vida.',
-  'Ser gentil comigo mesma também é um ato de coragem.',
-  'Eu confio na mulher que estou me tornando.',
-  'Tudo bem não estar bem. Tudo bem recomeçar quantas vezes for preciso.',
-  'O amor-próprio é a base de qualquer amor que eu venha a viver.',
-  'Eu respiro, eu me acalmo, eu me escolho.',
-  'Não sou o que aconteceu comigo. Sou o que escolho fazer a partir disso.',
-  'Minha paz vale mais do que qualquer mensagem não respondida.',
-  'Estou aprendendo a ser o meu próprio lugar seguro.',
-  'Eu floresço no meu ritmo, e o meu ritmo é perfeito.',
-  'Hoje eu me orgulho de cada pequeno passo que dei.',
-  'Eu deixo ir com amor e abro espaço para o novo.',
+  'Merezco un amor que no me haga dudar de mi valor.',
+  'Hoy elijo mi paz antes de cualquier respuesta.',
+  'Mi valor no disminuye por la incapacidad de alguien de verlo.',
+  'Puedo extrañar a alguien y aun así elegir lo que es mejor para mí.',
+  'Cada día que me respeto es un día de victoria.',
+  'No necesito prisa. Mi corazón se está reorganizando en su momento justo.',
+  'Estoy completa, incluso cuando siento que estoy en pedazos.',
+  'Lo que es para mí encuentra el camino hacia mí sin que tenga que rogar.',
+  'Me permito florecer, incluso después del invierno.',
+  'Mi historia no termina aquí. Este es solo un nuevo capítulo.',
+  'Elijo actuar con dignidad, no con desesperación.',
+  'Soy suficiente exactamente como soy.',
+  'Hoy cuido de mí como cuidaría de quien amo.',
+  'La claridad llega cuando dejo de perseguir respuestas.',
+  'Suelto lo que no puedo controlar y abrazo lo que depende de mí.',
+  'Mi brillo no depende de la presencia de nadie.',
+  'Soy la persona más importante de mi propia vida.',
+  'Ser amable conmigo misma también es un acto de valentía.',
+  'Confío en la mujer en la que me estoy convirtiendo.',
+  'Está bien no estar bien. Está bien recomenzar tantas veces como sea necesario.',
+  'El amor propio es la base de cualquier amor que vaya a vivir.',
+  'Respiro, me calmo, me elijo.',
+  'No soy lo que me pasó. Soy lo que elijo hacer a partir de esto.',
+  'Mi paz vale más que cualquier mensaje sin responder.',
+  'Estoy aprendiendo a ser mi propio lugar seguro.',
+  'Florezco a mi ritmo, y mi ritmo es perfecto.',
+  'Hoy me enorgullezco de cada pequeño paso que di.',
+  'Dejo ir con amor y abro espacio para lo nuevo.',
 ];
 
 export interface SelfCareHabit {
@@ -38,25 +38,25 @@ export interface SelfCareHabit {
 }
 
 export const SELF_CARE_HABITS: SelfCareHabit[] = [
-  { id: 'agua', label: 'Bebi água', emoji: '💧' },
-  { id: 'sono', label: 'Dormi bem', emoji: '😴' },
-  { id: 'movimento', label: 'Mexi o corpo', emoji: '🧘‍♀️' },
-  { id: 'sem-checar', label: 'Não chequei o perfil dele', emoji: '📵' },
-  { id: 'gentileza', label: 'Fui gentil comigo', emoji: '💗' },
-  { id: 'amiga', label: 'Falei com alguém querido', emoji: '👯‍♀️' },
+  { id: 'agua', label: 'Bebí agua', emoji: '💧' },
+  { id: 'sono', label: 'Dormí bien', emoji: '😴' },
+  { id: 'movimento', label: 'Moví el cuerpo', emoji: '🧘‍♀️' },
+  { id: 'sem-checar', label: 'No revisé su perfil', emoji: '📵' },
+  { id: 'gentileza', label: 'Fui amable conmigo', emoji: '💗' },
+  { id: 'amiga', label: 'Hablé con alguien querido', emoji: '👯‍♀️' },
 ];
 
 export const NO_CONTACT_MILESTONES = [1, 3, 7, 14, 21, 30, 60, 90];
 
 export const getMilestoneMessage = (days: number): string => {
-  if (days === 0) return 'Hoje é o primeiro dia. Você já começou e isso é enorme.';
-  if (days < 3) return 'Os primeiros dias são os mais difíceis. Você está indo muito bem.';
-  if (days < 7) return 'Seu corpo já está se acostumando a não depender da resposta dele.';
-  if (days < 14) return 'Uma semana inteira se escolhendo. Que orgulho!';
-  if (days < 21) return 'Sua mente está mais clara. Você já respira diferente.';
-  if (days < 30) return 'Três semanas! Você está criando um novo hábito: você.';
-  if (days < 60) return 'Um mês de força e dignidade. Você é inspiração.';
-  return 'Você floresceu. Sua paz agora é sua casa.';
+  if (days === 0) return 'Hoy es el primer día. Ya comenzaste y eso es enorme.';
+  if (days < 3) return 'Los primeros días son los más difíciles. Lo estás haciendo muy bien.';
+  if (days < 7) return 'Tu cuerpo ya se está acostumbrando a no depender de su respuesta.';
+  if (days < 14) return 'Una semana entera eligiéndote. ¡Qué orgullo!';
+  if (days < 21) return 'Tu mente está más clara. Ya respiras de forma diferente.';
+  if (days < 30) return '¡Tres semanas! Estás creando un nuevo hábito: tú.';
+  if (days < 60) return 'Un mes de fuerza y dignidad. Eres inspiración.';
+  return 'Has florecido. Tu paz ahora es tu hogar.';
 };
 
 export interface SelfCareBadge {
@@ -70,50 +70,50 @@ export interface SelfCareBadge {
 export const SELF_CARE_BADGES: SelfCareBadge[] = [
   {
     id: 'badge-inicio',
-    title: 'Semente Plantada',
-    description: 'Iniciou a jornada no Florecer e deu o primeiro passo por si mesma.',
+    title: 'Semilla Plantada',
+    description: 'Inició la jornada en Florecer y dio el primer paso por sí misma.',
     icon: '🌱',
     color: '#E8F5ED',
   },
   {
     id: 'badge-respiro',
     title: 'Mente Serena',
-    description: 'Completou um ciclo de respiração guiada para acalmar o coração.',
+    description: 'Completó un ciclo de respiración guiada para calmar el corazón.',
     icon: '🫁',
     color: '#FFE4EE',
   },
   {
     id: 'badge-carta',
-    title: 'Pétalas ao Vento',
-    description: 'Escreveu e soltou uma carta que não precisava ser enviada.',
+    title: 'Pétalos al Viento',
+    description: 'Escribió y soltó una carta que no necesitaba ser enviada.',
     icon: '✉️',
     color: '#FFF6E6',
   },
   {
     id: 'badge-habitos',
-    title: 'Florescer Completo',
-    description: 'Cumpriu todos os 6 micro-hábitos de autocuidado em um único dia.',
+    title: 'Florecer Completo',
+    description: 'Cumplió los 6 microhábitos de autocuidado en un solo día.',
     icon: '🌸',
     color: '#FFE1EC',
   },
   {
     id: 'badge-3dias',
-    title: 'Soberania Inicial',
-    description: 'Completou 3 dias consecutivos se escolhendo sem contato.',
+    title: 'Soberanía Inicial',
+    description: 'Completó 3 días consecutivos eligiéndose sin contacto.',
     icon: '🔥',
     color: '#FDECEC',
   },
   {
     id: 'badge-7dias',
-    title: 'Mulher Magnética',
-    description: 'Uma semana inteira preservando sua dignidade e valor.',
+    title: 'Mujer Magnética',
+    description: 'Una semana entera preservando su dignidad y valor.',
     icon: '👑',
     color: '#FFF0F5',
   },
   {
     id: 'badge-guardia',
-    title: 'Guardiã da Paz',
-    description: 'Guardou 3 ou mais afirmações de força no seu coração.',
+    title: 'Guardiana de la Paz',
+    description: 'Guardó 3 o más afirmaciones de fuerza en su corazón.',
     icon: '✨',
     color: '#FCF6EA',
   },

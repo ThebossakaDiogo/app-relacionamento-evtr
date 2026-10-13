@@ -19,15 +19,15 @@ export const AppShell: React.FC<AppShellProps> = ({
   children,
 }) => {
   const navItems = [
-    { key: 'hoje' as NavTab, label: 'Início', icon: House },
+    { key: 'hoje' as NavTab, label: 'Inicio', icon: House },
     { key: 'jornada' as NavTab, label: 'Jornada', icon: Sprout },
     { key: 'apoio' as NavTab, label: 'SOS', icon: Heart },
-    { key: 'diario' as NavTab, label: 'Diário', icon: BookOpen },
-    { key: 'voce' as NavTab, label: 'Você', icon: User },
+    { key: 'diario' as NavTab, label: 'Diario', icon: BookOpen },
+    { key: 'voce' as NavTab, label: 'Tú', icon: User },
   ];
 
-  const phaseName = userProfile.relationshipContext?.phaseName || 'Plano Personalizado';
-  const initialLetter = userProfile.name ? userProfile.name.charAt(0).toUpperCase() : 'V';
+  const phaseName = userProfile.relationshipContext?.phaseName || 'Plan Personalizado';
+  const initialLetter = userProfile.name ? userProfile.name.charAt(0).toUpperCase() : 'T';
 
   return (
     <div
@@ -102,7 +102,7 @@ export const AppShell: React.FC<AppShellProps> = ({
               fontWeight: 700,
             }}
           >
-            clareza para o próximo passo
+            claridad para el próximo paso
           </small>
           {userProfile.isPurchased && (
             <div
@@ -120,7 +120,7 @@ export const AppShell: React.FC<AppShellProps> = ({
                 fontWeight: 700,
               }}
             >
-              <Sparkles size={12} /> Acesso VIP Ativo
+              <Sparkles size={12} /> Acceso VIP Activo
             </div>
           )}
         </div>
@@ -172,12 +172,12 @@ export const AppShell: React.FC<AppShellProps> = ({
               lineHeight: 1.3,
             }}
           >
-            Seu ritmo.
+            Tu ritmo.
             <br />
-            Suas escolhas.
+            Tus elecciones.
           </div>
           <small style={{ color: 'var(--text-muted)', fontSize: '11px', display: 'block', marginTop: '6px' }}>
-            Um passo consciente de cada vez.
+            Un paso consciente a la vez.
           </small>
         </div>
       </aside>
@@ -267,7 +267,7 @@ export const AppShell: React.FC<AppShellProps> = ({
                 fontSize: '14px',
                 cursor: 'pointer',
               }}
-              title="Meu perfil"
+              title="Mi perfil"
             >
               {initialLetter}
             </button>

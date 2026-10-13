@@ -24,9 +24,9 @@ export const BreathingCircleModal: React.FC<BreathingCircleModalProps> = ({
 
   // Fases e durações (4-7-8)
   const PHASE_CONFIG = {
-    inhale: { duration: 4, label: 'Inspire pelo nariz...', tip: 'Enchendo o peito de amor-próprio', scale: 1.35 },
-    hold: { duration: 7, label: 'Segure o ar...', tip: 'Sentindo sua presença e dignidade', scale: 1.35 },
-    exhale: { duration: 8, label: 'Expire devagar...', tip: 'Soltando a pressa e a angústia', scale: 1.0 },
+    inhale: { duration: 4, label: 'Inspira por la nariz...', tip: 'Llenando el pecho de amor propio', scale: 1.35 },
+    hold: { duration: 7, label: 'Sostén el aire...', tip: 'Sintiendo tu presencia y dignidad', scale: 1.35 },
+    exhale: { duration: 8, label: 'Exhala despacio...', tip: 'Soltando la prisa y la angustia', scale: 1.0 },
   };
 
   const clearTimer = () => {
@@ -75,7 +75,7 @@ export const BreathingCircleModal: React.FC<BreathingCircleModalProps> = ({
             if (currentCycle >= totalCycles) {
               setPhase('done');
               StorageService.incrementSelfCareStat('breathSessions', 1);
-              onShowToast('Sessão concluída! Seu coração está mais sereno. 🌸');
+              onShowToast('¡Sesión completada! Tu corazón está más sereno. 🌸');
               return 0;
             } else {
               setCurrentCycle((c) => c + 1);
@@ -101,11 +101,11 @@ export const BreathingCircleModal: React.FC<BreathingCircleModalProps> = ({
         handleStop();
         onClose();
       }}
-      title="Respiração da Mulher Serena 🌸"
+      title="Respiración de la Mujer Serena 🌸"
     >
       <div style={{ textAlign: 'center', padding: '10px 0 20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <p style={{ color: 'var(--text-muted)', fontSize: '14px', maxWidth: '340px', margin: '0 auto 28px', lineHeight: 1.5 }}>
-          O método 4-7-8 desacelera os batimentos, desliga o impulso de mandar mensagem e devolve o controle para você.
+          El método 4-7-8 desacelera los latidos, apaga el impulso de enviar mensajes y te devuelve el control a ti.
         </p>
 
         {phase !== 'done' ? (
@@ -156,12 +156,12 @@ export const BreathingCircleModal: React.FC<BreathingCircleModalProps> = ({
                   </div>
                   <div style={{ fontSize: '13px', opacity: 0.95, marginTop: '4px', textTransform: 'uppercase', letterSpacing: '1px' }}>
                     {phase === 'idle'
-                      ? 'Pronta?'
+                      ? '¿Lista?'
                       : phase === 'inhale'
-                      ? 'Inspire'
+                      ? 'Inhala'
                       : phase === 'hold'
-                      ? 'Segure'
-                      : 'Expire'}
+                      ? 'Sostén'
+                      : 'Exhala'}
                   </div>
                 </div>
               </div>
@@ -171,12 +171,12 @@ export const BreathingCircleModal: React.FC<BreathingCircleModalProps> = ({
             <div style={{ minHeight: '50px', marginBottom: '24px' }}>
               <h4 style={{ fontSize: '18px', color: 'var(--primary)', margin: '0 0 4px', fontFamily: 'var(--font-brand)' }}>
                 {phase === 'idle'
-                  ? 'Reserve 1 minuto só seu'
+                  ? 'Reserva 1 minuto solo tuyo'
                   : PHASE_CONFIG[phase as 'inhale' | 'hold' | 'exhale']?.label}
               </h4>
               <p style={{ fontSize: '13px', color: 'var(--text-muted)', margin: 0 }}>
                 {phase === 'idle'
-                  ? 'Coloque a mão no peito e sinta sua respiração antes de iniciar.'
+                  ? 'Pon la mano en el pecho y siente tu respiración antes de iniciar.'
                   : PHASE_CONFIG[phase as 'inhale' | 'hold' | 'exhale']?.tip}
               </p>
             </div>
@@ -188,7 +188,7 @@ export const BreathingCircleModal: React.FC<BreathingCircleModalProps> = ({
                 onClick={startBreathing}
                 style={{ padding: '14px 32px', fontSize: '16px', fontWeight: 700 }}
               >
-                <Play size={18} /> Começar Respiração
+                <Play size={18} /> Comenzar Respiración
               </button>
             ) : (
               <button
@@ -221,10 +221,10 @@ export const BreathingCircleModal: React.FC<BreathingCircleModalProps> = ({
             </div>
 
             <h3 style={{ fontFamily: 'var(--font-brand)', fontSize: '24px', color: 'var(--primary)', margin: '0 0 8px' }}>
-              Seu centro foi restabelecido
+              Tu centro ha sido restablecido
             </h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '14px', lineHeight: 1.5, marginBottom: '24px', maxWidth: '320px', margin: '0 auto 24px' }}>
-              Você acabou de ensinar ao seu corpo que você não precisa correr atrás de nada. A sua calma é o seu maior poder.
+              Acabas de enseñarle a tu cuerpo que no necesitas correr detrás de nada. Tu calma es tu mayor poder.
             </p>
 
             <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
@@ -238,7 +238,7 @@ export const BreathingCircleModal: React.FC<BreathingCircleModalProps> = ({
                 className="btn btn-primary"
                 onClick={onClose}
               >
-                Voltar serena <Sparkles size={15} />
+                Volver serena <Sparkles size={15} />
               </button>
             </div>
           </div>

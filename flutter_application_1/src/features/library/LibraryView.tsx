@@ -42,7 +42,7 @@ export const LibraryView: React.FC<LibraryViewProps> = ({ onShowToast }) => {
     e?.stopPropagation();
     const isNowFav = StorageService.toggleFavorite(id);
     setFavorites(StorageService.getFavorites());
-    onShowToast(isNowFav ? 'Adicionado aos seus favoritos.' : 'Removido dos favoritos.');
+    onShowToast(isNowFav ? 'Añadido a tus favoritos.' : 'Eliminado de favoritos.');
   };
 
   const handleOpenItem = (item: LibraryItem) => {
@@ -99,12 +99,12 @@ export const LibraryView: React.FC<LibraryViewProps> = ({ onShowToast }) => {
     <div className="animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
       {/* Intro */}
       <div>
-        <span className="eyebrow">PEQUENAS PAUSAS, NOVAS PERSPECTIVAS</span>
+        <span className="eyebrow">PEQUEÑAS PAUSAS, NUEVAS PERSPECTIVAS</span>
         <h1 style={{ margin: '6px 0 8px', fontSize: '32px' }}>
           Biblioteca
         </h1>
         <p style={{ fontSize: '15px' }}>
-          Conteúdos para ler, ouvir e praticar no seu próprio ritmo, sem julgamentos.
+          Contenidos para leer, escuchar y practicar a tu propio ritmo, sin juicios.
         </p>
       </div>
 
@@ -123,7 +123,7 @@ export const LibraryView: React.FC<LibraryViewProps> = ({ onShowToast }) => {
           />
           <input
             type="text"
-            placeholder="Buscar por tema (saudade, silêncio, limites, reconciliação)..."
+            placeholder="Buscar por tema (nostalgia, silencio, límites, reconciliación)..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             style={{ paddingLeft: '42px' }}
@@ -132,9 +132,9 @@ export const LibraryView: React.FC<LibraryViewProps> = ({ onShowToast }) => {
 
         <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '4px' }}>
           {[
-            { key: 'all', label: 'Tudo' },
-            { key: 'leitura', label: 'Leituras (12)' },
-            { key: 'audio', label: 'Áudios Guiados (8)' },
+            { key: 'all', label: 'Todo' },
+            { key: 'leitura', label: 'Lecturas (12)' },
+            { key: 'audio', label: 'Audios Guiados (8)' },
             { key: 'checklist', label: 'Checklists (10)' },
           ].map((cat) => (
             <button
@@ -202,7 +202,7 @@ export const LibraryView: React.FC<LibraryViewProps> = ({ onShowToast }) => {
                       : 'var(--primary)',
                   }}
                 >
-                  {isAudio ? 'Áudio Guiado' : isChecklist ? 'Checklist' : 'Artigo'} · {item.duration}
+                  {isAudio ? 'Audio Guiado' : isChecklist ? 'Checklist' : 'Artículo'} · {item.duration}
                 </span>
 
                 <button
@@ -214,7 +214,7 @@ export const LibraryView: React.FC<LibraryViewProps> = ({ onShowToast }) => {
                     cursor: 'pointer',
                     padding: '4px',
                   }}
-                  title={isFav ? 'Remover dos favoritos' : 'Favoritar'}
+                  title={isFav ? 'Eliminar de favoritos' : 'Añadir a favoritos'}
                 >
                   {isFav ? <BookmarkCheck size={18} /> : <Bookmark size={18} />}
                 </button>
@@ -233,7 +233,7 @@ export const LibraryView: React.FC<LibraryViewProps> = ({ onShowToast }) => {
                   {item.category}
                 </span>
                 <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--primary)' }}>
-                  {isAudio ? 'Ouvir roteiro →' : isChecklist ? 'Preencher →' : 'Ler artigo →'}
+                  {isAudio ? 'Escuchar guión →' : isChecklist ? 'Completar →' : 'Leer artículo →'}
                 </span>
               </div>
             </div>
@@ -244,7 +244,7 @@ export const LibraryView: React.FC<LibraryViewProps> = ({ onShowToast }) => {
       {filteredItems.length === 0 && (
         <div className="card" style={{ textAlign: 'center', padding: '40px 20px' }}>
           <p style={{ margin: 0, fontSize: '15px' }}>
-            Nenhum conteúdo encontrado para os termos pesquisados.
+            No se encontró ningún contenido para los términos buscados.
           </p>
         </div>
       )}
@@ -275,7 +275,7 @@ export const LibraryView: React.FC<LibraryViewProps> = ({ onShowToast }) => {
               >
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', color: 'var(--primary)', marginBottom: '8px' }}>
                   <Volume2 size={24} />
-                  <span style={{ fontWeight: 700, fontSize: '14px' }}>ÁUDIO GUIADO</span>
+                  <span style={{ fontWeight: 700, fontSize: '14px' }}>AUDIO GUIADO</span>
                 </div>
 
                 {/* Progress bar */}
@@ -361,7 +361,7 @@ export const LibraryView: React.FC<LibraryViewProps> = ({ onShowToast }) => {
               {/* Transcrição integral */}
               <div>
                 <span className="eyebrow" style={{ display: 'block', marginBottom: '8px' }}>
-                  TRANSCRIÇÃO COMPLETA DO ÁUDIO
+                  TRANSCRIPCIÓN COMPLETA DEL AUDIO
                 </span>
                 <div
                   style={{
@@ -431,7 +431,7 @@ export const LibraryView: React.FC<LibraryViewProps> = ({ onShowToast }) => {
 
               <div style={{ marginTop: '24px', textAlign: 'center' }}>
                 <span className="pill pill-gold">
-                  {checklistCompletedItems.length} de {selectedItem.checklistItems?.length || 0} checados
+                  {checklistCompletedItems.length} de {selectedItem.checklistItems?.length || 0} completados
                 </span>
               </div>
             </div>

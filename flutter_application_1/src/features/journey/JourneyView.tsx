@@ -28,8 +28,8 @@ export const JourneyView: React.FC<JourneyViewProps> = ({
   const [expandedPhases, setExpandedPhases] = useState<Record<string, boolean>>({
     '01. Estabilizar': true,
     '02. Reposicionar': true,
-    '03. Contato com intenção': true,
-    '04. Reciprocidade e decisão': true,
+    '03. Contacto con intención': true,
+    '04. Reciprocidad y decisión': true,
   });
 
   const togglePhase = (phaseName: string) => {
@@ -39,22 +39,22 @@ export const JourneyView: React.FC<JourneyViewProps> = ({
   const phases = [
     {
       name: '01. Estabilizar',
-      subtitle: 'Reduzir decisões automáticas e organizar os fatos',
+      subtitle: 'Reducir decisiones automáticas y organizar los hechos',
       days: JOURNEY_DAYS.slice(0, 7),
     },
     {
       name: '02. Reposicionar',
-      subtitle: 'Retomar rotina, autonomia e observar padrões reais',
+      subtitle: 'Retomar rutina, autonomía y observar patrones reales',
       days: JOURNEY_DAYS.slice(7, 14),
     },
     {
-      name: '03. Contato com intenção',
-      subtitle: 'Decidir se, por que e como manter a comunicação',
+      name: '03. Contacto con intención',
+      subtitle: 'Decidir si, por qué y cómo mantener la comunicación',
       days: JOURNEY_DAYS.slice(14, 21),
     },
     {
-      name: '04. Reciprocidade e decisão',
-      subtitle: 'Avaliar consistência, limites, reconciliação ou continuidade',
+      name: '04. Reciprocidad y decisión',
+      subtitle: 'Evaluar consistencia, límites, reconciliación o continuidad',
       days: JOURNEY_DAYS.slice(21, 28),
     },
   ];
@@ -66,12 +66,12 @@ export const JourneyView: React.FC<JourneyViewProps> = ({
     <div className="animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
       {/* Intro */}
       <div>
-        <span className="eyebrow">SUA JORNADA</span>
+        <span className="eyebrow">TU JORNADA</span>
         <h1 style={{ margin: '6px 0 8px', fontSize: '32px' }}>
-          Seu plano de 28 dias.
+          Tu plan de 28 días.
         </h1>
         <p style={{ fontSize: '15px' }}>
-          Quatro fases estruturadas para guiar decisões, comunicação e reciprocidade no seu próprio ritmo.
+          Cuatro fases estructuradas para guiar decisiones, comunicación y reciprocidad a tu propio ritmo.
         </p>
       </div>
 
@@ -87,14 +87,14 @@ export const JourneyView: React.FC<JourneyViewProps> = ({
       >
         <div>
           <strong style={{ fontSize: '16px', display: 'block', color: 'var(--text)' }}>
-            Você concluiu {totalCompleted} de 28 passos
+            Has completado {totalCompleted} de 28 pasos
           </strong>
           <span style={{ fontSize: '13px', color: 'var(--text-muted)' }}>
-            {progressPercent}% da sua jornada percorrida
+            {progressPercent}% de tu viaje recorrido
           </span>
         </div>
         <div style={{ textAlign: 'right' }}>
-          <span className="pill pill-gold">{progressPercent}% Concluído</span>
+          <span className="pill pill-gold">{progressPercent}% Completado</span>
         </div>
       </div>
 
@@ -229,8 +229,8 @@ export const JourneyView: React.FC<JourneyViewProps> = ({
                             {day.title}
                           </strong>
                           <small style={{ color: 'var(--text-muted)', fontSize: '12px' }}>
-                            Dia {day.dayNumber} · {day.durationMinutes} min de leitura
-                            {isCurrent ? ' · (Seu dia atual)' : ''}
+                            Día {day.dayNumber} · {day.durationMinutes} min de lectura
+                            {isCurrent ? ' · (Tu día actual)' : ''}
                           </small>
                         </div>
 

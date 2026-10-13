@@ -1,520 +1,520 @@
 import { JourneyDay } from '../types';
 
 export const JOURNEY_DAYS: JourneyDay[] = [
-  // FASE 1: ESTABILIZAR (Dias 1-7)
+  // FASE 1: ESTABILIZAR (Días 1-7)
   {
     dayNumber: 1,
     phase: '01. Estabilizar',
     phaseKey: 'stabilize',
-    title: 'O que aconteceu de fato',
-    objective: 'Separar acontecimentos observáveis das interpretações que aparecem após o término.',
+    title: 'Lo que sucedió de hecho',
+    objective: 'Separar los acontecimientos observables de las interpretaciones que surgen tras la ruptura.',
     durationMinutes: 4,
-    bodyText: `Quando uma relação muda, é comum que fatos e significados se misturem. "Ele não respondeu desde ontem" é um fato observável. "Ele não respondeu porque já não se importa comigo" é uma interpretação.
+    bodyText: `Cuando una relación cambia, es común que los hechos y los significados se mezclen. "Él no respondió desde ayer" es un hecho observable. "Él no respondió porque ya no le importo" es una interpretación.
 
-A interpretação pode até parecer convincente, mas você ainda não tem acesso direto à intenção de outra pessoa. Quando tratamos uma hipótese como certeza absoluta, ela começa a ditar comportamentos impulsivos: mandar outra mensagem, apagar conversas, bloquear, desbloquear ou vasculhar redes sociais.
+La interpretación puede parecer convincente, pero aún no tienes acceso directo a la intención de otra persona. Cuando tratamos una hipótesis como una certeza absoluta, empieza a dictar conductas impulsivas: mandar otro mensaje, borrar conversaciones, bloquear, desbloquear o revisar redes sociales.
 
-Hoje, não precisamos decidir o futuro da relação. O primeiro passo é apenas organizar o que realmente sabemos. Pense na última interação: o que uma câmera de vídeo registraria? Quem falou? O que foi dito com exatidão? Houve silêncio? Guarde apenas o que pode ser comprovado.`,
-    example: 'Fato: Ele disse que precisava de alguns dias e não enviou mensagens desde então.\nInterpretação: Ele já me esqueceu e não se importa mais.',
-    exercise: 'Complete mentalmente ou no seu caderno:\n1. O que aconteceu foi...\n2. O significado que minha mente deu foi...\n3. O que eu ainda não posso provar é...',
-    action: 'Registre um acontecimento recente na Linha do Tempo usando apenas fatos observáveis na primeira frase.',
-    reflectionPrompt: 'Qual interpretação ou medo está exercendo mais pressão nas minhas decisões hoje?',
-    recommendedTool: 'Fato ou interpretação?',
+Hoy no necesitamos decidir el futuro de la relación. El primer paso es solo organizar lo que realmente sabemos. Piensa en la última interacción: ¿qué registraría una cámara de video? ¿Quién habló? ¿Qué se dijo con exactitud? ¿Hubo silencio? Quédate solo con lo que se puede comprobar.`,
+    example: 'Hecho: Dijo que necesitaba unos días y no ha enviado mensajes desde entonces.\nInterpretación: Ya me olvidó y ya no le importo.',
+    exercise: 'Completa mentalmente o en tu libreta:\n1. Lo que sucedió fue...\n2. El significado que mi mente le dio fue...\n3. Lo que aún no puedo demostrar es...',
+    action: 'Registra un acontecimiento reciente en la Línea de Tiempo usando solo hechos observables en la primera frase.',
+    reflectionPrompt: '¿Qué interpretación o miedo está ejerciendo más presión sobre mis decisiones hoy?',
+    recommendedTool: '¿Hecho o interpretación?',
   },
   {
     dayNumber: 2,
     phase: '01. Estabilizar',
     phaseKey: 'stabilize',
-    title: 'A vontade de mandar mensagem',
-    objective: 'Reconhecer o impulso como uma resposta de alívio temporário, e não como uma decisão madura.',
+    title: 'El impulso de mandar mensaje',
+    objective: 'Reconocer el impulso como una respuesta de alivio temporal, y no como una decisión madura.',
     durationMinutes: 4,
-    bodyText: `A urgência de mandar mensagem raramente surge de um pensamento racional e planejado. Quase sempre, ela vem de um pico de angústia: o silêncio dói, a incerteza parece insuportável e seu cérebro busca um alívio imediato para saber se a outra pessoa ainda existe para você.
+    bodyText: `La urgencia de enviar un mensaje rara vez proviene de un pensamiento racional y planificado. Casi siempre nace de un pico de angustia: el silencio duele, la incertidumbre parece insoportable y tu cerebro busca un alivio inmediato para saber si la otra persona aún existe para ti.
 
-Mandar uma mensagem no impulso pode acalmar a ansiedade por dez minutos, mas logo em seguida gera um novo ciclo de agonia: "Por que ele visualizou e não respondeu?", "Será que fui boba?".
+Enviar un mensaje por impulso puede calmar la ansiedad durante diez minutos, pero de inmediato genera un nuevo ciclo de angustia: "¿Por qué lo vio y no respondió?", "¿Habré sido tonta?".
 
-A vontade de falar não é uma ordem de execução. Você pode sentir saudade, vontade e dor sem precisar transformar isso em um envio no WhatsApp agora.`,
-    example: 'Você sente uma pontada no peito às 22h e digita: "Podemos conversar rápido?". Ao enviar, a angústia não some; ela se multiplica enquanto espera os dois risquinhos ficarem azuis.',
-    exercise: 'Quando o impulso vier, faça uma pausa de 90 segundos. Respire fundo três vezes e beba um copo de água antes de abrir o aplicativo de mensagens.',
-    action: 'Abra a ferramenta "Quero falar com ele agora" para descarregar o que sente sem enviar.',
-    reflectionPrompt: 'Se eu enviar essa mensagem agora, estou buscando resolver algo ou apenas aliviar minha angústia momentânea?',
-    recommendedTool: 'Quero falar com ele agora',
+El deseo de hablar no es una orden de ejecución. Puedes sentir nostalgia, ganas y dolor sin tener que convertir eso en un mensaje de WhatsApp ahora.`,
+    example: 'Sientes una opresión en el pecho a las 22:00 y escribes: "¿Podemos hablar rápido?". Al enviarlo, la angustia no desaparece; se multiplica mientras esperas que las dos tildes se pongan azules.',
+    exercise: 'Cuando llegue el impulso, haz una pausa de 90 segundos. Respira hondo tres veces y bebe un vaso de agua antes de abrir la aplicación de mensajes.',
+    action: 'Abre la herramienta "Quiero hablar con él ahora" para desahogar lo que sientes sin enviar nada.',
+    reflectionPrompt: 'Si envío este mensaje ahora, ¿estoy buscando resolver algo o solo aliviar mi angustia momentánea?',
+    recommendedTool: 'Quiero hablar con él ahora',
   },
   {
     dayNumber: 3,
     phase: '01. Estabilizar',
     phaseKey: 'stabilize',
-    title: 'O telefone não pode decidir seu dia',
-    objective: 'Reduzir a checagem automática e recuperar o controle da sua atenção.',
+    title: 'El teléfono no puede decidir tu día',
+    objective: 'Reducir la revisión automática y recuperar el control de tu atención.',
     durationMinutes: 3,
-    bodyText: `Checar o status online, olhar a foto de perfil, ver se o story foi visualizado. Esse comportamento é compreensível: seu cérebro está tentando monitorar uma ameaça de perda. 
+    bodyText: `Revisar la última conexión, mirar la foto de perfil, ver si miró la historia. Este comportamiento es comprensible: tu cerebro está intentando monitorear una amenaza de pérdida.
 
-No entanto, nenhuma dessas pequenas pistas virtuais responde à pergunta fundamental: se essa relação tem futuro com respeito e reciprocidade. 
+Sin embargo, ninguna de estas pequeñas pistas virtuales responde a la pregunta fundamental: si esta relación tiene futuro con respeto y reciprocidad.
 
-Cada checagem alimenta o ciclo de ansiedade. Ao decidir conscientemente deixar o telefone em outro cômodo durante uma refeição ou durante um banho, você começa a retomar o comando do seu próprio espaço.`,
-    example: 'Atualizar a tela a cada 5 minutos esperando uma notificação que não chega, transformando sua manhã em uma vigília exaustiva.',
-    exercise: 'Escolha um bloco de 1 hora no dia de hoje para colocar o celular no silencioso e fora do seu campo de visão.',
-    action: 'Defina limites digitais simples para a noite de hoje: não dormir com o celular ao lado do travesseiro.',
-    reflectionPrompt: 'Quanto do meu dia hoje foi consumido esperando por um sinal da outra pessoa?',
-    recommendedTool: 'Checklist: Limites Digitais',
+Cada revisión alimenta el ciclo de ansiedad. Al decidir conscientemente dejar el teléfono en otra habitación durante una comida o mientras te bañas, comienzas a recuperar el control de tu propio espacio.`,
+    example: 'Actualizar la pantalla cada 5 minutos esperando una notificación que no llega, convirtiendo tu mañana en una vigilia agotadora.',
+    exercise: 'Elige un bloque de 1 hora hoy para poner el celular en silencio y fuera de tu campo visual.',
+    action: 'Define límites digitales simples para esta noche: no dormir con el celular junto a la almohada.',
+    reflectionPrompt: '¿Cuánto de mi día de hoy se consumió esperando una señal de la otra persona?',
+    recommendedTool: 'Checklist: Límites Digitales',
   },
   {
     dayNumber: 4,
     phase: '01. Estabilizar',
     phaseKey: 'stabilize',
-    title: 'O que você espera receber',
-    objective: 'Identificar a expectativa oculta por trás de qualquer tentativa de contato.',
+    title: 'Lo que esperas recibir',
+    objective: 'Identificar la expectativa oculta detrás de cualquier intento de contacto.',
     durationMinutes: 5,
-    bodyText: `Geralmente dizemos a nós mesmas: "Vou mandar só um 'oi' casual para saber se ele está bem". Mas, no fundo, a expectativa é muito maior: esperamos que ele responda dizendo que se arrependeu, que não para de pensar em nós e que quer voltar correndo.
+    bodyText: `Solemos decirnos: "Solo voy a mandar un 'hola' casual para saber si está bien". Pero, en el fondo, la expectativa es mucho mayor: esperamos que responda diciendo que se arrepintió, que no deja de pensar en nosotras y que quiere volver de inmediato.
 
-Quando a resposta vem curta ou seca ("Tudo bem por aqui, e você?"), o impacto emocional é devastador.
+Cuando la respuesta es breve o fría ("Todo bien por aquí, ¿y tú?"), el impacto emocional es devastador.
 
-Antes de pensar no que falar, é indispensável encarar a resposta que você está secretamente encomendando. Se você não está preparada para uma resposta fria ou para o silêncio, então o contato hoje é um risco alto demais para a sua estabilidade.`,
-    example: 'Enviar uma foto de uma lembrança antiga esperando uma declaração apaixonada, e receber apenas um emoji de joinha.',
-    exercise: "Pergunte-se: 'Se eu receber apenas ok ou se ele demorar 24 horas para responder, como ficarei?'. Se a resposta for desespero, espere.",
-    action: 'Faça o teste na ferramenta "Devo mandar mensagem?" para avaliar sua prontidão.',
-    reflectionPrompt: 'Estou preparada para lidar com qualquer resposta, inclusive com a ausência de resposta?',
-    recommendedTool: 'Devo mandar mensagem?',
+Antes de pensar en qué decir, es indispensable encarar la respuesta que estás pidiendo en secreto. Si no estás preparada para una respuesta fría o para el silencio, el contacto hoy es un riesgo demasiado alto para tu estabilidad.`,
+    example: 'Enviar una foto de un recuerdo antiguo esperando una declaración apasionada y recibir solo un emoji con el pulgar arriba.',
+    exercise: "Pregúntate: 'Si recibo solo un ok o si tarda 24 horas en responder, ¿cómo me sentiré?'. Si la respuesta es desesperación, espera.",
+    action: 'Haz el test en la herramienta "¿Debo enviar mensaje?" para evaluar tu disposición.',
+    reflectionPrompt: '¿Estoy preparada para lidiar con cualquier respuesta, incluida la ausencia de respuesta?',
+    recommendedTool: '¿Debo enviar mensaje?',
   },
   {
     dayNumber: 5,
     phase: '01. Estabilizar',
     phaseKey: 'stabilize',
-    title: 'Escrever sem enviar',
-    objective: 'Criar espaço emocional e verbalizar sentimentos com total liberdade e zero risco.',
+    title: 'Escribir sin enviar',
+    objective: 'Crear espacio emocional y verbalizar sentimientos con total libertad y cero riesgo.',
     durationMinutes: 4,
-    bodyText: `Colocar os pensamentos no papel ou em um bloco de notas privado é uma das práticas mais terapêuticas que existem. Quando os sentimentos ficam apenas na cabeça, eles parecem um redemoinho gigante. Ao escrever, você dá contorno, peso e clareza ao que sente.
+    bodyText: `Poner los pensamientos en papel o en un bloc de notas privado es una de las prácticas más terapéuticas que existen. Cuando los sentimientos se quedan solo en la cabeza, parecen un torbellino gigante. Al escribir, les das contorno, peso y claridad.
 
-O segredo é escrever sem nenhum filtro: raiva, saudade, frustração, amor, mágoa. E ter a certeza inabalável de que aquilo NÃO será enviado.
+El secreto es escribir sin ningún filtro: rabia, nostalgia, frustración, amor, dolor. Y tener la certeza inquebrantable de que eso NO se enviará.
 
-Essa escrita cria um amortecedor entre a sua emoção e a sua ação. Você atende à necessidade de desabafar sem se expor e sem gerar ruído desnecessário com a outra pessoa.`,
-    example: 'Escrever duas páginas de desabafo no seu diário privado e, uma hora depois, perceber que a vontade desesperada de mandar aquilo já diminuiu 80%.',
-    exercise: 'Abra seu diário privado no app e responda: "Se eu pudesse dizer qualquer coisa sem consequências agora, o que eu diria?".',
-    action: 'Escreva um registro no seu Diário Privado hoje.',
-    reflectionPrompt: 'O que eu gostaria que ele entendesse que, talvez, ele ainda não tenha capacidade de compreender?',
-    recommendedTool: 'Meu Diário',
+Esta escritura crea un colchón entre tu emoción y tu acción. Atiendes la necesidad de desahogarte sin exponerte y sin generar ruido innecesario con la otra persona.`,
+    example: 'Escribir dos páginas de desahogo en tu diario privado y, una hora después, notar que las ganas desesperadas de mandarlo disminuyeron un 80%.',
+    exercise: 'Abre tu diario privado en la app y responde: "Si pudiera decir cualquier cosa sin consecuencias ahora, ¿qué diría?".',
+    action: 'Escribe una entrada en tu Diario Privado hoy.',
+    reflectionPrompt: '¿Qué me gustaría que él entendiera que, tal vez, aún no tiene la capacidad de comprender?',
+    recommendedTool: 'Mi Diario',
   },
   {
     dayNumber: 6,
     phase: '01. Estabilizar',
     phaseKey: 'stabilize',
-    title: 'Sua rotina ainda existe',
-    objective: 'Reconectar-se com uma ação pequena do cotidiano que devolve a sensação de chão.',
+    title: 'Tu rutina aún existe',
+    objective: 'Reconectar con una acción pequeña de lo cotidiano que devuelva la sensación de estabilidad.',
     durationMinutes: 4,
-    bodyText: `No término, temos a impressão de que a nossa vida parou, enquanto o mundo continua girando. É normal perder o apetite, a vontade de se cuidar ou o foco no trabalho.
+    bodyText: `En una ruptura tenemos la impresión de que nuestra vida se detuvo, mientras el mundo sigue girando. Es normal perder el apetito, las ganas de arreglarse o la concentración en el trabajo.
 
-Você não precisa fingir que está tudo ótimo e nem tentar resolver a sua vida inteira hoje. A cura não vem de um grande salto heroico, mas da soma de pequenos gestos de dignidade cotidiana: uma caminhada curta, um copo d'água bem tomado, uma refeição feita com carinho, arrumar a própria cama.
+No necesitas fingir que todo está perfecto ni intentar resolver toda tu vida hoy. La sanación no proviene de un gran salto heroico, sino de la suma de pequeños gestos de dignidad diaria: una caminata corta, un vaso de agua tomado con calma, una comida preparada con cariño, tender tu cama.
 
-Cada vez que você cuida de si mesma, você envia um sinal para o seu sistema nervoso: "Eu continuo aqui por mim".`,
-    example: 'Mesmo sem vontade de sair, preparar um café da manhã gostoso e saborear sem mexer no celular durante 15 minutos.',
-    exercise: 'Escolha uma única tarefa simples do seu dia que você estava adiando e cumpra-a nas próximas horas com calma.',
-    action: 'Registre no check-in como você está cuidando da sua rotina hoje.',
-    reflectionPrompt: 'Qual pequena coisa posso fazer por mim mesma hoje que nada tem a ver com meu ex?',
-    recommendedTool: 'Check-in Diário',
+Cada vez que cuidas de ti misma, le envías una señal a tu sistema nervioso: "Sigo aquí para mí".`,
+    example: 'Incluso sin ganas de salir, preparar un desayuno rico y disfrutarlo sin tocar el celular durante 15 minutos.',
+    exercise: 'Elige una sola tarea simple de tu día que hayas estado posponiendo y cúmplela en las próximas horas con tranquilidad.',
+    action: 'Registra en el check-in cómo estás cuidando tu rutina hoy.',
+    reflectionPrompt: '¿Qué pequeña cosa puedo hacer por mí misma hoy que no tenga nada que ver con mi ex?',
+    recommendedTool: 'Check-in Diario',
   },
   {
     dayNumber: 7,
     phase: '01. Estabilizar',
     phaseKey: 'stabilize',
-    title: 'Revisão da primeira semana',
-    objective: 'Reconhecer seus avanços, observar padrões de gatilho e fechar a fase de estabilização.',
+    title: 'Revisión de la primera semana',
+    objective: 'Reconocer tus avances, observar detonantes y cerrar la fase de estabilización.',
     durationMinutes: 5,
-    bodyText: `Parabéns por completar seus primeiros 7 passos. Você sobreviveu aos dias em que a tempestade emocional costuma ser mais intensa.
+    bodyText: `¡Felicitaciones por completar tus primeros 7 pasos! Has sobrevivido a los días en que la tormenta emocional suele ser más intensa.
 
-Olhe para trás com gentileza: você conteve impulsos, separou fatos de fantasias mentais e começou a dar espaço para si mesma. Não foi fácil, e você não precisa ter sido perfeita.
+Mira hacia atrás con amabilidad: contuviste impulsos, separaste hechos de fantasías mentales y empezaste a darte espacio. No fue fácil, y no tenías que haber sido perfecta.
 
-Agora começamos uma nova etapa. Saímos da urgência e entramos na fase de reposicionamento: é hora de olhar para a reciprocidade, para os limites e para a sua autonomia de longo prazo.`,
-    example: 'Perceber que, embora ainda doa, você já não se sente tão desesperada para mandar mensagem quanto no primeiro dia.',
-    exercise: 'Revise suas anotações no diário ou na linha do tempo e note um momento em que você conseguiu respirar antes de agir.',
-    action: 'Comemore internamente ter chegado ao fim da Fase 1 e prepare-se para reposicionar sua postura.',
-    reflectionPrompt: 'O que foi mais desafiador nesta semana e qual força descobri em mim que eu não lembrava que tinha?',
-    recommendedTool: 'Minha Linha do Tempo',
+Ahora comenzamos una nueva etapa. Salimos de la urgencia y entramos en la fase de reposicionamiento: es momento de mirar la reciprocidad, los límites y tu autonomía a largo plazo.`,
+    example: 'Notar que, aunque todavía duele, ya no te sientes tan desesperada por mandar mensaje como en el primer día.',
+    exercise: 'Revisa tus notas en el diario o en la línea de tiempo y recuerda un momento en que lograste respirar antes de actuar.',
+    action: 'Celebra internamente haber llegado al final de la Fase 1 y prepárate para reposicionar tu postura.',
+    reflectionPrompt: '¿Qué fue lo más desafiante de esta semana y qué fortaleza descubrí en mí que no recordaba tener?',
+    recommendedTool: 'Mi Línea de Tiempo',
   },
 
-  // FASE 2: REPOSICIONAR (Dias 8-14)
+  // FASE 2: REPOSICIONAR (Días 8-14)
   {
     dayNumber: 8,
     phase: '02. Reposicionar',
     phaseKey: 'reposition',
-    title: 'Sua vida não precisa ficar em espera',
-    objective: 'Retomar projetos e prioridades pessoais sem aguardar uma definição do outro.',
+    title: 'Tu vida no tiene que quedarse en pausa',
+    objective: 'Retomar proyectos y prioridades personales sin esperar una definición del otro.',
     durationMinutes: 4,
-    bodyText: `Ficar "em espera" é paralisar decisões importantes na esperança de que uma mensagem ou atitude dele mude o rumo da sua vida. Você adia planos de viagem, cursos, encontros com amigas ou novas metas de trabalho porque "e se ele me procurar no fim de semana?".
+    bodyText: `Quedarse "en pausa" es paralizar decisiones importantes con la esperanza de que un mensaje o actitud de él cambie el rumbo de tu vida. Pospones viajes, cursos, salidas con amigas o metas de trabajo pensando "¿y si me busca el fin de semana?".
 
-Viver em compasso de espera entrega o volante da sua vida para outra pessoa. 
+Vivir en espera le entrega el volante de tu vida a otra persona.
 
-Você não precisa tomar decisões definitivas sobre o término hoje, mas precisa continuar vivendo o seu presente com intensidade e respeito por você.`,
-    example: 'Recusar convites de amigos no sábado à noite na esperança secreta de que o ex apareça com uma mensagem de última hora.',
-    exercise: 'Marque um compromisso ou atividade prazerosa para os próximos dias e mantenha-o, aconteça o que acontecer no telefone.',
-    action: 'Abra a Biblioteca e leia o artigo "Voltar para a rotina".',
-    reflectionPrompt: 'O que eu deixei em segundo plano nas últimas semanas que posso resgatar hoje?',
-    recommendedTool: 'Biblioteca de Leituras',
+No necesitas tomar decisiones definitivas sobre la ruptura hoy, pero sí necesitas seguir viviendo tu presente con intensidad y respeto hacia ti misma.`,
+    example: 'Rechazar invitaciones de amigos el sábado por la noche con la esperanza secreta de que aparezca con un mensaje de última hora.',
+    exercise: 'Agenda un compromiso o actividad agradable para los próximos días y mantenlo, pase lo que pase en el teléfono.',
+    action: 'Abre la Biblioteca y lee el artículo "Volver a tu rutina".',
+    reflectionPrompt: '¿Qué dejé en segundo plano en las últimas semanas que puedo rescatar hoy?',
+    recommendedTool: 'Biblioteca de Lecturas',
   },
   {
     dayNumber: 9,
     phase: '02. Reposicionar',
     phaseKey: 'reposition',
-    title: 'Fato ou interpretação nos pequenos sinais',
-    objective: 'Aprender a não decifrar curtidas, stories e indiretas como declarações de intenção.',
+    title: 'Hecho o interpretación en las pequeñas señales',
+    objective: 'Aprender a no descifrar likes, historias e indirectas como declaraciones de intención.',
     durationMinutes: 5,
-    bodyText: `Ele postou uma música triste? Visualizou seu story em 2 minutos? Curtiu uma foto antiga?
+    bodyText: `¿Publicó una canción triste? ¿Vio tu historia en 2 minutos? ¿Le dio like a una foto antigua?
 
-No pós-término, qualquer movimento virtual parece um código secreto pronto para ser decifrado. Nós passamos horas analisando detalhes minúsculos para tentar descobrir o que ele está sentindo.
+Tras la ruptura, cualquier movimiento virtual parece un código secreto listo para ser descifrado. Pasamos horas analizando detalles minúsculos para adivinar qué siente.
 
-A verdade libertadora é: se uma pessoa quer construir algo maduro com você, ela fala com palavras claras e tem atitudes coerentes. Curtidas em redes sociais não são propostas de reconciliação. Não gaste sua energia tentando adivinhar intenções não declaradas.`,
-    example: 'Ele curtir uma foto sua não significa "quero voltar". Significa apenas: ele tocou duas vezes na tela do celular.',
-    exercise: 'Identifique a última "pista" que você tentou decifrar e anote apenas o fato concreto observável.',
-    action: 'Use a ferramenta "Fato ou interpretação?" para analisar o cenário "Ele curtiu meu story".',
-    reflectionPrompt: 'Estou procurando pistas porque quero esperança ou porque estou com medo de encarar a realidade?',
-    recommendedTool: 'Fato ou interpretação?',
+La verdad liberadora es: si una persona quiere construir algo maduro contigo, habla con palabras claras y tiene actitudes coherentes. Los likes en redes sociales no son propuestas de reconciliación. No gastes tu energía tratando de adivinar intenciones que no han sido declaradas.`,
+    example: 'Que le dé like a una foto tuya no significa "quiero volver". Significa únicamente: tocó dos veces la pantalla del teléfono.',
+    exercise: 'Identifica la última "pista" que intentaste descifrar y anota solo el hecho concreto observable.',
+    action: 'Usa la herramienta "¿Hecho o interpretación?" para analizar el escenario "Él le dio like a mi historia".',
+    reflectionPrompt: '¿Estoy buscando pistas porque quiero esperanza o porque tengo miedo de encarar la realidad?',
+    recommendedTool: '¿Hecho o interpretación?',
   },
   {
     dayNumber: 10,
     phase: '02. Reposicionar',
     phaseKey: 'reposition',
-    title: 'Reciprocidade observável',
-    objective: 'Avaliar a relação a partir das atitudes reais de ambas as partes, e não apenas do seu esforço.',
+    title: 'Reciprocidad observable',
+    objective: 'Evaluar la relación a partir de actitudes reales de ambas partes, y no solo de tu esfuerzo.',
     durationMinutes: 5,
-    bodyText: `Relacionamentos saudáveis são construídos em uma via de mão dupla. Muitas mulheres carregam a relação nas costas: são elas que puxam assunto, perguntam como o dia foi, perdoam ausências e tentam fazer a conversa render.
+    bodyText: `Las relaciones sanas se construyen en una calle de doble sentido. Muchas mujeres cargan la relación sobre sus hombros: son quienes inician la conversación, preguntan cómo estuvo el día, perdonan ausencias e intentan sostener el vínculo.
 
-Reciprocidade observável é simples: há iniciativa dele na mesma medida? Ele demonstra curiosidade genuína pela sua vida? Ele cumpre o que combina?
+La reciprocidad observable es simple: ¿hay iniciativa de su parte en la misma medida? ¿Demuestra curiosidad genuina por tu vida? ¿Cumple lo que acuerda?
 
-Se todo o esforço de manter o vínculo vem unicamente de você, o que existe não é uma conexão a dois; é uma perseguição unilateral.`,
-    example: 'Você manda textos longos e atenciosos; ele responde três horas depois com monossílabos ou respostas vagas.',
-    exercise: 'Faça uma lista mental das últimas 3 conversas: quem iniciou? Quem fez perguntas? Quem manteve o interesse?',
-    action: 'Leia o artigo "Reciprocidade no pós-término" na Biblioteca.',
-    reflectionPrompt: 'Eu estou apaixonada pela pessoa real ou pela versão que eu fico tentando resgatar com meu próprio esforço?',
-    recommendedTool: 'Biblioteca: Reciprocidade',
+Si todo el esfuerzo de mantener el lazo viene únicamente de ti, lo que existe no es una conexión de dos; es una persecución unilateral.`,
+    example: 'Tú envías mensajes largos y atentos; él responde tres horas después con monosílabos o evasivas.',
+    exercise: 'Haz una lista mental de las últimas 3 conversaciones: ¿quién inició? ¿Quién preguntó? ¿Quién mantuvo el interés?',
+    action: 'Lee el artículo "Reciprocidad en el post-ruptura" en la Biblioteca.',
+    reflectionPrompt: '¿Estoy enamorada de la persona real o de la versión que intento rescatar con mi propio esfuerzo?',
+    recommendedTool: 'Biblioteca: Reciprocidad',
   },
   {
     dayNumber: 11,
     phase: '02. Reposicionar',
     phaseKey: 'reposition',
-    title: 'Quando ele aparece e desaparece',
-    objective: 'Compreender o contato intermitente e como ele alimenta a dependência emocional.',
+    title: 'Cuando él aparece y desaparece',
+    objective: 'Comprender el contacto intermitente y cómo alimenta la dependencia emocional.',
     durationMinutes: 5,
-    bodyText: `O contato intermitente é aquele padrão em que a pessoa surge cheia de carinho ou saudade, conversa por um dia, e depois desaparece no ar por uma semana.
+    bodyText: `El contacto intermitente es ese patrón en el que la persona aparece llena de cariño o nostalgia, conversa por un día y luego se esfuma durante una semana.
 
-Esse ritmo é um dos mais viciantes para o cérebro humano, pois funciona como uma máquina de caça-níqueis: a imprevisibilidade da recompensa mantém você hipervigilante e presa na esperança.
+Este ritmo es uno de los más adictivos para el cerebro humano, pues funciona como una máquina tragamonedas: la imprevisibilidad de la recompensa te mantiene hipervigilante y atrapada en la esperanza.
 
-A consistência vale mais do que a intensidade esporádica. Quem realmente deseja estar na sua vida constrói presença, e não apenas aparições fantasmas quando bate o tédio.`,
-    example: 'Ele manda mensagem carinhosa à 1h da manhã de domingo e passa a semana inteira sem responder nada.',
-    exercise: 'Da próxima vez que ele aparecer do nada, não responda no impulso dos primeiros 5 minutos. Dê espaço para você respirar.',
-    action: 'Consulte os modelos de mensagem para "Contato intermitente" no Laboratório de Mensagens.',
-    reflectionPrompt: 'Por que eu aceito migalhas de atenção de alguém que não tem coragem de se comprometer?',
-    recommendedTool: 'Laboratório de Mensagens',
+La consistencia vale más que la intensidad esporádica. Quien realmente desea estar en tu vida construye presencia, no solo apariciones fantasma cuando el aburrimiento aprieta.`,
+    example: 'Envía un mensaje cariñoso a la 1:00 de la madrugada del domingo y pasa toda la semana sin responder nada.',
+    exercise: 'La próxima vez que aparezca de la nada, no respondas en el impulso de los primeros 5 minutos. Date espacio para respirar.',
+    action: 'Consulta los modelos de mensaje para "Contacto intermitente" en el Laboratorio de Mensajes.',
+    reflectionPrompt: '¿Por qué acepto migajas de atención de alguien que no tiene la valentía de comprometerse?',
+    recommendedTool: 'Laboratorio de Mensajes',
   },
   {
     dayNumber: 12,
     phase: '02. Reposicionar',
     phaseKey: 'reposition',
-    title: 'Limites digitais que protegem',
-    objective: 'Estabelecer fronteiras digitais para estancar o sangramento emocional.',
+    title: 'Límites digitales que protegen',
+    objective: 'Establecer fronteras digitales para detener el desgaste emocional.',
     durationMinutes: 4,
-    bodyText: `Colocar limites não é um ato de vingança nem um joguinho de desinteresse para "fazer ciúme". Colocar limites é um ato de autoproteção e cuidado com a sua saúde mental.
+    bodyText: `Poner límites no es un acto de venganza ni un juego de desinterés para "dar celos". Poner límites es un acto de autoprotección y cuidado hacia tu salud mental.
 
-Se silenciar stories, desativar notificações, arquivar a conversa ou até restringir o perfil for o que você precisa para conseguir dormir em paz, faça isso sem culpa. 
+Si silenciar historias, desactivar notificaciones, archivar la conversación o incluso restringir el perfil es lo que necesitas para dormir en paz, hazlo sin culpa.
 
-Você não deve satisfação a ninguém sobre o que é necessário para cuidar do seu coração e manter a sua sanidade.`,
-    example: 'Arquivar a conversa no WhatsApp para que o nome dele não fique visível toda vez que você abrir o app.',
-    exercise: 'Escolha uma ação de proteção digital agora: silenciar o perfil dele nas redes ou arquivar o contato.',
-    action: 'Marque no checklist de Limites Digitais o que você implementou hoje.',
-    reflectionPrompt: 'O que ainda me impede de colocar uma barreira que me proteja?',
-    recommendedTool: 'Checklist: Limites Digitais',
+No le debes explicaciones a nadie sobre lo que necesitas para cuidar tu corazón y mantener tu serenidad.`,
+    example: 'Archivar la conversación en WhatsApp para que su nombre no esté visible cada vez que abras la aplicación.',
+    exercise: 'Elige una acción de protección digital ahora: silenciar su perfil en redes o archivar su contacto.',
+    action: 'Marca en el checklist de Límites Digitales lo que implementaste hoy.',
+    reflectionPrompt: '¿Qué me impide aún poner una barrera que me proteja?',
+    recommendedTool: 'Checklist: Límites Digitales',
   },
   {
     dayNumber: 13,
     phase: '02. Reposicionar',
     phaseKey: 'reposition',
-    title: 'Saudade não é decisão',
-    objective: 'Diferenciar o sentimento legítimo da necessidade de mudar de atitude.',
+    title: 'Extrañar no es decidir',
+    objective: 'Diferenciar el sentimiento legítimo de la necesidad de cambiar de actitud.',
     durationMinutes: 4,
-    bodyText: `Sentir saudade é absolutamente natural. Você conviveu, compartilhou intimidades, riu e construiu histórias com essa pessoa. É esperado que o seu corpo e sua mente sintam a falta dessa presença.
+    bodyText: `Extrañar es absolutamente natural. Conviviste, compartiste intimidades, reíste y construiste historias con esa persona. Es de esperar que tu cuerpo y tu mente sientan la falta de su presencia.
 
-No entanto, sentir saudade não significa que o relacionamento funcionava bem. Nem significa que vocês devem reatar.
+Sin embargo, extrañar no significa que la relación funcionaba bien. Ni significa que deban volver.
 
-Sentir falta da rotina de casal é diferente de querer aceitar de volta os problemas, as faltas de respeito ou a falta de compromisso que causaram o término. Abrace a saudade com carinho, mas mantenha seus pés firmes na realidade.`,
-    example: 'Sentir saudade do abraço dele não apaga o fato de que vocês brigavam dia sim, dia não por falta de confiança.',
-    exercise: 'Escreva: "Eu sinto saudade de... mas eu me lembro de que...". Deixe os dois sentimentos coexistirem.',
-    action: 'Ouça o áudio reflexivo "Quando bate saudade à noite" na Biblioteca.',
-    reflectionPrompt: 'Estou com saudade dele de verdade ou da sensação de estar acompanhada e segura?',
-    recommendedTool: 'Áudio: Quando bate saudade',
+Echar de menos la rutina de pareja es muy diferente a querer aceptar de vuelta los problemas, las faltas de respeto o la falta de compromiso que causaron el final. Abraza la nostalgia con ternura, pero mantén tus pies firmes en la realidad.`,
+    example: 'Extrañar sus abrazos no borra el hecho de que discutían un día sí y otro también por falta de confianza.',
+    exercise: 'Escribe: "Extraño a... pero recuerdo que...". Deja que ambos sentimientos coexistan.',
+    action: 'Escucha el audio reflexivo "Cuando da nostalgia por la noche" en la Biblioteca.',
+    reflectionPrompt: '¿Lo extraño a él de verdad o extraño la sensación de estar acompañada y segura?',
+    recommendedTool: 'Audio: Cuando da nostalgia',
   },
   {
     dayNumber: 14,
     phase: '02. Reposicionar',
     phaseKey: 'reposition',
-    title: 'Revisão: o que mudou em você',
-    objective: 'Comemorar o ponto médio da jornada e consolidar sua nova postura diante das situações.',
+    title: 'Revisión: lo que cambió en ti',
+    objective: 'Celebrar el punto medio del plan y consolidar tu nueva postura ante las situaciones.',
     durationMinutes: 5,
-    bodyText: `Chegamos à metade do caminho! Há 14 dias você podia estar se sentindo completamente perdida e sem rumo. Hoje, você já possui ferramentas, repertório e lucidez para lidar com as situações.
+    bodyText: `¡Llegamos a la mitad del camino! Hace 14 días podías sentirte completamente perdida y sin rumbo. Hoy ya cuentas con herramientas, repertorio y lucidez para gestionar las situaciones.
 
-Você já consegue ver a diferença entre reagir cegamente e responder com intenção. 
+Ya logras ver la diferencia entre reaccionar a ciegas y responder con intención.
 
-Nas próximas duas semanas, vamos focar em como tomar decisões conscientes se houver aproximação ou se você optar por abrir uma conversa de fechamento ou recomeço.`,
-    example: 'Perceber que quando o telefone toca, seu coração não dispara mais da mesma forma desesperada de antes.',
-    exercise: 'Faça um balanço de 3 atitudes que você teve nos últimos 14 dias das quais se orgulha.',
-    action: 'Registre no seu Diário uma carta para você mesma celebrando sua evolução.',
-    reflectionPrompt: 'Como a minha autoestima e minha postura mudaram desde o dia em que comecei este plano?',
-    recommendedTool: 'Meu Diário',
+En las próximas dos semanas, nos enfocaremos en cómo tomar decisiones conscientes si hay acercamientos o si decides abrir una conversación de cierre o de recomenzar.`,
+    example: 'Notar que cuando suena el teléfono, tu corazón ya no se acelera con la misma desesperación de antes.',
+    exercise: 'Haz un balance de 3 actitudes que tuviste en los últimos 14 días de las que te sientas orgullosa.',
+    action: 'Registra en tu Diario una carta para ti misma celebrando tu evolución.',
+    reflectionPrompt: '¿Cómo cambiaron mi autoestima y mi postura desde el día en que comencé este plan?',
+    recommendedTool: 'Mi Diario',
   },
 
-  // FASE 3: CONTATO COM INTENÇÃO (Dias 15-21)
+  // FASE 3: CONTACTO CON INTENCIÓN (Días 15-21)
   {
     dayNumber: 15,
-    phase: '03. Contato com intenção',
+    phase: '03. Contacto con intención',
     phaseKey: 'contact',
-    title: 'Devo mandar mensagem?',
-    objective: 'Passar por um crivo claro de intencionalidade antes de iniciar qualquer comunicação.',
+    title: '¿Debo mandar mensaje?',
+    objective: 'Pasar por un filtro claro de intencionalidad antes de iniciar cualquier comunicación.',
     durationMinutes: 4,
-    bodyText: `A pergunta "devo mandar mensagem?" nunca deve ser respondida no calor do momento. Ela depende do seu propósito real.
+    bodyText: `La pregunta "¿debo mandar mensaje?" jamás debe responderse en caliente. Depende de tu verdadero propósito.
 
-Existem três motivos legítimos para mandar mensagem:
-1. Um assunto prático inadiável (ex: pertences, documentos, pets).
-2. Um pedido sincero de desculpas por algo específico que você reconheceu, sem cobrar retorno.
-3. Um convite maduro para conversar, sabendo exatamente o que quer dizer e preparada para uma recusa.
+Existen tres motivos legítimos para mandar mensaje:
+1. Un asunto práctico inaplazable (ej: pertenencias, documentos, mascotas).
+2. Una disculpa sincera por algo específico que reconociste, sin exigir respuesta.
+3. Una invitación madura a hablar, sabiendo exactamente qué quieres decir y preparada para una negativa.
 
-Qualquer mensagem enviada apenas para testar se ele responde ou para amenizar a solidão trará mais confusão do que clareza.`,
-    example: 'Em vez de "Podemos conversar?", uma mensagem com propósito diz: "Preciso pegar minha chave reserva. Qual horário fica bom para você amanhã?".',
-    exercise: 'Responda com honestidade: "Qual é o objetivo específico dessa mensagem em uma única frase?".',
-    action: 'Abra a ferramenta "Devo mandar mensagem?" e siga o roteiro de decisão.',
-    reflectionPrompt: 'Se ele não responder a essa mensagem, eu terei paz com a minha decisão de tê-la enviado?',
-    recommendedTool: 'Devo mandar mensagem?',
+Cualquier mensaje enviado solo para ver si responde o para calmar la soledad traerá más confusión que claridad.`,
+    example: 'En lugar de "¿Podemos hablar?", un mensaje con propósito dice: "Necesito recoger mi llave de repuesto. ¿Qué horario te queda bien mañana?".',
+    exercise: 'Responde con honestidad: "¿Cuál es el objetivo específico de este mensaje en una sola frase?".',
+    action: 'Abre la herramienta "¿Debo enviar mensaje?" y sigue la guía de decisión.',
+    reflectionPrompt: 'Si él no responde a este mensaje, ¿estaré en paz con mi decisión de haberlo enviado?',
+    recommendedTool: '¿Debo enviar mensaje?',
   },
   {
     dayNumber: 16,
-    phase: '03. Contato com intenção',
+    phase: '03. Contacto con intención',
     phaseKey: 'contact',
-    title: 'Uma mensagem com propósito',
-    objective: 'Escrever de forma elegante, clara, concisa e sem joguinhos emocionais.',
+    title: 'Un mensaje con propósito',
+    objective: 'Escribir de manera elegante, clara, concisa y sin manipulaciones emocionales.',
     durationMinutes: 4,
-    bodyText: `Mensagens longas, cheias de justificativas, cobranças ou declarações dramáticas costumam sobrecarregar quem recebe e expor quem envia.
+    bodyText: `Los mensajes largos, llenos de justificaciones, reproches o declaraciones dramáticas suelen sobrecargar a quien los recibe y exponer a quien los envía.
 
-A comunicação madura é breve, clara e respeitosa. Ela diz o que precisa ser dito sem agressividade e sem implorar por migalhas.
+La comunicación madura es breve, clara y respetuosa. Dice lo que necesita decirse sin agresividad y sin pedir migajas.
 
-Quando você se comunica com clareza, você demonstra respeito por si mesma e dá ao outro a oportunidade de responder com o mesmo nível de maturidade.`,
-    example: 'Evite desabafos de 10 parágrafos no WhatsApp. Prefira 2 frases objetivas e pontuais.',
-    exercise: 'Escreva o rascunho de uma mensagem e corte 50% das palavras que não acrescentam valor prático.',
-    action: 'Use o Laboratório de Mensagens para preparar e salvar seu rascunho com tranquilidade.',
-    reflectionPrompt: 'O meu tom de voz nessa mensagem reflete a mulher segura e digna que eu desejo ser?',
-    recommendedTool: 'Laboratório de Mensagens',
+Cuando te comunicas con claridad, demuestras respeto por ti misma y le das al otro la oportunidad de responder con el mismo nivel de madurez.`,
+    example: 'Evita desahogos de 10 párrafos en WhatsApp. Prefiere 2 frases objetivas y puntuales.',
+    exercise: 'Escribe el borrador de un mensaje y elimina el 50% de las palabras que no aporten valor práctico.',
+    action: 'Usa el Laboratorio de Mensajes para preparar y guardar tu borrador con tranquilidad.',
+    reflectionPrompt: '¿Mi tono de voz en este mensaje refleja a la mujer segura y digna que deseo ser?',
+    recommendedTool: 'Laboratorio de Mensajes',
   },
   {
     dayNumber: 17,
-    phase: '03. Contato com intenção',
+    phase: '03. Contacto con intención',
     phaseKey: 'contact',
-    title: 'Se ele me procurar',
-    objective: 'Responder a um contato dele sem pressa e sem criar um filme de cinema na cabeça.',
+    title: 'Si él me busca',
+    objective: 'Responder a un contacto suyo sin prisa y sin crear una película en la cabeza.',
     durationMinutes: 4,
-    bodyText: `A notificação subiu: é ele. O coração bate rápido e a mão treme.
+    bodyText: `Apareció la notificación: es él. El corazón late rápido y la mano tiembla.
 
-A primeira regra de ouro: você NÃO é obrigada a responder em 30 segundos. Respire. Beba água. Espere o choque passar.
+La primera regla de oro: NO estás obligada a responder en 30 segundos. Respira. Bebe agua. Espera a que pase el impacto inicial.
 
-Um "Oi, sumida" ou "Tudo bem?" é apenas uma sondagem casual. Não projete aí um pedido de casamento nem uma declaração de amor eterno. Responda com a mesma energia com que foi procurada: educada, calma e sem excesso de entusiasmo.`,
-    example: 'Ele pergunta: "E aí, como estão as coisas?". Responder: "Tudo bem por aqui, e você?" mantém a elegância sem entregar o jogo todo.',
-    exercise: 'Pratique esperar pelo menos 30 a 60 minutos antes de abrir a mensagem de um ex se ela não for uma emergência real.',
-    action: 'Consulte o guia "Ele me chamou" no módulo de Apoio antes de responder.',
-    reflectionPrompt: 'Eu estou respondendo com calma ou deixando a euforia tomar as rédeas da minha resposta?',
-    recommendedTool: 'Ele me chamou',
+Un "¿Cómo estás?" o "Hola, perdida" es solo un sondeo casual. No proyectes ahí una propuesta de matrimonio ni una declaración de amor eterno. Responde con la misma energía con la que te buscaron: educada, tranquila y sin exceso de entusiasmo.`,
+    example: 'Él pregunta: "¿Qué tal, cómo va todo?". Responder: "Todo bien por aquí, ¿y tú?" mantiene la elegancia sin entregar todas las cartas.',
+    exercise: 'Practica esperar al menos de 30 a 60 minutos antes de abrir el mensaje de tu ex si no es una emergencia real.',
+    action: 'Consulta la guía "Él me buscó" en el módulo de Apoyo antes de responder.',
+    reflectionPrompt: '¿Estoy respondiendo con calma o dejando que la euforia tome las riendas de mi respuesta?',
+    recommendedTool: 'Él me buscó',
   },
   {
     dayNumber: 18,
-    phase: '03. Contato com intenção',
+    phase: '03. Contacto con intención',
     phaseKey: 'contact',
-    title: 'Resposta fria ou monossilábica',
-    objective: 'Aprender a acolher o distanciamento do outro sem entrar em desespero ou cobrança.',
+    title: 'Respuesta fría o monosilábica',
+    objective: 'Aprender a acoger el distanciamiento del otro sin entrar en desesperación ni reproches.',
     durationMinutes: 4,
-    bodyText: `Você enviou uma mensagem educada e ele respondeu de forma seca: "Beleza", "Depois vejo", ou demorou 18 horas para responder.
+    bodyText: `Enviaste un mensaje educado y él respondió de forma seca: "Bien", "Luego veo", o tardó 18 horas en contestar.
 
-A tentação nessas horas é enviar: "Nossa, por que você está tão grosso?", "Aconteceu algo?".
+La tentación en estos momentos es enviar: "Vaya, ¿por qué estás tan cortante?", "¿Pasó algo?".
 
-Não faça isso. Uma resposta fria é uma resposta completa: ela comunica que o outro não tem disponibilidade ou interesse em aprofundar o contato neste momento. Aceite essa informação sem insistir. Deixe a conversa morrer ali com classe.`,
-    example: 'Ele responde: "Valeu". Você apenas curte a mensagem ou responde "De nada" e encerra sem prolongar.',
-    exercise: 'Respire fundo e repita para si mesma: "O desinteresse ou a frieza do outro não diminuem o meu valor".',
-    action: 'Consulte o modelo editorial "Resposta fria" no Laboratório de Mensagens.',
-    reflectionPrompt: 'Por que eu tento forçar calor em alguém que está escolhendo ser frio comigo?',
-    recommendedTool: 'Laboratório de Mensagens',
+No lo hagas. Una respuesta fría es una respuesta completa: comunica que la otra persona no tiene disponibilidad o interés en profundizar el contacto en este momento. Acepta esa información sin insistir. Deja que la conversación termine ahí con clase.`,
+    example: 'Él responde: "Gracias". Tú simplemente le das me gusta al mensaje o respondes "De nada" y cierras sin alargar.',
+    exercise: 'Respira hondo y repítete: "El desinterés o la frialdad del otro no disminuyen mi valor".',
+    action: 'Consulta el modelo "Respuesta tras mensaje frío" en el Laboratorio de Mensajes.',
+    reflectionPrompt: '¿Por qué intento forzar calidez en alguien que elige ser frío conmigo?',
+    recommendedTool: 'Laboratorio de Mensajes',
   },
   {
     dayNumber: 19,
-    phase: '03. Contato com intenção',
+    phase: '03. Contacto con intención',
     phaseKey: 'contact',
-    title: 'Silêncio após a mensagem',
-    objective: 'Lidar com o não-retorno sem enviar mensagens consecutivas e sem se culpar.',
+    title: 'Silencio tras el mensaje',
+    objective: 'Gestionar la falta de respuesta sin enviar mensajes consecutivos y sin culparte.',
     durationMinutes: 5,
-    bodyText: `O silêncio é a resposta mais difícil de digerir, mas também uma das mais reveladoras.
+    bodyText: `El silencio es la respuesta más difícil de asimilar, pero también una de las más reveladoras.
 
-Quando enviamos uma mensagem e não recebemos retorno, a mente entra em parafuso criando desculpas: "Será que ele não viu?", "Será que perdeu o celular?". 
+Cuando enviamos un mensaje y no recibimos respuesta, la mente entra en pánico creando excusas: "¿Será que no lo vio?", "¿Habrá perdido el teléfono?".
 
-Na imensa maioria das vezes, a pessoa viu sim. Mandar uma segunda mensagem ("???" ou "Você viu?") só aumenta o desconforto e enfraquece a sua dignidade. O silêncio já disse tudo o que você precisava ouvir. Deixe ele soar.`,
-    example: 'Não mande "Esquece" ou "Você nem responde, né?" depois de 5 horas sem resposta. Mantenha o silêncio.',
-    exercise: 'Prometa a si mesma não enviar nenhuma mensagem adicional pelas próximas 48 horas se não houver resposta.',
-    action: 'Leia o artigo "Como lidar com o silêncio depois de uma mensagem" na Biblioteca.',
-    reflectionPrompt: 'O que o silêncio dele me diz sobre a prioridade que eu ocupo na vida dele hoje?',
-    recommendedTool: 'Biblioteca de Leituras',
+En la inmensa mayoría de los casos, la persona sí lo vio. Enviar un segundo mensaje ("¿¿??" o "¿Viste esto?") solo aumenta la incomodidad y debilita tu dignidad. El silencio ya dijo todo lo que necesitabas escuchar. Deja que hable.`,
+    example: 'No mandes "Olvídalo" ni "Ni respondes, ¿verdad?" tras 5 horas sin respuesta. Mantén el silencio.',
+    exercise: 'Prométete no enviar ningún mensaje adicional en las próximas 48 horas si no hay respuesta.',
+    action: 'Lee el artículo "Cómo gestionar el silencio tras un mensaje" en la Biblioteca.',
+    reflectionPrompt: '¿Qué me dice su silencio sobre la prioridad que ocupo en su vida hoy?',
+    recommendedTool: 'Biblioteca de Lecturas',
   },
   {
     dayNumber: 20,
-    phase: '03. Contato com intenção',
+    phase: '03. Contacto con intención',
     phaseKey: 'contact',
-    title: 'Preparar uma conversa importante',
-    objective: 'Organizar tópicos, limites e clareza mental antes de uma conversa presencial ou por telefone.',
+    title: 'Preparar una conversación importante',
+    objective: 'Organizar temas, límites y claridad mental antes de una conversación presencial o telefónica.',
     durationMinutes: 5,
-    bodyText: `Se vocês marcaram de conversar sobre o que aconteceu ou sobre os termos do afastamento, vá com uma pauta clara em mente.
+    bodyText: `Si acordaron hablar sobre lo que pasó o sobre los términos de la distancia, ve con una agenda clara en mente.
 
-Conversas difíceis descarrilam quando nos perdemos no calor da discussão ou em cobranças do passado ("Você sempre fazia aquilo...").
+Las conversaciones difíciles se descarrilan cuando nos perdemos en el calor de la discusión o en reproches del pasado ("Tú siempre hacías aquello...").
 
-Foque em três pontos: o que você sente, o que é inegociável para você e o que você propõe para o futuro imediato. Esteja disposta a ouvir sem interromper, mas firme para sustentar seus limites.`,
-    example: 'Ir para a conversa sabendo exatamente: "Eu não quero voltar se não houver um compromisso com terapia ou diálogo".',
-    exercise: 'Anote em 3 tópicos simples o que você não abre mão de esclarecer nessa conversa.',
-    action: 'Consulte o Checklist "Antes de conversar" na Biblioteca.',
-    reflectionPrompt: 'Qual é a conclusão que eu espero tirar desse encontro para a minha própria paz?',
+Enfócate en tres puntos: lo que sientes, lo que es innegociable para ti y lo que propones para el futuro inmediato. Mantén la disposición de escuchar sin interrumpir, pero con firmeza para sostener tus límites.`,
+    example: 'Ir a la conversación sabiendo exactamente: "No quiero volver si no hay un compromiso con terapia o diálogo abierto".',
+    exercise: 'Anota en 3 puntos simples lo que no estás dispuesta a dejar de aclarar en esa conversación.',
+    action: 'Consulta el Checklist "Antes de conversar" en la Biblioteca.',
+    reflectionPrompt: '¿Cuál es la conclusión que espero obtener de este encuentro para mi propia paz?',
     recommendedTool: 'Checklist: Antes de conversar',
   },
   {
     dayNumber: 21,
-    phase: '03. Contato com intenção',
+    phase: '03. Contacto con intención',
     phaseKey: 'contact',
-    title: 'Revisão: contato e intenção',
-    objective: 'Analisar as interações recentes e preparar a transição para a fase final de avaliação.',
+    title: 'Revisión: contacto e intención',
+    objective: 'Analizar las interacciones recientes y preparar la transición hacia la fase final de evaluación.',
     durationMinutes: 4,
-    bodyText: `Você completou três semanas inteiras de reflexão, disciplina e autocuidado.
+    bodyText: `Has completado tres semanas enteras de reflexión, disciplina y autocuidado.
 
-Agora você sabe que toda interação precisa ter propósito, que o silêncio também fala e que a sua dignidade vem antes da urgência de receber afeto.
+Ahora sabes que toda interacción debe tener propósito, que el silencio también habla y que tu dignidad está antes que la urgencia de recibir afecto.
 
-Na última semana do plano, vamos tratar da pergunta definitiva: vale a pena uma reconciliação se a porta se abrir? E como seguir em frente com leveza se a resposta for não?`,
-    example: 'Olhar para as conversas recentes e ver que você não se rebaixou em nenhuma delas.',
-    exercise: 'Atualize sua Linha do Tempo com as interações mais marcantes dos últimos 7 dias.',
-    action: 'Marque o Dia 21 como concluído e celebre 75% da jornada percorrida.',
-    reflectionPrompt: 'Se ele me procurasse hoje querendo voltar, o que eu responderia de bate-pronto?',
-    recommendedTool: 'Minha Linha do Tempo',
+En la última semana del plan, abordaremos la pregunta definitiva: ¿vale la pena una reconciliación si se abre la puerta? ¿Y cómo seguir adelante con serenidad si la respuesta es no?`,
+    example: 'Mirar las conversaciones recientes y ver que no te rebajaste en ninguna de ellas.',
+    exercise: 'Actualiza tu Línea de Tiempo con las interacciones más significativas de los últimos 7 días.',
+    action: 'Marca el Día 21 como concluido y celebra el 75% del camino recorrido.',
+    reflectionPrompt: 'Si me buscara hoy queriendo volver, ¿qué respondería de inmediato?',
+    recommendedTool: 'Mi Línea de Tiempo',
   },
 
-  // FASE 4: RECIPROCIDADE E DECISÃO (Dias 22-28)
+  // FASE 4: RECIPROCIDAD Y DECISIÓN (Días 22-28)
   {
     dayNumber: 22,
-    phase: '04. Reciprocidade e decisão',
+    phase: '04. Reciprocidad y decisión',
     phaseKey: 'reciprocity',
-    title: 'Interesse genuíno ou educação?',
-    objective: 'Diferenciar simpatia superficial de um comprometimento real com a relação.',
+    title: '¿Interés genuino o educación?',
+    objective: 'Diferenciar la simpatía superficial de un compromiso real con la relación.',
     durationMinutes: 4,
-    bodyText: `Muitas vezes confundimos boa educação com desejo de reconciliação. A pessoa pode ser simpática, responder com emojis fofos e até desejar um bom dia, mas sem nenhum movimento concreto para estar junto ou resolver pendências.
+    bodyText: `Muchas veces confundimos la buena educación con el deseo de reconciliación. La persona puede ser simpática, responder con emojis amables e incluso desear los buenos días, pero sin ningún movimiento concreto para estar juntos o resolver diferencias.
 
-Simpatia não é compromisso. Educação não é amor.
+La simpatía no es compromiso. La cortesía no es amor.
 
-Observe as atitudes que custam esforço: a pessoa se desloca para te ver? Ela assume compromissos e cumpre? Ela fala do futuro com você incluída? Olhe para os fatos práticos, não para os agrados virtuais.`,
-    example: 'Ele responde todos os seus stories com carinho, mas quando você sugere um café, ele "está muito ocupado essa semana".',
-    exercise: 'Analise as últimas duas semanas: quais foram os atos de compromisso reais que ele teve em relação a você?',
-    action: 'Leia o artigo "Reciprocidade e Consistência" na Biblioteca.',
-    reflectionPrompt: 'Eu estou supervalorizando pequenas gentilezas porque estou com fome de afeto?',
-    recommendedTool: 'Biblioteca de Leituras',
+Observa las actitudes que conllevan esfuerzo: ¿la persona se traslada para verte? ¿Asume compromisos y los cumple? ¿Habla del futuro incluyéndote? Mira los hechos prácticos, no las atenciones virtuales.`,
+    example: 'Responde todas tus historias con cariño, pero cuando sugieres un café, "está muy ocupado esta semana".',
+    exercise: 'Analiza las últimas dos semanas: ¿cuáles fueron los actos de compromiso reales que tuvo hacia ti?',
+    action: 'Lee el artículo "Contacto intermitente y consistencia" en la Biblioteca.',
+    reflectionPrompt: '¿Estoy sobrevalorando pequeñas atenciones porque tengo hambre de afecto?',
+    recommendedTool: 'Biblioteca de Lecturas',
   },
   {
     dayNumber: 23,
-    phase: '04. Reciprocidade e decisão',
+    phase: '04. Reciprocidad y decisión',
     phaseKey: 'reciprocity',
-    title: 'Palavras versus comportamento',
-    objective: 'Analisar a consistência entre o que é prometido e o que é efetivamente vivido.',
+    title: 'Palabras frente a comportamiento',
+    objective: 'Analizar la consistencia entre lo prometido y lo que efectivamente se vive.',
     durationMinutes: 5,
-    bodyText: `Promessas no pós-término são muito fáceis de fazer: "Eu vou mudar", "Eu percebi meus erros", "Com você é diferente".
+    bodyText: `Las promesas tras la ruptura son muy fáciles de hacer: "Voy a cambiar", "Me di cuenta de mis errores", "Contigo es diferente".
 
-No entanto, palavras sem mudança comportamental consistente são apenas ilusões momentâneas para aliviar a culpa.
+Sin embargo, las palabras sin un cambio conductual constante son solo ilusiones momentáneas para aliviar la culpa.
 
-Uma mudança real não se comprova em um discurso apaixonado na sexta-feira à noite. Ela se comprova ao longo de semanas e meses de respeito, escuta e atitudes diferentes. Dê tempo ao tempo e observe o comportamento.`,
-    example: 'Ele diz que quer ser mais presente, mas some no primeiro fim de semana seguinte com os amigos.',
-    exercise: 'Coloque em duas colunas: "O que ele prometeu" versus "O que ele realmente fez nas últimas 3 semanas".',
-    action: 'Registre no Diário suas observações sobre a coerência dele.',
-    reflectionPrompt: 'As atitudes dele combinam com as palavras que saem da boca dele?',
-    recommendedTool: 'Meu Diário',
+Un cambio real no se comprueba en un discurso apasionado un viernes por la noche. Se comprueba a lo largo de semanas y meses de respeto, escucha y actitudes diferentes. Dale tiempo al tiempo y observa la conducta.`,
+    example: 'Dice que quiere estar más presente, pero desaparece el primer fin de semana con sus amigos.',
+    exercise: 'Anota en dos columnas: "Lo que prometió" frente a "Lo que realmente hizo en las últimas 3 semanas".',
+    action: 'Registra en el Diario tus observaciones sobre su coherencia.',
+    reflectionPrompt: '¿Sus actitudes coinciden con las palabras que salen de su boca?',
+    recommendedTool: 'Mi Diario',
   },
   {
     dayNumber: 24,
-    phase: '04. Reciprocidade e decisão',
+    phase: '04. Reciprocidad y decisión',
     phaseKey: 'reciprocity',
-    title: 'Antes de se reencontrar',
-    objective: 'Preparar a mente e o coração para um encontro presencial sem desmoronar seus avanços.',
+    title: 'Antes de reencontrarse',
+    objective: 'Preparar la mente y el corazón para un encuentro presencial sin derrumbar tus avances.',
     durationMinutes: 5,
-    bodyText: `Vocês combinaram de se encontrar. É normal sentir borboletas no estômago, ansiedade e até vontade de caprichar na roupa.
+    bodyText: `Acordaron verse. Es normal sentir nervios en el estómago, ansiedad e incluso ganas de esmerarte con la ropa.
 
-Mas lembre-se: um reencontro não é um teste onde você precisa provar seu valor para ser escolhida de novo. É uma oportunidade para VOCÊ avaliar se essa pessoa ainda cabe na mulher que você está se tornando.
+Pero recuerda: un reencuentro no es una prueba donde tengas que demostrar tu valor para ser elegida de nuevo. Es una oportunidad para que TÚ evalúes si esa persona aún tiene cabida en la mujer en la que te estás convirtiendo.
 
-Escolha um lugar público e neutro, defina um horário limite para terminar o encontro e vá sem a obrigação de beijar, transar ou decidir nada naquela mesma noite.`,
-    example: 'Combinar um café de 1 hora às 16h em vez de um jantar regado a vinho até as 2h da manhã na casa dele.',
-    exercise: 'Defina seu limite principal para o encontro: "Hoje eu não vou para a casa dele, aconteça o que acontecer".',
-    action: 'Consulte o checklist "Antes de se encontrar" na Biblioteca.',
-    reflectionPrompt: 'O que eu preciso observar nele para saber se esse encontro foi saudável para mim?',
-    recommendedTool: 'Checklist: Antes de se encontrar',
+Elige un lugar público y neutro, define un horario límite para terminar el encuentro y ve sin la obligación de besar, intimar o decidir nada esa misma noche.`,
+    example: 'Coordinar un café de 1 hora a las 16:00 en lugar de una cena con vino hasta las 2:00 de la madrugada en su casa.',
+    exercise: 'Define tu límite principal para el encuentro: "Hoy no iré a su casa, pase lo que pase".',
+    action: 'Consulta el checklist "Antes de un reencuentro presencial" en la Biblioteca.',
+    reflectionPrompt: '¿Qué necesito observar en él para saber si este encuentro fue sano para mí?',
+    recommendedTool: 'Checklist: Antes de encontrarse',
   },
   {
     dayNumber: 25,
-    phase: '04. Reciprocidade e decisão',
+    phase: '04. Reciprocidad y decisión',
     phaseKey: 'reciprocity',
-    title: 'Depois do reencontro',
-    objective: 'Registrar sensações corporais e fatos observados logo após o encontro, antes que a mente idealize.',
+    title: 'Después del reencuentro',
+    objective: 'Registrar sensaciones corporales y hechos observados tras el encuentro, antes de que la mente idealice.',
     durationMinutes: 4,
-    bodyText: `Depois do encontro, a mente tende a distorcer as coisas: pinçamos os momentos de carinho e esquecemos os momentos de frieza ou desconforto.
+    bodyText: `Después del encuentro, la mente suele distorsionar las cosas: rescatamos los momentos de cariño y olvidamos los de frialdad o incomodidad.
 
-Logo após o encontro, antes de dormir, tire 10 minutos para registrar a verdade nua e crua. 
+Justo después de verte con él, antes de dormir, tómate 10 minutos para registrar la verdad cruda y real.
 
-Como você se sentiu no seu corpo? Houve tensão? Ele te olhou nos olhos? As conversas fluíram ou pareciam forçadas? Ele perguntou sobre você ou só falou de si mesmo? Registre os fatos enquanto eles estão frescos na memória.`,
-    example: 'Anotar: "Nós nos beijamos, mas quando toquei no assunto de compromisso, ele mudou de assunto e ficou tenso".',
-    exercise: 'Preencha as notas do diário com a impressão real do encontro sem floreios românticos.',
-    action: 'Adicione o evento "Encontro presencial" na sua Linha do Tempo com como você se sentiu.',
-    reflectionPrompt: 'Eu saí desse encontro me sentindo valorizada e em paz ou confusa e ansiosa?',
-    recommendedTool: 'Minha Linha do Tempo',
+¿Cómo te sentiste en tu cuerpo? ¿Hubo tensión? ¿Te miró a los ojos? ¿Las conversaciones fluyeron o parecieron forzadas? ¿Preguntó por ti o solo habló de sí mismo? Registra los hechos mientras están frescos en la memoria.`,
+    example: 'Anotar: "Nos besamos, pero cuando toqué el tema de compromiso, cambió de tema y se puso tenso".',
+    exercise: 'Llena las notas del diario con la impresión real del encuentro sin adornos románticos.',
+    action: 'Agrega el evento "Encuentro presencial" en tu Línea de Tiempo con cómo te sentiste.',
+    reflectionPrompt: '¿Salí de este encuentro sintiéndome valorada y en paz o confundida y ansiosa?',
+    recommendedTool: 'Mi Línea de Tiempo',
   },
   {
     dayNumber: 26,
-    phase: '04. Reciprocidade e decisão',
+    phase: '04. Reciprocidad y decisión',
     phaseKey: 'reciprocity',
-    title: 'Se ele quiser voltar',
-    objective: 'Avaliar uma proposta de reconciliação com calma, critérios claros e sem impulsividade.',
+    title: 'Si él quiere volver',
+    objective: 'Evaluar una propuesta de reconciliación con calma, criterios claros y sin impulsividad.',
     durationMinutes: 5,
-    bodyText: `Ouvir "eu quero voltar" pode parecer a realização do maior desejo do seu coração. No entanto, voltar sem critérios é a receita perfeita para viver o mesmo término daqui a 3 meses.
+    bodyText: `Escuchar "quiero volver" puede sentirse como el mayor deseo de tu corazón hecho realidad. Sin embargo, volver sin criterios es la receta perfecta para vivir la misma ruptura dentro de 3 meses.
 
-Uma reconciliação verdadeira não é o retorno ao passado; é a construção de uma NOVA relação, com novas bases.
+Una reconciliación verdadera no es regresar al pasado; es la construcción de una NUEVA relación, con nuevas bases.
 
-O que causou o término? Aquele problema foi superado ou continua exatamente igual? Vocês conseguem conversar abertamente sobre limites? Se a única coisa que mudou foi a saudade temporária, voltar trará as mesmas dores de antes.`,
-    example: 'Não responder "sim!" de imediato. Responder: "Eu fico feliz que você tenha pensado sobre nós. Vamos conversar com calma sobre o que precisa ser diferente para nós dois".',
-    exercise: 'Use o checklist "Antes de recomeçar" para analisar os 7 critérios indispensáveis de um retorno maduro.',
-    action: 'Abra a ferramenta de apoio "Antes de recomeçar" e responda às perguntas reflexivas.',
-    reflectionPrompt: 'O que precisaria mudar radicalmente para que essa relação fosse segura e saudável para mim?',
-    recommendedTool: 'Checklist: Antes de recomeçar',
+¿Qué causó la ruptura? ¿Ese problema fue superado o sigue exactamente igual? ¿Logran hablar abiertamente sobre límites? Si lo único que cambió fue la nostalgia temporal, volver traerá los mismos dolores de antes.`,
+    example: 'No responder "¡sí!" de inmediato. Responder: "Me alegra que hayas pensado en nosotros. Hablemos con calma sobre lo que necesita ser diferente para los dos".',
+    exercise: 'Usa el checklist "Antes de recomenzar" para analizar los 7 criterios indispensables de un regreso maduro.',
+    action: 'Abre la herramienta de apoyo "Antes de recomenzar" y responde las preguntas reflexivas.',
+    reflectionPrompt: '¿Qué tendría que cambiar radicalmente para que esta relación fuera segura y sana para mí?',
+    recommendedTool: 'Checklist: Antes de recomenzar',
   },
   {
     dayNumber: 27,
-    phase: '04. Reciprocidade e decisão',
+    phase: '04. Reciprocidad y decisión',
     phaseKey: 'reciprocity',
-    title: 'Quando não há reciprocidade',
-    objective: 'Acolher a realidade do encerramento com dignidade e respeito por si mesma.',
+    title: 'Cuando no hay reciprocidad',
+    objective: 'Acoger la realidad del cierre con dignidad y respeto por ti misma.',
     durationMinutes: 5,
-    bodyText: `Talvez você tenha observado os fatos e concluído que, infelizmente, não há reciprocidade. A outra pessoa fez a escolha dela de seguir outro caminho, ou não tem maturidade e vontade para construir algo com você.
+    bodyText: `Tal vez observaste los hechos y concluiste que, lamentablemente, no hay reciprocidad. La otra persona tomó su decisión de seguir otro camino, o no tiene la madurez ni el deseo de construir algo contigo.
 
-Essa conclusão dói, mas ela traz uma libertação imensa. Não há mais pelo que esperar, não há mais pistas para decifrar, não há mais joguinhos.
+Esa conclusión duele, pero trae una liberación inmensa. Ya no hay por qué esperar, no hay más pistas que descifrar, no hay más juegos.
 
-A não-reciprocidade dele não é um atestado de defeito em você. É apenas a constatação de que os caminhos se desencontraram. Ao soltar quem não quer ficar, você abre espaço para a sua própria vida florescer.`,
-    example: 'Dizer a si mesma: "Eu amei, eu tentei com maturidade, mas agora é hora de honrar a mim mesma e soltar".',
-    exercise: 'Escreva uma mensagem de despedida simbólica no seu Diário (para nunca enviar) fechando esse ciclo.',
-    action: 'Leia o artigo "Quando seguir em frente passa a ser uma possibilidade" na Biblioteca.',
-    reflectionPrompt: 'O que eu ganho de volta quando paro de implorar pelo amor de quem não me valoriza?',
-    recommendedTool: 'Biblioteca de Leituras',
+Su falta de reciprocidad no es una prueba de que haya algo mal en ti. Es solo la constatación de que los caminos se separaron. Al soltar a quien no quiere quedarse, abres espacio para que tu propia vida florezca.`,
+    example: 'Decirte a ti misma: "Amé, lo intenté con madurez, pero ahora es momento de honrarme a mí misma y soltar".',
+    exercise: 'Escribe un mensaje de despedida simbólica en tu Diario (para nunca enviar) cerrando este ciclo.',
+    action: 'Lee el artículo "Cuando seguir adelante se convierte en una posibilidad" en la Biblioteca.',
+    reflectionPrompt: '¿Qué recupero cuando dejo de rogar por el amor de quien no me valora?',
+    recommendedTool: 'Biblioteca de Lecturas',
   },
   {
     dayNumber: 28,
-    phase: '04. Reciprocidade e decisão',
+    phase: '04. Reciprocidad y decisión',
     phaseKey: 'reciprocity',
-    title: 'Seu próximo ciclo: clareza e autonomia',
-    objective: 'Celebrar a conclusão do plano de 28 dias e assumir as rédeas do seu próprio destino.',
+    title: 'Tu próximo ciclo: claridad y autonomía',
+    objective: 'Celebrar la conclusión del plan de 28 días y tomar las riendas de tu propio destino.',
     durationMinutes: 5,
-    bodyText: `Você completou o seu plano de 28 dias de pós-término no Florecer!
+    bodyText: `¡Has completado tu plan de 28 días de post-ruptura en Florecer!
 
-Olhe para onde você estava no Dia 1 e olhe para a mulher que você é agora: mais consciente, mais firme, com domínio dos seus pensamentos e muito mais conectada com o que merece.
+Mira dónde estabas en el Día 1 y mira a la mujer que eres ahora: más consciente, más firme, con dominio de tus pensamientos y mucho más conectada con lo que mereces.
 
-Seja decidindo tentar um recomeço consciente e sem ingenuidade, seja decidindo seguir em frente e virar a página, você agora tem algo que ninguém pode te tirar: CLAREZA. 
+Ya sea decidiendo intentar recomenzar de forma consciente y sin ingenuidad, o decidiendo seguir adelante y pasar la página, ahora tienes algo que nadie te puede quitar: CLARIDAD.
 
-Você não precisa mais agir no desespero. Você aprendeu a respirar, a separar fatos de medos e a escolher a si mesma.`,
-    example: 'Sentir uma paz no peito e saber que o seu futuro é luminoso e pertence exclusivamente a você.',
-    exercise: 'Revise todas as suas conquistas nas estatísticas da aba "Você" e leia suas primeiras anotações.',
-    action: 'Marque o 28º dia como concluído e continue usando o Florecer sempre que precisar de um ponto de apoio.',
-    reflectionPrompt: 'Qual é a maior lição que levarei comigo dessa jornada de volta para mim mesma?',
-    recommendedTool: 'Aba Você: Estatísticas',
+Ya no necesitas actuar desde la desesperación. Aprendiste a respirar, a separar hechos de miedos y a elegirte a ti misma.`,
+    example: 'Sentir una paz en el pecho y saber que tu futuro es luminoso y te pertenece exclusivamente a ti.',
+    exercise: 'Revisa todos tus logros en las estadísticas de la pestaña "Tú" y lee tus primeras anotaciones.',
+    action: 'Marca el día 28 como concluido y continúa usando Florecer siempre que necesites un punto de apoyo.',
+    reflectionPrompt: '¿Cuál es la mayor lección que me llevo de este camino de regreso a mí misma?',
+    recommendedTool: 'Pestaña Tú: Estadísticas',
   },
 ];

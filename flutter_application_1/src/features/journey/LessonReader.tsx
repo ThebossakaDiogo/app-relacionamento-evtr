@@ -37,7 +37,7 @@ export const LessonReader: React.FC<LessonReaderProps> = ({
     const nextState = !isCompleted;
     onToggleComplete(day.dayNumber, nextState);
     if (nextState) {
-      onShowToast(`Dia ${day.dayNumber} concluído! Parabéns pelo seu avanço.`);
+      onShowToast(`¡Día ${day.dayNumber} completado! Felicitaciones por tu avance.`);
     }
   };
 
@@ -49,7 +49,7 @@ export const LessonReader: React.FC<LessonReaderProps> = ({
       promptUsed: day.reflectionPrompt,
     });
     setReflectionAnswer('');
-    onShowToast('Reflexão guardada no seu Diário Privado com sucesso!');
+    onShowToast('¡Reflexión guardada en tu Diario Privado con éxito!');
   };
 
   return (
@@ -94,11 +94,11 @@ export const LessonReader: React.FC<LessonReaderProps> = ({
             cursor: 'pointer',
           }}
         >
-          <ArrowLeft size={18} /> Voltar à Jornada
+          <ArrowLeft size={18} /> Volver a la Jornada
         </button>
 
         <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)' }}>
-          DIA {day.dayNumber} DE 28
+          DÍA {day.dayNumber} DE 28
         </span>
 
         <button
@@ -118,7 +118,7 @@ export const LessonReader: React.FC<LessonReaderProps> = ({
           }}
         >
           {isCompleted ? <CheckCircle2 size={15} /> : null}
-          {isCompleted ? 'Concluído' : 'Marcar concluído'}
+          {isCompleted ? 'Completado' : 'Marcar completado'}
         </button>
       </div>
 
@@ -138,7 +138,7 @@ export const LessonReader: React.FC<LessonReaderProps> = ({
             <span className="eyebrow">{day.phase}</span>
             <span style={{ color: 'var(--border)' }}>·</span>
             <span style={{ fontSize: '12px', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <Clock size={12} /> {day.durationMinutes} min de leitura
+              <Clock size={12} /> {day.durationMinutes} min de lectura
             </span>
           </div>
 
@@ -163,7 +163,7 @@ export const LessonReader: React.FC<LessonReaderProps> = ({
             }}
           >
             <strong style={{ display: 'block', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1.5px', color: 'var(--primary)', marginBottom: '4px' }}>
-              Objetivo de hoje
+              Objetivo de hoy
             </strong>
             <p style={{ margin: 0, fontSize: '15px', color: 'var(--text)' }}>
               {day.objective}
@@ -195,7 +195,7 @@ export const LessonReader: React.FC<LessonReaderProps> = ({
             }}
           >
             <span className="eyebrow" style={{ color: 'var(--gold-decorative)', display: 'block', marginBottom: '8px' }}>
-              EXEMPLO CONCRETO
+              EJEMPLO CONCRETO
             </span>
             <p style={{ margin: 0, fontSize: '15px', color: 'var(--text)', fontStyle: 'italic', whiteSpace: 'pre-line' }}>
               "{day.example}"
@@ -215,7 +215,7 @@ export const LessonReader: React.FC<LessonReaderProps> = ({
             }}
           >
             <span className="eyebrow" style={{ display: 'block', marginBottom: '8px' }}>
-              EXERCÍCIO DE HOJE
+              EJERCICIO DE HOY
             </span>
             <div style={{ fontSize: '15px', color: 'var(--text)', whiteSpace: 'pre-line', lineHeight: '1.6' }}>
               {day.exercise}
@@ -239,7 +239,7 @@ export const LessonReader: React.FC<LessonReaderProps> = ({
             <Sparkles size={22} color="var(--primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
             <div>
               <strong style={{ display: 'block', fontSize: '14px', color: 'var(--primary)', marginBottom: '4px' }}>
-                Ação do dia
+                Acción del día
               </strong>
               <p style={{ margin: 0, fontSize: '14px', color: 'var(--text)' }}>
                 {day.action}
@@ -258,13 +258,13 @@ export const LessonReader: React.FC<LessonReaderProps> = ({
             }}
           >
             <span className="eyebrow" style={{ display: 'block', marginBottom: '8px' }}>
-              REFLEXÃO OPCIONAL
+              REFLEXIÓN OPCIONAL
             </span>
             <h3 style={{ fontSize: '18px', margin: '0 0 12px' }}>
               "{day.reflectionPrompt}"
             </h3>
             <textarea
-              placeholder="Escreva sua reflexão sincera aqui (salva no seu diário privado)..."
+              placeholder="Escribe tu reflexión sincera aquí (guardada en tu diario privado)..."
               value={reflectionAnswer}
               onChange={(e) => setReflectionAnswer(e.target.value)}
               style={{ marginBottom: '14px' }}
@@ -276,7 +276,7 @@ export const LessonReader: React.FC<LessonReaderProps> = ({
                 disabled={!reflectionAnswer.trim()}
                 style={{ opacity: reflectionAnswer.trim() ? 1 : 0.6 }}
               >
-                Salvar no Diário
+                Guardar en el Diario
               </button>
             </div>
           </div>
@@ -290,7 +290,7 @@ export const LessonReader: React.FC<LessonReaderProps> = ({
             style={{ minWidth: '260px', fontSize: '15px' }}
           >
             <CheckCircle2 size={18} />
-            {isCompleted ? 'Lição Concluída (Clique para desmarcar)' : 'Concluir Meu Passo de Hoje'}
+            {isCompleted ? 'Lección Completada (Haz clic para desmarcar)' : 'Completar Mi Paso de Hoy'}
           </button>
         </div>
 
@@ -319,7 +319,7 @@ export const LessonReader: React.FC<LessonReaderProps> = ({
               fontWeight: 600,
             }}
           >
-            <ArrowLeft size={16} /> Dia anterior
+            <ArrowLeft size={16} /> Día anterior
           </button>
 
           <button
@@ -337,7 +337,7 @@ export const LessonReader: React.FC<LessonReaderProps> = ({
               fontWeight: 600,
             }}
           >
-            Próximo dia <ArrowRight size={16} />
+            Próximo día <ArrowRight size={16} />
           </button>
         </div>
       </div>

@@ -15,7 +15,7 @@ import { GoldenLotusIcon } from '../../components/GoldenLotusIcon';
 import { Modal } from '../../components/Modal';
 import { SelfCareSection } from '../selfcare/SelfCareSection';
 
-// --- Thumbnails em SVG correspondentes ao Mockup ---
+// --- Thumbnails en SVG correspondientes al Mockup ---
 
 const SunsetWomanThumbnail: React.FC = () => (
   <svg
@@ -50,10 +50,10 @@ const SunsetWomanThumbnail: React.FC = () => (
     <circle cx="34" cy="38" r="12" fill="url(#sun-glow)" />
     <circle cx="34" cy="38" r="5" fill="#FFF7E6" />
     <rect y="46" width="68" height="22" fill="url(#sunset-sea)" />
-    {/* Reflexos do mar */}
+    {/* Reflejos del mar */}
     <ellipse cx="34" cy="49" rx="10" ry="1.2" fill="#FCD58E" opacity="0.7" />
     <ellipse cx="34" cy="54" rx="6" ry="0.9" fill="#FCD58E" opacity="0.5" />
-    {/* Silhueta feminina contemplando o horizonte */}
+    {/* Silueta femenina contemplando el horizonte */}
     <path
       d="M23 68C23 58 25 53 27 49C28.5 46 29.8 45 31 43C30 41 30 38 32 36C33.5 34.5 35.8 34.5 37.2 36C38.6 37.5 38.5 40.5 37.5 42.5C38.5 44 40.5 46.5 41.5 49C43.5 54 44.5 60 45.5 68H23Z"
       fill="#281026"
@@ -201,7 +201,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
     setQuickEvent(updated);
     StorageService.setQuickEvent(updated);
     if (updated) {
-      onShowToast(`Acontecimento registrado: "${updated}"`);
+      onShowToast(`Acontecimiento registrado: "${updated}"`);
     }
   };
 
@@ -211,18 +211,18 @@ export const TodayView: React.FC<TodayViewProps> = ({
       date: today,
       mindLoad: mood,
       dominantFeeling: mood,
-      contactState: quickEvent || 'Não registrado',
+      contactState: quickEvent || 'No registrado',
     });
     setTodayCheckin(saved);
-    onShowToast('Seu acolhimento de hoje foi registrado com carinho.');
+    onShowToast('Tu registro emocional de hoy fue guardado con cariño.');
   };
 
-  const userName = userProfile.name && userProfile.name !== 'Você' ? userProfile.name : '';
+  const userName = userProfile.name && userProfile.name !== 'Tú' ? userProfile.name : '';
 
   return (
     <div className="animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '22px' }}>
       
-      {/* 🌸 HEADER PRINCIPAL (Exatamente como o Topo do Mockup) */}
+      {/* 🌸 HEADER PRINCIPAL */}
       <div
         style={{
           textAlign: 'center',
@@ -235,12 +235,12 @@ export const TodayView: React.FC<TodayViewProps> = ({
           overflow: 'hidden',
         }}
       >
-        {/* Emblema Dourado da Flor de Lótus */}
+        {/* Emblema Dorado del Loto */}
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '4px' }}>
           <GoldenLotusIcon size={46} />
         </div>
 
-        {/* Título Florecer em Tipografia Editorial */}
+        {/* Título Florecer en Tipografía Editorial */}
         <h1
           className="brand-title"
           style={{
@@ -253,7 +253,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
           Florecer
         </h1>
 
-        {/* Frase Acolhedora do Mockup */}
+        {/* Frase Acogedora */}
         <p
           style={{
             fontFamily: 'var(--font-brand)',
@@ -264,10 +264,10 @@ export const TodayView: React.FC<TodayViewProps> = ({
             lineHeight: 1.4,
           }}
         >
-          {userName ? `Oi, ${userName}! ` : 'Oi, '}você está fazendo um lindo trabalho. ♡
+          {userName ? `¡Hola, ${userName}! ` : '¡Hola, '}estás haciendo un trabajo hermoso. ♡
         </p>
 
-        {/* Slogan com Dourado */}
+        {/* Slogan con Dorado */}
         <small
           style={{
             display: 'block',
@@ -279,10 +279,10 @@ export const TodayView: React.FC<TodayViewProps> = ({
             fontWeight: 600,
           }}
         >
-          Do fim, para um novo florescer ♡
+          Del fin, hacia un nuevo florecer ♡
         </small>
 
-        {/* Pill de Status da Jornada */}
+        {/* Pill de Estado de la Jornada */}
         <div
           style={{
             display: 'inline-flex',
@@ -299,15 +299,15 @@ export const TodayView: React.FC<TodayViewProps> = ({
           }}
         >
           <Clock size={13} />
-          <span>Dia {currentDay} de 28 • {progressPercent}% concluído</span>
-          {isLessonCompleted && <span style={{ color: 'var(--success)', fontWeight: 700 }}>✓ Feito</span>}
+          <span>Día {currentDay} de 28 • {progressPercent}% completado</span>
+          {isLessonCompleted && <span style={{ color: 'var(--success)', fontWeight: 700 }}>✓ Hecho</span>}
         </div>
       </div>
 
-      {/* 🧭 OS 4 CARDS DOPAMINÉRGICOS PRINCIPAIS (Idênticos ao Mockup do Celular) */}
+      {/* 🧭 LOS 4 CARDS PRINCIPALES */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
         
-        {/* CARD 1: MAPA DO SEU MOMENTO */}
+        {/* CARD 1: MAPA DE TU MOMENTO */}
         <div
           className="card-dopamine"
           onClick={() => setIsDiagnosticModalOpen(true)}
@@ -317,10 +317,10 @@ export const TodayView: React.FC<TodayViewProps> = ({
           <SunsetWomanThumbnail />
           <div style={{ flex: 1, minWidth: 0 }}>
             <h3 style={{ margin: '0 0 4px', fontSize: '18px', fontWeight: 600, color: 'var(--text)' }}>
-              Mapa do Seu Momento
+              Mapa de Tu Momento
             </h3>
             <p style={{ margin: 0, fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.4 }}>
-              Entenda o que você sente e onde quer chegar.
+              Entiende lo que sientes y hacia dónde quieres ir.
             </p>
             {userProfile.relationshipContext && (
               <span
@@ -343,7 +343,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
           </div>
         </div>
 
-        {/* CARD 2: JORNADA DE 28 DIAS */}
+        {/* CARD 2: JORNADA DE 28 DÍAS */}
         <div
           className="card-dopamine"
           onClick={() => onOpenLesson(currentDay)}
@@ -353,10 +353,10 @@ export const TodayView: React.FC<TodayViewProps> = ({
           <BotanicalSproutThumbnail />
           <div style={{ flex: 1, minWidth: 0 }}>
             <h3 style={{ margin: '0 0 4px', fontSize: '18px', fontWeight: 600, color: 'var(--text)' }}>
-              Jornada de 28 Dias
+              Jornada de 28 Días
             </h3>
             <p style={{ margin: 0, fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.4 }}>
-              Pequenos passos para um grande recomeço.
+              Pequeños pasos para un gran nuevo comienzo.
             </p>
             <span
               style={{
@@ -367,7 +367,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
                 color: 'var(--primary)',
               }}
             >
-              Missão de hoje: Dia {activeDay.dayNumber} ({activeDay.durationMinutes} min)
+              Misión de hoy: Día {activeDay.dayNumber} ({activeDay.durationMinutes} min)
             </span>
           </div>
           <div className="dopamine-arrow-btn">
@@ -388,7 +388,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
               SOS Emocional
             </h3>
             <p style={{ margin: 0, fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.4 }}>
-              Acolhimento imediato quando você mais precisa.
+              Acompañamiento inmediato cuando más lo necesitas.
             </p>
             <span
               style={{
@@ -399,7 +399,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
                 color: 'var(--rose-vibrant)',
               }}
             >
-              Respiração • Modelos de Mensagem • Análises
+              Respiración • Modelos de Mensaje • Análisis
             </span>
           </div>
           <div className="dopamine-arrow-btn">
@@ -407,7 +407,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
           </div>
         </div>
 
-        {/* CARD 4: DIÁRIO ÍNTIMO */}
+        {/* CARD 4: DIARIO ÍNTIMO */}
         <div
           className="card-dopamine"
           onClick={() => onNavigateTab('diario')}
@@ -417,10 +417,10 @@ export const TodayView: React.FC<TodayViewProps> = ({
           <DiaryBookThumbnail />
           <div style={{ flex: 1, minWidth: 0 }}>
             <h3 style={{ margin: '0 0 4px', fontSize: '18px', fontWeight: 600, color: 'var(--text)' }}>
-              Diário Íntimo
+              Diario Íntimo
             </h3>
             <p style={{ margin: 0, fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.4 }}>
-              Um espaço só seu para sentir, escrever e se libertar.
+              Un espacio solo tuyo para sentir, escribir y liberarte.
             </p>
             <span
               style={{
@@ -431,7 +431,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
                 color: 'var(--primary)',
               }}
             >
-              100% Confidencial no seu celular
+              100% Confidencial en tu dispositivo
             </span>
           </div>
           <div className="dopamine-arrow-btn">
@@ -440,13 +440,13 @@ export const TodayView: React.FC<TodayViewProps> = ({
         </div>
       </div>
 
-      {/* 🌸 ESPAÇO DE AUTOCUIDADO & SOBERANIA (Dopaminérgico) */}
+      {/* 🌸 ESPACIO DE AUTOCUIDADO */}
       <SelfCareSection
         onShowToast={onShowToast}
         onOpenSupportTool={onOpenSupportTool}
       />
 
-      {/* 💭 CHECK-IN EMOCIONAL INTERATIVO (Termômetro do Coração) */}
+      {/* 💭 CHECK-IN EMOCIONAL INTERACTIVO */}
       <div
         className="card"
         style={{
@@ -457,21 +457,21 @@ export const TodayView: React.FC<TodayViewProps> = ({
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
           <div>
-            <span className="eyebrow" style={{ color: 'var(--rose-vibrant)' }}>TERMÔMETRO DO CORAÇÃO</span>
-            <h3 style={{ margin: '2px 0 0', fontSize: '17px' }}>Como seu peito está agora?</h3>
+            <span className="eyebrow" style={{ color: 'var(--rose-vibrant)' }}>TERMÓMETRO DEL CORAZÓN</span>
+            <h3 style={{ margin: '2px 0 0', fontSize: '17px' }}>¿Cómo está tu corazón ahora?</h3>
           </div>
           <span className="pill pill-gold" style={{ fontSize: '10px' }}>
-            {todayCheckin ? 'Registrado hoje' : 'Toque para acolher'}
+            {todayCheckin ? 'Registrado hoy' : 'Toca para registrar'}
           </span>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '6px' }}>
           {[
-            { label: 'Muito difícil', emoji: '💔', text: 'Machucada' },
+            { label: 'Muy difícil', emoji: '💔', text: 'Herida' },
             { label: 'Difícil', emoji: '⚡', text: 'Ansiosa' },
             { label: 'Neutro', emoji: '💭', text: 'Pensativa' },
-            { label: 'Bem', emoji: '🕊️', text: 'Serena' },
-            { label: 'Muito bem', emoji: '🌸', text: 'Florescendo' },
+            { label: 'Bien', emoji: '🕊️', text: 'Serena' },
+            { label: 'Muy bien', emoji: '🌸', text: 'Floreciendo' },
           ].map((item) => {
             const isSelected = todayCheckin?.mindLoad === item.label;
             return (
@@ -503,12 +503,12 @@ export const TodayView: React.FC<TodayViewProps> = ({
         </div>
       </div>
 
-      {/* ⚡ REGISTRO DE ACONTECIMENTO RECENTE (Interativo) */}
+      {/* ⚡ REGISTRO DE ACONTECIMIENTO RECIENTE */}
       <div className="card" style={{ padding: '20px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
           <div>
-            <span className="eyebrow">ACONTECIMENTO RECENTE</span>
-            <h3 style={{ margin: '2px 0 0', fontSize: '17px' }}>Algo novo aconteceu hoje?</h3>
+            <span className="eyebrow">ACONTECIMIENTO RECIENTE</span>
+            <h3 style={{ margin: '2px 0 0', fontSize: '17px' }}>¿Algo nuevo pasó hoy?</h3>
           </div>
           {quickEvent && (
             <button
@@ -524,18 +524,18 @@ export const TodayView: React.FC<TodayViewProps> = ({
                 gap: '4px',
               }}
             >
-              <RotateCcw size={12} /> Limpar
+              <RotateCcw size={12} /> Limpiar
             </button>
           )}
         </div>
 
         <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '4px' }}>
           {[
-            'Ele me chamou',
-            'Eu mandei mensagem',
-            'Não houve contato',
-            'Tivemos uma conversa',
-            'Nada mudou',
+            'Él me llamó',
+            'Yo le escribí',
+            'No hubo contacto',
+            'Tuvimos una conversación',
+            'Nada cambió',
           ].map((item) => {
             const isSelected = quickEvent === item;
             return (
@@ -562,8 +562,8 @@ export const TodayView: React.FC<TodayViewProps> = ({
           })}
         </div>
 
-        {/* Card Adaptativo de Resposta Imediata */}
-        {quickEvent === 'Ele me chamou' && (
+        {/* Card Adaptativo de Respuesta Inmediata */}
+        {quickEvent === 'Él me llamó' && (
           <div
             className="animate-fade-in"
             style={{
@@ -575,21 +575,21 @@ export const TodayView: React.FC<TodayViewProps> = ({
             }}
           >
             <h4 style={{ margin: '0 0 6px', fontSize: '15px', color: 'var(--primary)' }}>
-              Antes de responder: separe fatos de expectativas
+              Antes de responder: separa hechos de expectativas
             </h4>
             <p style={{ margin: '0 0 12px', fontSize: '13px', color: 'var(--text)', lineHeight: 1.5 }}>
-              Respire fundo. Não responda no calor do momento. Vamos escolher a postura mais consciente e elegante para o seu caso.
+              Respira profundo. No respondas en el calor del momento. Vamos a elegir la postura más consciente y elegante para tu caso.
             </p>
             <button
               className="btn btn-primary btn-sm"
               onClick={() => onOpenSupportTool ? onOpenSupportTool('ele-me-chamou') : onNavigateTab('apoio')}
             >
-              Analisar contato no SOS <ArrowRight size={14} />
+              Analizar contacto en SOS <ArrowRight size={14} />
             </button>
           </div>
         )}
 
-        {quickEvent === 'Eu mandei mensagem' && (
+        {quickEvent === 'Yo le escribí' && (
           <div
             className="animate-fade-in"
             style={{
@@ -601,10 +601,10 @@ export const TodayView: React.FC<TodayViewProps> = ({
             }}
           >
             <h4 style={{ margin: '0 0 6px', fontSize: '15px', color: 'var(--warning)' }}>
-              Você enviou. Agora dê tempo e proteja sua paz.
+              Ya enviaste. Ahora dale tiempo y protege tu paz.
             </h4>
             <p style={{ margin: '0 0 12px', fontSize: '13px', color: 'var(--text)', lineHeight: 1.5 }}>
-              Evite olhar o WhatsApp a cada 2 minutos. A sua dignidade permanece intacta. Descanse o telefone por alguns instantes.
+              Evita mirar WhatsApp cada 2 minutos. Tu dignidad permanece intacta. Descansa el teléfono por unos instantes.
             </p>
             <button
               className="btn btn-secondary btn-sm"
@@ -616,7 +616,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
         )}
       </div>
 
-      {/* 🪷 OS 4 PILARES DO FLORECER (Idênticos aos badges do poster na imagem) */}
+      {/* 🪷 LOS 4 PILARES DEL FLORECER */}
       <div
         style={{
           display: 'grid',
@@ -646,7 +646,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
             <GoldenLotusIcon size={22} hasGlow={false} />
           </div>
           <span style={{ fontSize: '10px', fontWeight: 800, letterSpacing: '0.5px', color: 'var(--primary)', lineHeight: 1.2 }}>
-            MAIS EQUILÍBRIO
+            MÁS EQUILIBRIO
           </span>
         </div>
 
@@ -667,7 +667,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
             <Heart size={20} />
           </div>
           <span style={{ fontSize: '10px', fontWeight: 800, letterSpacing: '0.5px', color: 'var(--primary)', lineHeight: 1.2 }}>
-            MAIS AUTOESTIMA
+            MÁS AUTOESTIMA
           </span>
         </div>
 
@@ -688,7 +688,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
             <Sparkles size={20} />
           </div>
           <span style={{ fontSize: '10px', fontWeight: 800, letterSpacing: '0.5px', color: 'var(--primary)', lineHeight: 1.2 }}>
-            MAIS CLAREZA
+            MÁS CLARIDAD
           </span>
         </div>
 
@@ -709,12 +709,12 @@ export const TodayView: React.FC<TodayViewProps> = ({
             <Compass size={20} />
           </div>
           <span style={{ fontSize: '10px', fontWeight: 800, letterSpacing: '0.5px', color: 'var(--primary)', lineHeight: 1.2 }}>
-            MAIS RECOMEÇOS
+            MÁS NUEVOS COMIENZOS
           </span>
         </div>
       </div>
 
-      {/* ♡ BANNER DE AFIRMAÇÃO FINAL (Frase do Poster) */}
+      {/* ♡ BANNER DE AFIRMACIÓN FINAL */}
       <div
         style={{
           textAlign: 'center',
@@ -735,7 +735,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
             letterSpacing: '0.02em',
           }}
         >
-          Um novo capítulo sempre é possível ♡
+          Un nuevo capítulo siempre es posible ♡
         </span>
         <small
           style={{
@@ -747,16 +747,16 @@ export const TodayView: React.FC<TodayViewProps> = ({
             fontWeight: 700,
           }}
         >
-          Cura • Clareza • Autoconexão • Recomeço • Você de Novo
+          Sanación • Claridad • Autoconexión • Nuevo Comienzo • Tú de Nuevo
         </small>
       </div>
 
-      {/* MODAL DETALHADO DO MAPA DO SEU MOMENTO */}
+      {/* MODAL DETALLADO DEL MAPA DE TU MOMENTO */}
       <Modal
         isOpen={isDiagnosticModalOpen}
         onClose={() => setIsDiagnosticModalOpen(false)}
-        title="Mapa do Seu Momento"
-        eyebrow="SEU DIAGNÓSTICO ATUAL"
+        title="Mapa de Tu Momento"
+        eyebrow="TU DIAGNÓSTICO ACTUAL"
       >
         {userProfile.relationshipContext ? (
           <div>
@@ -779,7 +779,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
 
             <div style={{ marginBottom: '14px' }}>
               <strong style={{ fontSize: '12px', color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '4px' }}>
-                Foco Principal Agora:
+                Foco Principal Ahora:
               </strong>
               <p style={{ margin: 0, fontSize: '14px', color: 'var(--text)' }}>
                 {userProfile.relationshipContext.focus}
@@ -788,7 +788,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
 
             <div style={{ marginBottom: '20px' }}>
               <strong style={{ fontSize: '12px', color: 'var(--gold-decorative)', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '4px' }}>
-                Primeiro Passo Recomendado:
+                Primer Paso Recomendado:
               </strong>
               <p style={{ margin: 0, fontSize: '14px', color: 'var(--text)' }}>
                 {userProfile.relationshipContext.firstStep}
@@ -803,7 +803,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
                   onNavigateTab('voce');
                 }}
               >
-                Refazer questionário
+                Rehacer cuestionario
               </button>
               <button
                 className="btn btn-primary btn-sm"
@@ -812,14 +812,14 @@ export const TodayView: React.FC<TodayViewProps> = ({
                   onOpenLesson(currentDay);
                 }}
               >
-                Continuar lição de hoje <ArrowRight size={14} />
+                Continuar lección de hoy <ArrowRight size={14} />
               </button>
             </div>
           </div>
         ) : (
           <div>
             <p style={{ fontSize: '14px' }}>
-              Você ainda não respondeu as 8 perguntas do Mapa do Momento.
+              Todavía no respondiste las 8 preguntas del Mapa del Momento.
             </p>
             <button
               className="btn btn-primary btn-sm"
@@ -828,7 +828,7 @@ export const TodayView: React.FC<TodayViewProps> = ({
                 onNavigateTab('voce');
               }}
             >
-              Iniciar Mapa do Momento
+              Iniciar Mapa del Momento
             </button>
           </div>
         )}

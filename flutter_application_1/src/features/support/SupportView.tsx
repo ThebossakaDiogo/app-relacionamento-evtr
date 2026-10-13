@@ -53,7 +53,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
   const [selectedScenarioId, setSelectedScenarioId] = useState<number>(1);
 
   // Estados da ferramenta: Laboratório de Mensagens
-  const [msgCategory, setMsgCategory] = useState<string>('Tudo');
+  const [msgCategory, setMsgCategory] = useState<string>('Todo');
   const [msgSearch, setMsgSearch] = useState<string>('');
   const [editingMsg, setEditingMsg] = useState<{ id: number; text: string; title: string } | null>(null);
 
@@ -67,10 +67,10 @@ export const SupportView: React.FC<SupportViewProps> = ({
   });
 
   // Categorias do Laboratório de mensagens
-  const msgCategories = ['Tudo', 'Respostas Curtas', 'Prático e Limites', 'Respostas com Calma', 'Abertura de Diálogo', 'Saudade e Emoções', 'Encontros', 'Reconciliação'];
+  const msgCategories = ['Todo', 'Respuestas Cortas', 'Práctico y Límites', 'Respuestas con Calma', 'Apertura de Diálogo', 'Nostalgia y Emociones', 'Encuentros', 'Reconciliación'];
 
   const filteredMessages = MESSAGE_TEMPLATES.filter((m) => {
-    const matchesCategory = msgCategory === 'Tudo' || m.category === msgCategory;
+    const matchesCategory = msgCategory === 'Todo' || m.category === msgCategory;
     const matchesSearch =
       m.title.toLowerCase().includes(msgSearch.toLowerCase()) ||
       m.template.toLowerCase().includes(msgSearch.toLowerCase());
@@ -80,9 +80,9 @@ export const SupportView: React.FC<SupportViewProps> = ({
   const handleCopyText = async (text: string) => {
     try {
       await navigator.clipboard.writeText(text);
-      onShowToast('Mensagem copiada para a área de transferência.');
+      onShowToast('Mensaje copiado al portapapeles.');
     } catch {
-      onShowToast('Selecione e copie o texto manualmente.');
+      onShowToast('Selecciona y copia el texto manualmente.');
     }
   };
 
@@ -90,14 +90,14 @@ export const SupportView: React.FC<SupportViewProps> = ({
     StorageService.saveMessageDraft({
       title,
       content,
-      category: 'Apoio',
+      category: 'Apoyo',
     });
-    onShowToast('Mensagem guardada nos seus Rascunhos (aba Você).');
+    onShowToast('Mensaje guardado en tus Borradores (pestaña Tú).');
   };
 
   // Cálculo da decisão: Devo mandar mensagem?
   const handleCalculateDm = () => {
-    if (!dmAnswers.hasClearGoal || dmAnswers.ifNoResponse === 'Ficaria desesperada') {
+    if (!dmAnswers.hasClearGoal || dmAnswers.ifNoResponse.includes('desesperaría')) {
       setDmResult('wait');
     } else if (dmAnswers.isPractical) {
       setDmResult('prepare');
@@ -123,12 +123,12 @@ export const SupportView: React.FC<SupportViewProps> = ({
     <div className="animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
       {/* Intro */}
       <div>
-        <span className="eyebrow">UM ESPAÇO PARA ORGANIZAR</span>
+        <span className="eyebrow">UN ESPACIO PARA ORGANIZAR</span>
         <h1 style={{ margin: '6px 0 8px', fontSize: '32px' }}>
-          O que aconteceu agora?
+          ¿Qué pasó ahora?
         </h1>
         <p style={{ fontSize: '15px' }}>
-          Quando algo muda, você não precisa decidir sozinha no impulso. Escolha a ferramenta ideal para o seu momento.
+          Cuando algo cambia, no tienes que decidir sola por impulso. Elige la herramienta ideal para tu momento.
         </p>
       </div>
 
@@ -166,15 +166,15 @@ export const SupportView: React.FC<SupportViewProps> = ({
               <Compass size={22} />
             </div>
             <div>
-              <span className="eyebrow">FLUXO DE DECISÃO</span>
-              <h3 style={{ margin: 0, fontSize: '18px' }}>Devo mandar mensagem?</h3>
+              <span className="eyebrow">FLUJO DE DECISIÓN</span>
+              <h3 style={{ margin: 0, fontSize: '18px' }}>¿Debo enviar un mensaje?</h3>
             </div>
           </div>
           <p style={{ fontSize: '14px', flex: 1, marginBottom: '16px' }}>
-            Descubra se o contato agora faz sentido ou se é melhor aguardar para preservar sua paz.
+            Descubre si el contacto ahora tiene sentido o si es mejor esperar para preservar tu paz.
           </p>
           <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>
-            Avaliar minha intenção <ArrowRight size={15} />
+            Evaluar mi intención <ArrowRight size={15} />
           </span>
         </div>
 
@@ -240,15 +240,15 @@ export const SupportView: React.FC<SupportViewProps> = ({
               <MessageCircle size={22} />
             </div>
             <div>
-              <span className="eyebrow">ANÁLISE DE CONTATO</span>
-              <h3 style={{ margin: 0, fontSize: '18px' }}>Ele me chamou</h3>
+              <span className="eyebrow">ANÁLISIS DE CONTACTO</span>
+              <h3 style={{ margin: 0, fontSize: '18px' }}>Él me escribió</h3>
             </div>
           </div>
           <p style={{ fontSize: '14px', flex: 1, marginBottom: '16px' }}>
-            Organize o que ele realmente disse antes de responder, evitando cair em ilusões ou impulsos.
+            Organiza lo que realmente dijo antes de responder, evitando caer en ilusiones o impulsos.
           </p>
           <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>
-            Analisar mensagem dele <ArrowRight size={15} />
+            Analizar su mensaje <ArrowRight size={15} />
           </span>
         </div>
 
@@ -275,16 +275,16 @@ export const SupportView: React.FC<SupportViewProps> = ({
             </div>
             <div>
               <span className="eyebrow" style={{ color: 'var(--success)' }}>
-                24 MODELOS EDITORIAIS
+                24 MODELOS EDITORIALES
               </span>
-              <h3 style={{ margin: 0, fontSize: '18px' }}>Encontre as palavras</h3>
+              <h3 style={{ margin: 0, fontSize: '18px' }}>Encuentra las palabras</h3>
             </div>
           </div>
           <p style={{ fontSize: '14px', flex: 1, marginBottom: '16px' }}>
-            Modelos de mensagens elegantes e maduras para cada situação. Copie ou edite com a sua voz.
+            Modelos de mensajes elegantes y maduros para cada situación. Copia o edita con tu propia voz.
           </p>
           <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--success)', display: 'flex', alignItems: 'center', gap: '4px' }}>
-            Ver modelos de mensagem <ArrowRight size={15} />
+            Ver modelos de mensaje <ArrowRight size={15} />
           </span>
         </div>
 
@@ -311,14 +311,14 @@ export const SupportView: React.FC<SupportViewProps> = ({
             </div>
             <div>
               <span className="eyebrow">LUCIDEZ EMOCIONAL</span>
-              <h3 style={{ margin: 0, fontSize: '18px' }}>Fato ou interpretação?</h3>
+              <h3 style={{ margin: 0, fontSize: '18px' }}>¿Hecho o interpretación?</h3>
             </div>
           </div>
           <p style={{ fontSize: '14px', flex: 1, marginBottom: '16px' }}>
-            Separe o que uma câmera filmaria daquilo que o seu medo ou desejo está supondo.
+            Separa lo que una cámara filmaría de lo que tu miedo o deseo está suponiendo.
           </p>
           <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>
-            Abrir analisador <ArrowRight size={15} />
+            Abrir analizador <ArrowRight size={15} />
           </span>
         </div>
 
@@ -347,14 +347,14 @@ export const SupportView: React.FC<SupportViewProps> = ({
               <span className="eyebrow" style={{ color: '#8B4513' }}>
                 FLORECER PLUS
               </span>
-              <h3 style={{ margin: 0, fontSize: '18px' }}>Assistente de Clareza</h3>
+              <h3 style={{ margin: 0, fontSize: '18px' }}>Asistente de Claridad</h3>
             </div>
           </div>
           <p style={{ fontSize: '14px', flex: 1, marginBottom: '16px' }}>
-            Estruture uma conversa delicada ou organize seus pensamentos com auxílio guiado.
+            Estructura una conversación delicada u organiza tus pensamientos con apoyo guiado.
           </p>
           <span style={{ fontSize: '13px', fontWeight: 600, color: '#8B4513', display: 'flex', alignItems: 'center', gap: '4px' }}>
-            Acessar Assistente <ArrowRight size={15} />
+            Acceder al Asistente <ArrowRight size={15} />
           </span>
         </div>
       </div>
@@ -363,23 +363,23 @@ export const SupportView: React.FC<SupportViewProps> = ({
       <Modal
         isOpen={activeModal === 'devo-mandar'}
         onClose={() => setActiveModal(null)}
-        title="Devo mandar mensagem?"
-        eyebrow="FLUXO DE DECISÃO"
+        title="¿Debo enviar un mensaje?"
+        eyebrow="FLUJO DE DECISIÓN"
       >
         {!dmResult ? (
           <div>
             {dmStep === 1 && (
               <div>
                 <p style={{ fontSize: '15px', color: 'var(--text)', marginBottom: '16px' }}>
-                  1. O que fez você sentir vontade de entrar em contato neste exato momento?
+                  1. ¿Qué hizo que sintieras ganas de ponerte en contacto en este preciso momento?
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   {[
-                    'Um assunto prático ou inadiável (coisas, documentos, pet)',
-                    'Um pico repentino de saudade ou solidão',
-                    'Vi algo em redes sociais ou lembrei de nós dois',
-                    'Quero pedir desculpas por algo específico que fiz',
-                    'Quero saber se ainda existe abertura entre nós',
+                    'Un asunto práctico o impostergable (cosas, documentos, mascota)',
+                    'Un pico repentino de nostalgia o soledad',
+                    'Vi algo en redes sociales o me acordé de los dos',
+                    'Quiero pedir disculpas por algo específico que hice',
+                    'Quiero saber si todavía hay apertura entre nosotros',
                   ].map((opt) => (
                     <button
                       key={opt}
@@ -388,7 +388,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
                         setDmAnswers((prev) => ({
                           ...prev,
                           reason: opt,
-                          isPractical: opt.includes('prático'),
+                          isPractical: opt.includes('práctico'),
                         }));
                         setDmStep(2);
                       }}
@@ -404,14 +404,14 @@ export const SupportView: React.FC<SupportViewProps> = ({
             {dmStep === 2 && (
               <div>
                 <p style={{ fontSize: '15px', color: 'var(--text)', marginBottom: '16px' }}>
-                  2. O que você espera secretamente que aconteça após o envio?
+                  2. ¿Qué esperas secretamente que suceda después de enviarlo?
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   {[
-                    'Apenas resolver o assunto prático com rapidez',
-                    'Que ele me responda dizendo que se arrependeu e quer voltar',
-                    'Aliviar a minha angústia e saber que ele não me esqueceu',
-                    'Ter uma resposta madura e tranquila',
+                    'Solo resolver el asunto práctico con rapidez',
+                    'Que me responda diciendo que se arrepintió y quiere volver',
+                    'Aliviar mi angustia y saber que no me ha olvidado',
+                    'Tener una respuesta madura y tranquila',
                   ].map((opt) => (
                     <button
                       key={opt}
@@ -432,13 +432,13 @@ export const SupportView: React.FC<SupportViewProps> = ({
             {dmStep === 3 && (
               <div>
                 <p style={{ fontSize: '15px', color: 'var(--text)', marginBottom: '16px' }}>
-                  3. Se ele não responder ou demorar mais de 24 horas, como você ficaria?
+                  3. Si no responde o tarda más de 24 horas, ¿cómo te sentirías?
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   {[
-                    'Ficaria desesperada, checando o celular a cada minuto',
-                    'Ficaria chateada, mas consigo seguir com meus afazeres em paz',
-                    'Tranquila: o assunto é objetivo e o silêncio já será uma resposta',
+                    'Me desesperaría, revisando el celular a cada minuto',
+                    'Me sentiría triste, pero puedo seguir con mis cosas en paz',
+                    'Tranquila: el tema es objetivo y el silencio ya será una respuesta',
                   ].map((opt) => (
                     <button
                       key={opt}
@@ -447,7 +447,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
                         setDmAnswers((prev) => ({
                           ...prev,
                           ifNoResponse: opt,
-                          hasClearGoal: opt.includes('Tranquila') || opt.includes('chateada'),
+                          hasClearGoal: opt.includes('Tranquila') || opt.includes('triste'),
                         }));
                         handleCalculateDm();
                       }}
@@ -465,13 +465,13 @@ export const SupportView: React.FC<SupportViewProps> = ({
             {dmResult === 'wait' && (
               <div style={{ textAlign: 'center', padding: '10px 0' }}>
                 <span className="pill pill-gold" style={{ marginBottom: '12px', fontSize: '13px' }}>
-                  RECOMENDAÇÃO: ESPERE UM POUCO
+                  RECOMENDACIÓN: ESPERA UN POCO
                 </span>
                 <h3 style={{ fontSize: '22px', margin: '12px 0 10px', color: 'var(--primary)' }}>
-                  Aguarde antes de iniciar contato.
+                  Espera antes de iniciar contacto.
                 </h3>
                 <p style={{ fontSize: '15px', lineHeight: '1.6', marginBottom: '24px' }}>
-                  Sua motivação principal agora parece ser aliviar a angústia da incerteza. Enviar uma mensagem nesse estado transfere o controle da sua paz para a resposta dele. Dê a si mesma 24 horas de trégua.
+                  Tu motivación principal ahora parece ser aliviar la angustia de la incertidumbre. Enviar un mensaje en este estado transfiere el control de tu paz a su respuesta. Date a ti misma 24 horas de tregua.
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <button
@@ -480,7 +480,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
                       setActiveModal('90-segundos');
                     }}
                   >
-                    Fazer pausa de 90 segundos agora
+                    Hacer pausa de 90 segundos ahora
                   </button>
                   <button
                     className="btn btn-secondary"
@@ -489,7 +489,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
                       setActiveModal(null);
                     }}
                   >
-                    Escrever no Diário Privado
+                    Escribir en el Diario Privado
                   </button>
                 </div>
               </div>
@@ -498,13 +498,13 @@ export const SupportView: React.FC<SupportViewProps> = ({
             {dmResult === 'prepare' && (
               <div>
                 <span className="pill pill-success" style={{ marginBottom: '12px', fontSize: '13px' }}>
-                  RECOMENDAÇÃO: PREPARE ANTES DE ENVIAR
+                  RECOMENDACIÓN: PREPARA ANTES DE ENVIAR
                 </span>
                 <h3 style={{ fontSize: '22px', margin: '12px 0 10px', color: 'var(--primary)' }}>
-                  Há um assunto concreto. Mantenha o texto objetivo.
+                  Hay un asunto concreto. Mantén el texto objetivo.
                 </h3>
                 <p style={{ fontSize: '15px', lineHeight: '1.6', marginBottom: '20px' }}>
-                  Você tem um assunto prático para resolver. A melhor estratégia é ser breve, educada e direta, sem misturar lembranças emocionais com recados práticos.
+                  Tienes un asunto práctico que resolver. La mejor estrategia es ser breve, educada y directa, sin mezclar recuerdos emocionales con recados prácticos.
                 </p>
                 <button
                   className="btn btn-primary btn-block"
@@ -512,7 +512,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
                     setActiveModal('laboratorio');
                   }}
                 >
-                  Ver modelos de Assunto Prático
+                  Ver modelos de Asunto Práctico
                 </button>
               </div>
             )}
@@ -520,13 +520,13 @@ export const SupportView: React.FC<SupportViewProps> = ({
             {dmResult === 'conversation' && (
               <div>
                 <span className="pill" style={{ marginBottom: '12px', fontSize: '13px' }}>
-                  RECOMENDAÇÃO: UMA CONVERSA PODE FAZER SENTIDO
+                  RECOMENDACIÓN: UNA CONVERSACIÓN PUEDE TENER SENTIDO
                 </span>
                 <h3 style={{ fontSize: '22px', margin: '12px 0 10px', color: 'var(--primary)' }}>
-                  Objetivo claro e maturidade para lidar com a resposta.
+                  Objetivo claro y madurez para lidiar con la respuesta.
                 </h3>
                 <p style={{ fontSize: '15px', lineHeight: '1.6', marginBottom: '20px' }}>
-                  Você avaliou seu estado emocional e demonstrou preparo para qualquer desfecho. Escolha um modelo respeitoso e envie com tranquilidade.
+                  Evaluaste tu estado emocional y demostraste estar preparada para cualquier desenlace. Elige un modelo respetuoso y envía con tranquilidad.
                 </p>
                 <button
                   className="btn btn-primary btn-block"
@@ -534,7 +534,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
                     setActiveModal('laboratorio');
                   }}
                 >
-                  Preparar mensagem no Laboratório
+                  Preparar mensaje en el Laboratorio
                 </button>
               </div>
             )}
@@ -546,7 +546,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
       <Modal
         isOpen={activeModal === '90-segundos'}
         onClose={() => setActiveModal(null)}
-        title="Quero falar com ele agora"
+        title="Quiero hablar con él ahora"
         eyebrow="PAUSA DE 90 SEGUNDOS"
       >
         <div>
@@ -573,17 +573,17 @@ export const SupportView: React.FC<SupportViewProps> = ({
             </div>
             <small style={{ color: 'var(--text-muted)', fontSize: '12px', marginTop: '6px', display: 'block' }}>
               {sosSeconds > 0
-                ? 'Puxe o ar em 4 segundos... segure em 2... solte em 6 segundos.'
-                : 'Tempo concluído. Respire e avalie como está o seu corpo.'}
+                ? 'Inhala en 4 segundos... sostén en 2... exhala en 6 segundos.'
+                : 'Tiempo completado. Respira y evalúa cómo se siente tu cuerpo.'}
             </small>
           </div>
 
           <p style={{ fontSize: '14px', lineHeight: '1.6', marginBottom: '16px' }}>
-            Escreva abaixo absolutamente tudo o que você gostaria de dizer agora. Descarregue o texto sem filtro: nada daqui será enviado para ninguém.
+            Escribe a continuación absolutamente todo lo que te gustaría decir ahora. Descarga el texto sin filtro: nada de esto se enviará a nadie.
           </p>
 
           <textarea
-            placeholder="Se eu pudesse falar qualquer coisa sem consequências agora..."
+            placeholder="Si pudiera decir cualquier cosa sin consecuencias ahora..."
             value={sosDraft}
             onChange={(e) => setSosDraft(e.target.value)}
             style={{ minHeight: '130px', marginBottom: '16px' }}
@@ -594,21 +594,21 @@ export const SupportView: React.FC<SupportViewProps> = ({
               className="btn btn-primary btn-block"
               onClick={() => {
                 if (sosDraft.trim()) {
-                  handleSaveDraft('Desabafo SOS (90 segundos)', sosDraft.trim());
+                  handleSaveDraft('Desahogo SOS (90 segundos)', sosDraft.trim());
                   setSosDraft('');
                   setActiveModal(null);
                 } else {
-                  onShowToast('Escreva algo antes de guardar.');
+                  onShowToast('Escribe algo antes de guardar.');
                 }
               }}
             >
-              Guardar no Diário sem enviar
+              Guardar en el Diario sin enviar
             </button>
             <button
               className="btn btn-secondary btn-block"
               onClick={() => setActiveModal(null)}
             >
-              Concluir pausa
+              Terminar pausa
             </button>
           </div>
         </div>
@@ -618,12 +618,12 @@ export const SupportView: React.FC<SupportViewProps> = ({
       <Modal
         isOpen={activeModal === 'ele-me-chamou'}
         onClose={() => setActiveModal(null)}
-        title="Ele me chamou"
-        eyebrow="ANÁLISE DE CONTATO"
+        title="Él me escribió"
+        eyebrow="ANÁLISIS DE CONTACTO"
       >
         <div>
           <label htmlFor="select-scenario" style={{ marginBottom: '8px', display: 'block' }}>
-            Selecione o tipo de mensagem que ele enviou:
+            Selecciona el tipo de mensaje que él envió:
           </label>
           <select
             id="select-scenario"
@@ -644,21 +644,21 @@ export const SupportView: React.FC<SupportViewProps> = ({
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div style={{ padding: '14px', backgroundColor: 'var(--bg)', borderRadius: '16px' }}>
                   <strong style={{ fontSize: '12px', color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                    O que é fato observável:
+                    Lo que es un hecho observable:
                   </strong>
                   <p style={{ margin: '4px 0 0', fontSize: '14px', color: 'var(--text)' }}>{sc.whatIsFact}</p>
                 </div>
 
                 <div style={{ padding: '14px', backgroundColor: 'var(--bg)', borderRadius: '16px' }}>
                   <strong style={{ fontSize: '12px', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                    O que ainda não sabemos:
+                    Lo que todavía no sabemos:
                   </strong>
                   <p style={{ margin: '4px 0 0', fontSize: '14px', color: 'var(--text)' }}>{sc.whatWeDontKnow}</p>
                 </div>
 
                 <div style={{ padding: '14px', backgroundColor: 'var(--bg)', borderRadius: '16px' }}>
                   <strong style={{ fontSize: '12px', color: 'var(--gold-decorative)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                    O que observar em seguida:
+                    Qué observar a continuación:
                   </strong>
                   <p style={{ margin: '4px 0 0', fontSize: '14px', color: 'var(--text)' }}>{sc.whatToObserve}</p>
                 </div>
@@ -671,7 +671,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
                   }}
                 >
                   <strong style={{ fontSize: '13px', color: 'var(--primary)', display: 'block', marginBottom: '4px' }}>
-                    Ação recomendada:
+                    Acción recomendada:
                   </strong>
                   <p style={{ margin: 0, fontSize: '14px', color: 'var(--text)' }}>{sc.suggestedAction}</p>
                 </div>
@@ -711,8 +711,8 @@ export const SupportView: React.FC<SupportViewProps> = ({
           setActiveModal(null);
           setEditingMsg(null);
         }}
-        title="Laboratório de Mensagens"
-        eyebrow="24 MODELOS EDITORIAIS"
+        title="Laboratorio de Mensajes"
+        eyebrow="24 MODELOS EDITORIALES"
         maxWidth="680px"
       >
         <div>
@@ -720,7 +720,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
           {editingMsg ? (
             <div className="animate-fade-in">
               <span className="eyebrow" style={{ display: 'block', marginBottom: '6px' }}>
-                EDITAR COM A SUA VOZ
+                EDITAR CON TU VOZ
               </span>
               <h3 style={{ margin: '0 0 14px', fontSize: '20px' }}>{editingMsg.title}</h3>
 
@@ -737,7 +737,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
                     handleCopyText(editingMsg.text);
                   }}
                 >
-                  <Copy size={16} /> Copiar para o WhatsApp
+                  <Copy size={16} /> Copiar para WhatsApp
                 </button>
                 <button
                   className="btn btn-secondary"
@@ -745,13 +745,13 @@ export const SupportView: React.FC<SupportViewProps> = ({
                     handleSaveDraft(editingMsg.title, editingMsg.text);
                   }}
                 >
-                  <BookmarkPlus size={16} /> Guardar nos Rascunhos
+                  <BookmarkPlus size={16} /> Guardar en Borradores
                 </button>
                 <button
                   className="btn btn-soft"
                   onClick={() => setEditingMsg(null)}
                 >
-                  Voltar à lista
+                  Volver a la lista
                 </button>
               </div>
             </div>
@@ -766,7 +766,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
                   />
                   <input
                     type="text"
-                    placeholder="Buscar modelo por tema ou palavra..."
+                    placeholder="Buscar modelo por tema o palabra..."
                     value={msgSearch}
                     onChange={(e) => setMsgSearch(e.target.value)}
                     style={{ paddingLeft: '40px' }}
@@ -848,7 +848,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
                     </div>
 
                     <div style={{ fontSize: '12px', color: 'var(--error)' }}>
-                      <strong>Evite:</strong> {msg.avoidTip}
+                      <strong>Evita:</strong> {msg.avoidTip}
                     </div>
                   </div>
                 ))}
@@ -862,7 +862,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
       <Modal
         isOpen={activeModal === 'fato-interpretacao'}
         onClose={() => setActiveModal(null)}
-        title="Fato ou Interpretação?"
+        title="¿Hecho o interpretación?"
         eyebrow="LUCIDEZ EMOCIONAL"
       >
         <div>
@@ -871,20 +871,20 @@ export const SupportView: React.FC<SupportViewProps> = ({
               className={`btn btn-sm ${factMode === 'preset' ? 'btn-primary' : 'btn-secondary'}`}
               onClick={() => setFactMode('preset')}
             >
-              Cenários comuns
+              Escenarios comunes
             </button>
             <button
               className={`btn btn-sm ${factMode === 'custom' ? 'btn-primary' : 'btn-secondary'}`}
               onClick={() => setFactMode('custom')}
             >
-              Minha própria situação
+              Mi propia situación
             </button>
           </div>
 
           {factMode === 'preset' ? (
             <div>
               <p style={{ fontSize: '14px', marginBottom: '14px' }}>
-                Selecione uma situação comum para exercitar o filtro de lucidez:
+                Selecciona una situación común para ejercitar el filtro de lucidez:
               </p>
               <select
                 value={selectedScenarioId}
@@ -904,28 +904,28 @@ export const SupportView: React.FC<SupportViewProps> = ({
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                     <div style={{ padding: '14px', backgroundColor: 'var(--success-soft)', borderRadius: '14px' }}>
                       <strong style={{ fontSize: '12px', color: 'var(--success)', textTransform: 'uppercase' }}>
-                        1. Fato (o que a câmera filmou):
+                        1. Hecho (lo que filmó la cámara):
                       </strong>
                       <p style={{ margin: '4px 0 0', fontSize: '14px', color: 'var(--text)' }}>{sc.whatIsFact}</p>
                     </div>
 
                     <div style={{ padding: '14px', backgroundColor: 'var(--error-soft)', borderRadius: '14px' }}>
                       <strong style={{ fontSize: '12px', color: 'var(--error)', textTransform: 'uppercase' }}>
-                        2. O que a mente supõe no medo:
+                        2. Lo que la mente supone por miedo:
                       </strong>
                       <p style={{ margin: '4px 0 0', fontSize: '14px', color: 'var(--text)' }}>{sc.whatHappened}</p>
                     </div>
 
                     <div style={{ padding: '14px', backgroundColor: 'var(--bg)', borderRadius: '14px' }}>
                       <strong style={{ fontSize: '12px', color: 'var(--text-muted)', textTransform: 'uppercase' }}>
-                        3. O que ainda não sabemos:
+                        3. Lo que todavía no sabemos:
                       </strong>
                       <p style={{ margin: '4px 0 0', fontSize: '14px', color: 'var(--text)' }}>{sc.whatWeDontKnow}</p>
                     </div>
 
                     <div style={{ padding: '14px', backgroundColor: 'var(--primary-soft)', borderRadius: '14px' }}>
                       <strong style={{ fontSize: '12px', color: 'var(--primary)', textTransform: 'uppercase' }}>
-                        4. O que observar em seguida:
+                        4. Qué observar a continuación:
                       </strong>
                       <p style={{ margin: '4px 0 0', fontSize: '14px', color: 'var(--text)' }}>{sc.whatToObserve}</p>
                     </div>
@@ -936,27 +936,27 @@ export const SupportView: React.FC<SupportViewProps> = ({
           ) : (
             <div>
               <p style={{ fontSize: '14px', marginBottom: '14px' }}>
-                Preencha os campos para desacelerar o pensamento e enxergar a situação com clareza:
+                Completa los campos para desacelerar el pensamiento y ver la situación con claridad:
               </p>
-              <label>1. O que aconteceu de fato (apenas fatos comprováveis):</label>
+              <label>1. Lo que sucedió de hecho (solo hechos comprobables):</label>
               <textarea
-                placeholder="Ex: Ele me ligou ontem às 21h e conversamos por 10 minutos..."
+                placeholder="Ej: Me llamó ayer a las 21:00 y hablamos durante 10 minutos..."
                 value={customSituation.fact}
                 onChange={(e) => setCustomSituation({ ...customSituation, fact: e.target.value })}
                 style={{ minHeight: '70px', marginBottom: '12px' }}
               />
 
-              <label>2. O significado que a minha mente está dando:</label>
+              <label>2. El significado que mi mente le está dando:</label>
               <textarea
-                placeholder="Ex: Estou achando que ele quer voltar / estou com medo de que ele já esteja com outra..."
+                placeholder="Ej: Creo que quiere volver / tengo miedo de que ya esté con otra persona..."
                 value={customSituation.interpretation}
                 onChange={(e) => setCustomSituation({ ...customSituation, interpretation: e.target.value })}
                 style={{ minHeight: '70px', marginBottom: '12px' }}
               />
 
-              <label>3. O que eu ainda NÃO posso provar com certeza:</label>
+              <label>3. Lo que todavía NO puedo demostrar con certeza:</label>
               <textarea
-                placeholder="Ex: Não sei qual é a real intenção dele porque ele não expressou isso..."
+                placeholder="Ej: No sé cuál es su verdadera intención porque no lo ha expresado..."
                 value={customSituation.unknown}
                 onChange={(e) => setCustomSituation({ ...customSituation, unknown: e.target.value })}
                 style={{ minHeight: '70px', marginBottom: '16px' }}
@@ -968,17 +968,17 @@ export const SupportView: React.FC<SupportViewProps> = ({
                   if (customSituation.fact.trim()) {
                     StorageService.saveJournalEntry({
                       date: new Date().toISOString(),
-                      content: `Fato: ${customSituation.fact}\nInterpretação: ${customSituation.interpretation}\nO que não sei: ${customSituation.unknown}`,
-                      promptUsed: 'Exercício: Fato ou Interpretação',
+                      content: `Hecho: ${customSituation.fact}\nInterpretación: ${customSituation.interpretation}\nLo que no sé: ${customSituation.unknown}`,
+                      promptUsed: 'Ejercicio: Hecho o Interpretación',
                     });
-                    onShowToast('Exercício salvo com sucesso no seu Diário!');
+                    onShowToast('¡Ejercicio guardado con éxito en tu Diario!');
                     setActiveModal(null);
                   } else {
-                    onShowToast('Preencha pelo menos o campo de fatos.');
+                    onShowToast('Completa al menos el campo de hechos.');
                   }
                 }}
               >
-                Salvar exercício no Diário
+                Guardar ejercicio en el Diario
               </button>
             </div>
           )}
@@ -989,7 +989,7 @@ export const SupportView: React.FC<SupportViewProps> = ({
       <Modal
         isOpen={activeModal === 'assistente-plus'}
         onClose={() => setActiveModal(null)}
-        title="Assistente de Clareza"
+        title="Asistente de Claridad"
         eyebrow="FLORECER PLUS"
       >
         <div>
@@ -1002,24 +1002,24 @@ export const SupportView: React.FC<SupportViewProps> = ({
             }}
           >
             <p style={{ margin: 0, fontSize: '14px', color: 'var(--primary)', lineHeight: '1.6' }}>
-              O Assistente de Clareza opera com princípios éticos rigorosos: ele não promete volta de ex, não diagnostica comportamentos de terceiros e ajuda você a estruturar mensagens e pensamentos com elegância e maturidade.
+              El Asistente de Claridad opera con principios éticos rigurosos: no promete el regreso de una expareja, no diagnostica conductas de terceros y te ayuda a estructurar mensajes y pensamientos con elegancia y madurez.
             </p>
           </div>
 
-          <label>Qual situação você gostaria de estruturar hoje?</label>
+          <label>¿Qué situación te gustaría estructurar hoy?</label>
           <textarea
-            placeholder="Ex: Ele me convidou para sair no fim de semana, mas eu tenho medo de ceder e voltar para os mesmos problemas de antes..."
+            placeholder="Ej: Me invitó a salir el fin de semana, pero tengo miedo de ceder y volver a los mismos problemas de antes..."
             style={{ minHeight: '110px', marginBottom: '16px' }}
           />
 
           <button
             className="btn btn-primary btn-block"
             onClick={() => {
-              onShowToast('Modo de auxílio interativo ativo para esta sessão.');
+              onShowToast('Modo de asistencia interactiva activo para esta sesión.');
               setActiveModal(null);
             }}
           >
-            Organizar meus pontos com o Assistente
+            Organizar mis puntos con el Asistente
           </button>
         </div>
       </Modal>

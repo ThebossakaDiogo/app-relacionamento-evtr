@@ -34,7 +34,7 @@ export default function App() {
   const handleCompleteOnboarding = (newProfile: UserProfile) => {
     setUserProfile(newProfile);
     setCurrentTab('hoje');
-    showToast(`Bem-vinda, ${newProfile.name}! Seu plano personalizado está pronto.`);
+    showToast(`¡Bienvenida, ${newProfile.name}! Tu plan personalizado está listo.`);
   };
 
   const handleResetOnboarding = () => {

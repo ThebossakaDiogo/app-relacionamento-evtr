@@ -1,499 +1,499 @@
 import { LibraryItem } from '../types';
 
 export const LIBRARY_ITEMS: LibraryItem[] = [
-  // --- LEITURAS (12 ARTIGOS) ---
+  // --- LECTURAS (12 ARTÍCULOS) ---
   {
     id: 'art-1',
     type: 'leitura',
-    title: 'Fato e interpretação depois do término',
-    subtitle: 'Como separar acontecimentos observáveis das histórias que a ansiedade cria.',
-    category: 'Clareza Mental',
+    title: 'Hecho e interpretación después de la ruptura',
+    subtitle: 'Cómo separar acontecimientos observables de las historias que crea la ansiedad.',
+    category: 'Claridad Mental',
     duration: '4 min',
-    tags: ['ansiedade', 'fatos', 'clareza', 'mente'],
-    content: `Quando passamos por um término, nossa mente entra em estado de alerta máximo. Nessa condição, qualquer gesto — uma demora de vinte minutos para responder, uma música postada nos stories, um tom de voz ligeiramente diferente — é imediatamente interpretado como uma mensagem codificada.
+    tags: ['ansiedad', 'hechos', 'claridad', 'mente'],
+    content: `Cuando pasamos por una ruptura, nuestra mente entra en estado de alerta máxima. En esta condición, cualquier gesto —una demora de veinte minutos en responder, una canción compartida en historias, un tono de voz ligeramente diferente— se interpreta de inmediato como un mensaje en clave.
 
-Um fato é aquilo que uma câmera de vídeo neutra seria capaz de registrar: "Ele mandou mensagem às 14h dizendo que está ocupado".
-Uma interpretação é a história que o seu medo inventa: "Ele está com outra pessoa e não quer mais falar comigo".
+Un hecho es aquello que una cámara de video neutra registraría: "Él envió un mensaje a las 14:00 diciendo que está ocupado".
+Una interpretación es la historia que inventa tu miedo: "Está con otra persona y ya no quiere hablar conmigo".
 
-A interpretação pode até parecer evidente para você, mas enquanto for apenas uma suposição na sua mente, agir com base nela costuma gerar reações precipitadas e constrangimento. Quando você separa os fatos do que está apenas imaginando, a sua urgência de responder no impulso cai pela metade. Antes de tomar qualquer atitude drástica, pergunte-se: "Eu tenho uma prova concreta disso ou estou sofrendo por antecipação?".`,
+La interpretación puede parecer evidente para ti, pero mientras sea solo una suposición en tu mente, actuar con base en ella suele provocar reacciones precipitadas y arrepentimiento. Cuando separas los hechos de lo que imaginas, la urgencia de responder por impulso se reduce a la mitad. Antes de tomar cualquier decisión drástica, pregúntate: "¿Tengo una prueba concreta de esto o estoy sufriendo por anticipación?".`,
   },
   {
     id: 'art-2',
     type: 'leitura',
-    title: 'Saudade não é uma decisão',
-    subtitle: 'Por que sentir falta da pessoa não significa que vocês devem reatar.',
-    category: 'Emoções',
+    title: 'Extrañar no es una decisión',
+    subtitle: 'Por qué echar de menos a alguien no significa que deban volver.',
+    category: 'Emociones',
     duration: '5 min',
-    tags: ['saudade', 'decisão', 'apego', 'coração'],
-    content: `A saudade é um sentimento biológico e emocional. Você compartilhou sua intimidade, seus segredos e sua rotina com aquela pessoa. Quando o vínculo é cortado, seu cérebro sofre uma espécie de abstinência química de ocitocina e dopamina.
+    tags: ['extrañar', 'decisión', 'apego', 'corazón'],
+    content: `Extrañar es un sentimiento biológico y emocional. Compartiste tu intimidad, tus secretos y tu rutina con esa persona. Cuando el vínculo se corta, tu cerebro sufre una abstinencia química de oxitocina y dopamina.
 
-No entanto, muitas mulheres cometem o erro de tratar a saudade como uma ordem de comando: "Estou sofrendo de saudade, logo preciso mandar mensagem para ele voltar".
+Sin embargo, muchas mujeres cometen el error de tratar la nostalgia como una orden de acción: "Siento que lo extraño demasiado, por lo tanto debo escribirle para volver".
 
-Sentir falta da presença de alguém não apaga os motivos que levaram ao término. A saudade não resolve falta de respeito, incompatibilidade de valores, mentiras ou indisponibilidade emocional. Aprenda a acolher a sua saudade como um luto legítimo, sem transformá-la em uma justificativa para se submeter novamente a uma dinâmica que te feria.`,
+Echar de menos la presencia de alguien no borra los motivos que llevaron al final. La nostalgia no resuelve la falta de respeto, la incompatibilidad de valores, las mentiras o la indisponibilidad emocional. Aprende a acoger tu nostalgia como un duelo legítimo, sin transformarla en una justificación para someterte nuevamente a una dinámica que te lastimaba.`,
   },
   {
     id: 'art-3',
     type: 'leitura',
-    title: 'Quando esperar antes de responder',
-    subtitle: 'O poder dos 60 minutos de pausa para recuperar o comando das suas reações.',
-    category: 'Comunicação',
+    title: 'Cuándo esperar antes de responder',
+    subtitle: 'El poder de la pausa de 60 minutos para recuperar el control de tus reacciones.',
+    category: 'Comunicación',
     duration: '4 min',
-    tags: ['resposta', 'tempo', 'pausa', 'limites'],
-    content: `Você não está sob juramento e nem em um plantão de pronto-socorro: você não tem nenhuma obrigação de responder a uma mensagem no instante em que ela apita no seu celular.
+    tags: ['respuesta', 'tiempo', 'pausa', 'límites'],
+    content: `No estás bajo juramento ni en una sala de emergencias: no tienes ninguna obligación de responder un mensaje en el mismo segundo en que suena en tu teléfono.
 
-A pressa em responder quase sempre vem do receio de que a outra pessoa perca o interesse ou vá embora se você demorar. Mas a verdade é o oposto: responder no calor do momento costuma entregar desespero e ansiedade mal contida.
+La prisa por responder casi siempre nace del temor a que la otra persona pierda el interés o se vaya si tardas. Pero la verdad es la contraria: responder en caliente suele transmitir desesperación y ansiedad mal contenida.
 
-Dar a si mesma uma pausa de 30 a 60 minutos antes de digitar uma resposta permite que o pico de adrenalina baixe. Nesse intervalo, você ganha a lucidez necessária para formular uma resposta elegante, calma e alinhada com os seus princípios. O tempo de resposta é uma prerrogativa sua.`,
+Darte una pausa de 30 a 60 minutos antes de escribir una respuesta permite que baje el pico de adrenalina. En ese intervalo, recuperas la lucidez necesaria para formular una respuesta elegante, tranquila y alineada con tus principios. El tiempo de respuesta es tu decisión y tu prerrogativa.`,
   },
   {
     id: 'art-4',
     type: 'leitura',
-    title: 'Reciprocidade no pós-término',
-    subtitle: 'Aprenda a observar a balança de esforço antes de se doar novamente.',
-    category: 'Relacionamento',
+    title: 'Reciprocidad en el post-ruptura',
+    subtitle: 'Aprende a observar la balanza de esfuerzo antes de volver a entregarte.',
+    category: 'Relación',
     duration: '5 min',
-    tags: ['reciprocidade', 'esforço', 'atitudes'],
-    content: `Um relacionamento só existe quando duas pessoas decidem caminhar na mesma direção com empenho mútuo. Se apenas você faz perguntas, se apenas você sugere encontros, se apenas você perdoa e tenta consertar tudo, você não está em um relacionamento: você está em uma maratona solitária.
+    tags: ['reciprocidad', 'esfuerzo', 'actitudes'],
+    content: `Una relación solo existe cuando dos personas deciden caminar en la misma dirección con empeño mutuo. Si solo tú haces preguntas, si solo tú propones encuentros, si solo tú perdonas e intentas arreglarlo todo, no estás en una relación: estás en una maratón solitaria.
 
-No pós-término, preste atenção não no que a pessoa diz que sente, mas no que ela efetivamente FAZ. Ela demonstra interesse real pelo seu bem-estar? Ela assume compromissos e comparece? Ela tem coragem de ter conversas difíceis?
+En el post-ruptura, presta atención no a lo que la persona dice sentir, sino a lo que efectivamente HACE. ¿Demuestra interés genuino por tu bienestar? ¿Asume compromisos y los cumple? ¿Tiene la valentía de tener conversaciones difíciles?
 
-Pare de medir o amor pelo tamanho do sofrimento que você suporta. O amor saudável é leve, transparente e se sustenta na reciprocidade diária.`,
+Deja de medir el amor por el tamaño del sufrimiento que eres capaz de soportar. El amor sano es ligero, transparente y se sostiene en la reciprocidad cotidiana.`,
   },
   {
     id: 'art-5',
     type: 'leitura',
-    title: 'Como preparar uma conversa importante',
-    subtitle: 'Roteiro prático para falar com firmeza sem se perder em discussões antigas.',
-    category: 'Comunicação',
+    title: 'Cómo preparar una conversación importante',
+    subtitle: 'Guía práctica para hablar con firmeza sin perderse en discusiones del pasado.',
+    category: 'Comunicación',
     duration: '6 min',
-    tags: ['conversa', 'diálogo', 'preparação'],
-    content: `Conversas sobre o término costumam ser armadilhas emocionais se você for sem planejamento. A tendência natural é resgatar mágoas de meses atrás e transformar o diálogo em uma sessão de acusações mútuas que não levam a lugar nenhum.
+    tags: ['conversación', 'diálogo', 'preparación'],
+    content: `Las conversaciones sobre la ruptura suelen ser trampas emocionales si vas sin planificación. La tendencia natural es revivir heridas de meses atrás y transformar el diálogo en una sesión de reproches mutuos que no lleva a ninguna parte.
 
-Para ter uma conversa produtiva:
-1. Tenha um objetivo claro: o que você quer saber ou comunicar?
-2. Fale na primeira pessoa: em vez de "Você nunca me deu atenção", diga "Eu me sentia desvalorizada quando minhas opiniões eram ignoradas".
-3. Saiba onde colocar o ponto final: se a conversa começar a virar bate-boca, encerre com gentileza: "Vejo que estamos nos exaltando. Prefiro continuar em outro momento".
+Para tener una conversación productiva:
+1. Ten un objetivo claro: ¿qué quieres saber o comunicar con exactitud?
+2. Habla en primera persona: en lugar de "Tú nunca me diste atención", di "Yo me sentía desvalorizada cuando mis opiniones eran ignoradas".
+3. Aprende a poner el punto final: si la conversación empieza a convertirse en discusión acalorada, concluye con gentileza: "Veo que nos estamos alterando. Prefiero que continuemos en otro momento".
 
-A sua dignidade na conversa vale mais do que ter a última palavra.`,
+Tu dignidad en la conversación vale mucho más que tener la última palabra.`,
   },
   {
     id: 'art-6',
     type: 'leitura',
-    title: 'Contato intermitente e consistência',
-    subtitle: 'Entenda por que quem aparece e desaparece causa tanta dependência.',
-    category: 'Padrões',
+    title: 'Contacto intermitente y consistencia',
+    subtitle: 'Entiende por qué quien aparece y desaparece genera tanta dependencia.',
+    category: 'Patrones',
     duration: '5 min',
-    tags: ['inconsistência', 'joguinhos', 'clareza'],
-    content: `O padrão de aparecer de forma arrebatadora e depois sumir por dias sem explicação é uma das dinâmicas mais destrutivas que existem. A psicologia chama isso de reforço intermitente: quando a recompensa é incerta, o cérebro fica obcecado.
+    tags: ['inconsistencia', 'juegos', 'claridad'],
+    content: `El patrón de aparecer de forma arrebatadora y luego esfumarse durante días sin explicación es una de las dinámicas más destructivas. La psicología lo llama refuerzo intermitente: cuando la recompensa es incierta, el cerebro se obsesiona.
 
-Você passa a viver esperando a próxima aparição dele, como se fosse um presente divino.
+Pasas a vivir esperando su próxima aparición, como si fuera una concesión especial.
 
-Lembre-se: maturidade emocional é sinônimo de previsibilidade e segurança. Um homem que realmente te valoriza não faz você viver na corda bamba da incerteza. Exija consistência ou retire o acesso fácil que ele tem à sua vida.`,
+Recuerda: la madurez emocional es sinónimo de previsibilidad y seguridad. Un hombre que realmente te valora no te hace vivir en la cuerda floja de la incertidumbre. Exige consistencia o retira el acceso fácil que tiene a tu vida.`,
   },
   {
     id: 'art-7',
     type: 'leitura',
-    title: 'O que observar depois de um pedido de desculpas',
-    subtitle: 'Perdoar não significa que você precisa voltar para a mesma dinâmica de antes.',
-    category: 'Limites',
+    title: 'Qué observar tras una disculpa',
+    subtitle: 'Perdonar no significa que tengas que regresar a la misma dinámica de antes.',
+    category: 'Límites',
     duration: '4 min',
-    tags: ['desculpas', 'perdão', 'mudança'],
-    content: `Ouvir um "me desculpa por tudo o que fiz" pode trazer alívio para o seu coração. É bom saber que a outra pessoa reconheceu a dor que causou.
+    tags: ['disculpas', 'perdón', 'cambio'],
+    content: `Escuchar un "perdóname por todo lo que hice" puede traer alivio a tu corazón. Es reconfortante saber que la otra persona reconoció el dolor que causó.
 
-Porém, existe uma diferença gigantesca entre aceitar um pedido de desculpas e retomar um relacionamento. 
+Sin embargo, hay una diferencia enorme entre aceptar una disculpa y retomar una relación.
 
-As desculpas servem para curar o passado; a reconciliação exige a garantia de um futuro diferente. Observe se o pedido vem acompanhado de ações práticas para não repetir os mesmos erros ou se é apenas uma tentativa rápida de limpar a própria consciência.`,
+Las disculpas sirven para sanar el pasado; la reconciliación exige la garantía de un futuro diferente. Observa si la disculpa viene acompañada de acciones prácticas para no repetir los mismos errores o si es solo un intento rápido de limpiar su propia culpa.`,
   },
   {
     id: 'art-8',
     type: 'leitura',
-    title: 'Antes de aceitar uma reconciliação',
-    subtitle: 'Critérios fundamentais para não repetir o mesmo término alguns meses depois.',
-    category: 'Reconciliação',
+    title: 'Antes de aceptar una reconciliación',
+    subtitle: 'Criterios fundamentales para no repetir la misma ruptura unos meses después.',
+    category: 'Reconciliación',
     duration: '6 min',
-    tags: ['reconciliação', 'recomeço', 'critérios'],
-    content: `Voltar por medo da solidão ou por apego à rotina é o caminho mais rápido para reabrir as feridas que você acabou de começar a cicatrizar.
+    tags: ['reconciliación', 'recomenzar', 'criterios'],
+    content: `Volver por miedo a la soledad o por apego a la rutina es el camino más directo para reabrir las heridas que apenas comenzaban a cicatrizar.
 
-Para que uma reconciliação seja saudável:
-- O motivo principal que causou o término precisa ter sido resolvido ou estar em processo claro de transformação.
-- Ambos devem ter a coragem de olhar para os próprios erros sem defensividade.
-- Os limites e necessidades de cada um precisam ser estabelecidos de forma transparente.
+Para que una reconciliación sea saludable:
+- El motivo principal que causó la ruptura debe haberse resuelto o estar en un proceso evidente de transformación.
+- Ambos deben tener la valentía de mirar sus propios errores sin ponerse a la defensiva.
+- Los límites y necesidades de cada uno deben establecerse con total transparencia.
 
-Se nada mudou além da saudade de vocês dois, voltar agora trará exatamente os mesmos conflitos de antes.`,
+Si nada cambió más allá de que se echan de menos, volver ahora traerá exactamente los mismos conflictos de antes.`,
   },
   {
     id: 'art-9',
     type: 'leitura',
-    title: 'Limites digitais que protegem',
-    subtitle: 'Como parar de sangrar emocionalmente nas redes sociais sem sentir culpa.',
+    title: 'Límites digitales que protegen',
+    subtitle: 'Cómo dejar de desgastarte en redes sociales sin sentir culpa.',
     category: 'Autocuidado',
     duration: '4 min',
-    tags: ['redes sociais', 'bloqueio', 'limites'],
-    content: `Ficar olhando os stories do ex, checando quem ele começou a seguir ou esperando que ele veja as suas publicações é uma forma silenciosa de automutilação emocional.
+    tags: ['redes sociales', 'bloqueo', 'límites'],
+    content: `Mirar las historias de tu ex, revisar a quién empezó a seguir o esperar que vea tus publicaciones es una forma silenciosa de lastimarte emocionalmente.
 
-Você não precisa anunciar publicamente o que vai fazer: apenas silencie, oculte ou pare de seguir.
+No necesitas anunciar públicamente lo que vas a hacer: simplemente silencia, oculta o deja de seguir.
 
-Cuidar do que entra pelos seus olhos é a sua primeira linha de defesa contra recaídas de ansiedade. O seu feed deve ser um lugar de inspiração e tranquilidade, não um campo de batalha com fantasmas do passado.`,
+Cuidar lo que entra por tus ojos es tu primera línea de defensa contra recaídas de ansiedad. Tu inicio debe ser un lugar de inspiración y tranquilidad, no un campo de batalla con fantasmas del pasado.`,
   },
   {
     id: 'art-10',
     type: 'leitura',
-    title: 'Como lidar com o silêncio após uma mensagem',
-    subtitle: 'Aprenda a deixar o silêncio falar sem se desesperar para preencher o vazio.',
-    category: 'Comunicação',
+    title: 'Cómo gestionar el silencio tras un mensaje',
+    subtitle: 'Aprende a dejar que el silencio hable sin desesperarte por llenar el vacío.',
+    category: 'Comunicación',
     duration: '5 min',
-    tags: ['silêncio', 'rejeição', 'autoestima'],
-    content: `Você teve coragem, mandou uma mensagem sincera e foi recebida com silêncio absoluto. 
+    tags: ['silencio', 'rechazo', 'autoestima'],
+    content: `Tuviste valentía, mandaste un mensaje sincero y recibiste un silencio absoluto.
 
-A primeira reação é a vergonha: "Que idiota eu fui, não devia ter mandado".
-A segunda é o desespero: a vontade de mandar outra mensagem tentando apagar ou justificar o que escreveu.
+La primera reacción es la vergüenza: "Qué tonta fui, no debí haber escrito".
+La segunda es la desesperación: el impulso de enviar otro mensaje intentando borrar o justificar lo que pusiste.
 
-Respire. Você se expressou com honestidade e dignidade; a incapacidade da outra pessoa de responder com maturidade fala sobre ela, não sobre você. O silêncio dele é uma resposta definitiva. Acolha essa resposta e não gaste nem mais uma vírgula onde não há quem queira ler.`,
+Respira. Te expresaste con honestidad y dignidad; la incapacidad de la otra persona para responder con madurez habla de ella, no de ti. Su silencio es una respuesta definitiva. Acoge esa respuesta y no gastes ni una coma más donde nadie quiere leer.`,
   },
   {
     id: 'art-11',
     type: 'leitura',
-    title: 'Voltar para a rotina',
-    subtitle: 'Pequenos passos diários para reconstruir o seu centro de gravidade.',
+    title: 'Volver a tu rutina',
+    subtitle: 'Pequeños pasos diarios para reconstruir tu centro de gravedad.',
     category: 'Autocuidado',
     duration: '4 min',
-    tags: ['rotina', 'autonomia', 'hábitos'],
-    content: `Quando um relacionamento termina, perdemos não apenas uma pessoa, mas toda uma teia de hábitos que tínhamos construído juntos. A casa parece quieta demais, o domingo parece longo demais.
+    tags: ['rutina', 'autonomía', 'hábitos'],
+    content: `Cuando una relación termina, perdemos no solo a una persona, sino toda una red de hábitos que habíamos construido juntos. La casa parece demasiado silenciosa, el domingo parece demasiado largo.
 
-A reconstrução da sua rotina não precisa ser um projeto grandioso de um dia para o outro.
+Reconstruir tu rutina no tiene que ser un proyecto descomunal de un día para otro.
 
-Comece pelas coisas simples: retome aquele café que você gostava de tomar sozinha, volte a caminhar no parque, leia três páginas daquele livro esquecido, arrume o seu quarto. Ao recolocar a atenção na sua própria vida, você descobre que o seu mundo continua inteiro e cheio de possibilidades.`,
+Comienza por lo sencillo: retoma ese café que disfrutabas tomar a solas, vuelve a caminar al aire libre, lee tres páginas de aquel libro pendiente, arregla tu habitación. Al regresar tu atención a tu propia vida, descubres que tu mundo sigue completo y lleno de posibilidades.`,
   },
   {
     id: 'art-12',
     type: 'leitura',
-    title: 'Quando seguir em frente passa a ser uma possibilidade',
-    subtitle: 'O momento em que a dor do fim se transforma no alívio de um novo começo.',
+    title: 'Cuando seguir adelante se convierte en una posibilidad',
+    subtitle: 'El momento en que el dolor del final se transforma en el alivio de un nuevo comienzo.',
     category: 'Futuro',
     duration: '5 min',
-    tags: ['seguir em frente', 'ciclos', 'paz'],
-    content: `Chega um dia em que você acorda e percebe que ele não foi o primeiro pensamento da sua manhã. Você percebe que a lembrança dele já não vem acompanhada de aperto no peito, mas de uma sensação neutra de capítulo encerrado.
+    tags: ['seguir adelante', 'ciclos', 'paz'],
+    content: `Llega un día en que despiertas y te das cuenta de que él no fue el primer pensamiento de tu mañana. Notas que su recuerdo ya no viene acompañado de una opresión en el pecho, sino de una sensación neutra de ciclo cerrado.
 
-Seguir em frente não é esquecer que a história aconteceu ou odiar quem fez parte dela. Seguir em frente é reconhecer que aquela fase cumpriu o papel que tinha na sua trajetória e que você está pronta para os novos presentes que a vida reservou para você.
+Seguir adelante no es olvidar que la historia existió ni odiar a quien formó parte de ella. Seguir adelante es reconocer que esa etapa cumplió su función en tu camino y que estás lista para los nuevos regalos que la vida tiene para ti.
 
-Você é completa por si mesma. E o melhor da sua história ainda está por vir.`,
+Estás completa por ti misma. Y lo mejor de tu historia aún está por llegar.`,
   },
 
   // --- ÁUDIOS GUIADOS (8 ROTEIROS COMPLETOS COM TRANSCRIÇÃO) ---
   {
     id: 'aud-1',
     type: 'audio',
-    title: 'Antes de mandar mensagem',
-    subtitle: 'Áudio reflexivo de 3 minutos para acalmar a urgência de contato.',
-    category: 'Pausa e Foco',
+    title: 'Antes de mandar mensaje',
+    subtitle: 'Audio reflexivo de 3 minutos para calmar la urgencia de contacto.',
+    category: 'Pausa y Enfoque',
     duration: '3 min',
     audioDuration: '03:15',
-    tags: ['áudio', 'urgência', 'pausa', 'respiração'],
-    content: 'Ouça este áudio antes de digitar ou enviar qualquer mensagem. Reserve 3 minutos para você respirar e se reconectar.',
-    audioScript: `Respire fundo. Puxe o ar pelo nariz contando até quatro... e solte devagar pela boca contando até seis.
+    tags: ['audio', 'urgencia', 'pausa', 'respiración'],
+    content: 'Escucha este audio antes de escribir o enviar cualquier mensaje. Tómate 3 minutos para respirar y reconectar contigo.',
+    audioScript: `Respira hondo. Inhala aire por la nariz contando hasta cuatro... y suelta despacio por la boca contando hasta seis.
 
-Antes de decidir o que você vai escrever ou se vai enviar qualquer coisa agora, reserve este momento só para você.
+Antes de decidir qué vas a escribir o si vas a enviar algo en este momento, regálate este instante solo para ti.
 
-Pergunte-se: o que é um fato nessa situação? O que você está apenas supondo? 
+Pregúntate: ¿qué es un hecho real en esta situación? ¿Qué estás solo suponiendo?
 
-Muitas vezes, a vontade urgente de mandar mensagem é apenas o seu coração tentando se livrar da dor da incerteza. Mas responder à incerteza com desespero só traz mais sofrimento depois.
+Muchas veces, la necesidad urgente de mandar mensaje es solo tu corazón intentando librarse del dolor de la incertidumbre. Pero responder a la incertidumbre con desesperación solo trae más sufrimiento después.
 
-Se houver um objetivo claro, prático e respeitoso, você poderá enviar daqui a pouco, com calma. Se for apenas para aliviar a solidão, dê a si mesma o presente de esperar mais algumas horas. Você tem todo o tempo do mundo. E você está segura aqui e agora.`,
+Si existe un objetivo claro, práctico y respetuoso, podrás enviarlo dentro de un rato, con calma. Si es solo para calmar la soledad, date el regalo de esperar unas horas más. Tienes todo el tiempo del mundo. Y estás a salvo aquí y ahora.`,
   },
   {
     id: 'aud-2',
     type: 'audio',
-    title: 'Ele não respondeu',
-    subtitle: 'Áudio de acolhimento para lidar com a dor do silêncio ou visualização sem resposta.',
-    category: 'Acolhimento',
+    title: 'Él no respondió',
+    subtitle: 'Audio de contención para gestionar el dolor del silencio o la lectura sin respuesta.',
+    category: 'Contención',
     duration: '4 min',
     audioDuration: '04:10',
-    tags: ['áudio', 'silêncio', 'rejeição', 'calma'],
-    content: 'Quando o silêncio machucar, coloque os fones de ouvido e deixe estas palavras te ampararem.',
-    audioScript: `Eu sei que dói. Ver que a mensagem foi entregue ou visualizada e não receber nenhuma resposta dói no corpo todo. É como se a nossa presença não importasse.
+    tags: ['audio', 'silencio', 'rechazo', 'calma'],
+    content: 'Cuando el silencio duela, ponte los auriculares y permite que estas palabras te acompañen.',
+    audioScript: `Sé que duele. Ver que el mensaje fue entregado o leído y no recibir ninguna respuesta duele en todo el cuerpo. Se siente como si nuestra presencia no importara.
 
-Mas escute com muita atenção: o valor de quem você é não depende da velocidade com que outra pessoa digita na tela de um celular. 
+Pero escucha con mucha atención: el valor de lo que eres no depende de la velocidad con que otra persona escriba en la pantalla de un teléfono.
 
-A ausência de resposta dele diz respeito às limitações dele, ao momento dele ou à falta de coragem dele em se posicionar. Não diz nada sobre a sua beleza, sobre a sua capacidade de amar ou sobre a sua dignidade.
+Su ausencia de respuesta habla de sus limitaciones, de su momento o de su falta de valentía para comunicarse. No dice absolutamente nada sobre tu valor, sobre tu capacidad de amar ni sobre tu dignidad.
 
-Não mande outra mensagem. Não se humilhe pedindo atenção. Recolha o seu carinho de onde ele não está sendo valorizado e coloque as duas mãos sobre o seu coração. Você continua inteira.`,
+No envíes otro mensaje. No te humilles pidiendo atención. Recoge tu cariño de donde no está siendo valorado y pon tus dos manos sobre tu corazón. Sigues estando completa.`,
   },
   {
     id: 'aud-3',
     type: 'audio',
-    title: 'Ele apareceu novamente',
-    subtitle: 'Como manter o eixo e a serenidade quando uma notificação dele surge do nada.',
-    category: 'Serenidade',
+    title: 'Él apareció nuevamente',
+    subtitle: 'Cómo mantener el centro y la serenidad cuando llega una notificación suya de la nada.',
+    category: 'Serenidad',
     duration: '4 min',
     audioDuration: '03:50',
-    tags: ['áudio', 'contato', 'notificação', 'calma'],
-    content: 'Acalme a adrenalina e organize suas ideias antes de abrir o aplicativo de conversa.',
-    audioScript: `O nome dele apareceu na tela e o seu estômago deu um nó, não é? Isso é perfeitamente normal. O seu sistema nervoso foi ativado.
+    tags: ['audio', 'contacto', 'notificación', 'calma'],
+    content: 'Calma la adrenalina y organiza tus ideas antes de abrir la aplicación de mensajes.',
+    audioScript: `Su nombre apareció en la pantalla y sentiste un nudo en el estómago, ¿verdad? Es perfectamente normal. Tu sistema nervioso se activó.
 
-Não abra a mensagem correndo. Não responda no primeiro minuto.
+No abras el mensaje corriendo. No respondas en el primer minuto.
 
-Lembre-se: ele mandou uma mensagem, não fez um pedido de casamento. Um "oi" casual não significa que ele mudou ou que compreendeu tudo o que aconteceu. 
+Recuerda: mandó un mensaje, no te pidió matrimonio. Un "hola" casual no significa que haya cambiado o que haya comprendido todo lo sucedido.
 
-Mantenha os pés no chão. Respire fundo três vezes. Pergunte-se o que você deseja para a sua vida antes de pensar no que vai responder para ele. O controle da sua paz continua nas suas mãos.`,
+Mantén los pies en la tierra. Respira hondo tres veces. Pregúntate qué deseas para tu vida antes de pensar en qué vas a responderle. El control de tu paz sigue estando en tus manos.`,
   },
   {
     id: 'aud-4',
     type: 'audio',
-    title: 'Antes de encontrar seu ex',
-    subtitle: 'Preparação emocional e alinhamento de postura antes de um encontro presencial.',
-    category: 'Preparação',
+    title: 'Antes de encontrar a tu ex',
+    subtitle: 'Preparación emocional y postura clara antes de un encuentro presencial.',
+    category: 'Preparación',
     duration: '5 min',
     audioDuration: '05:00',
-    tags: ['áudio', 'encontro', 'postura', 'limites'],
-    content: 'Ouça enquanto se arruma ou no caminho para o encontro para manter seu centro de equilíbrio.',
-    audioScript: `Você está prestes a vê-lo pessoalmente. É natural que venham lembranças, frio na barriga e expectativas.
+    tags: ['audio', 'encuentro', 'postura', 'límites'],
+    content: 'Escucha mientras te arreglas o en camino al encuentro para mantener tu centro de equilibrio.',
+    audioScript: `Estás a punto de verlo en persona. Es natural que aparezcan recuerdos, nervios y expectativas.
 
-Lembre-se do seu papel hoje: você não está indo para ser avaliada. Você está indo para observar.
+Recuerda tu papel hoy: no vas a ser evaluada. Vas a observar.
 
-Você é uma mulher que tem história, que tem valor e que sabe o que quer. Mantenha a sua postura ereta, olhe nos olhos com serenidade e não tenha pressa em concordar com nada.
+Eres una mujer con historia, con valor y que sabe lo que quiere. Mantén tu postura erguida, mira a los ojos con serenidad y no tengas prisa por coincidir en nada.
 
-Se você se sentir desconfortável em qualquer momento, você tem o direito absoluto de se levantar e ir embora. Você está no comando da sua vida.`,
+Si en algún momento te sientes incómoda, tienes el derecho absoluto de levantarte y marcharte. Tú estás al mando de tu propia vida.`,
   },
   {
     id: 'aud-5',
     type: 'audio',
-    title: 'Depois de uma conversa difícil',
-    subtitle: 'Como descomprimir o corpo e recuperar a paz após um diálogo desgastante.',
-    category: 'Descompressão',
+    title: 'Después de una conversación difícil',
+    subtitle: 'Cómo descompresionar el cuerpo y recuperar la paz tras un diálogo agotador.',
+    category: 'Descompresión',
     duration: '4 min',
     audioDuration: '04:20',
-    tags: ['áudio', 'descompressão', 'conversa', 'alívio'],
-    content: 'Tire os sapatos, deite-se confortavelmente e permita-se soltar o peso da tensão.',
-    audioScript: `A conversa acabou. Talvez não tenha sido como você sonhou. Talvez tenham dito coisas duras, ou talvez tenha ficado um vazio esquisito no ar.
+    tags: ['audio', 'descompresión', 'conversación', 'alivio'],
+    content: 'Quítate los zapatos, recuéstate con comodidad y permítete soltar la tensión acumulada.',
+    audioScript: `La conversación terminó. Tal vez no fue como soñabas. Tal vez se dijeron cosas duras, o tal vez quedó un vacío extraño en el ambiente.
 
-Agora é a hora de soltar. Solte os ombros. Solte o maxilar. 
+Ahora es el momento de soltar. Suelta los hombros. Suelta la mandíbula.
 
-Você fez o seu melhor com a consciência e a maturidade que tinha. Você não tem controle sobre o que a outra pessoa pensa, sente ou diz. O que cabia a você foi feito.
+Hiciste lo mejor que pudiste con la conciencia y madurez que tenías. No tienes control sobre lo que la otra persona piensa, siente o dice. Lo que dependía de ti ya está hecho.
 
-Deixe esse assunto do lado de fora do seu quarto esta noite. Agora é o momento de descansar e cuidar de você.`,
+Deja este asunto fuera de tu habitación esta noche. Ahora es tu momento para descansar y cuidar de ti.`,
   },
   {
     id: 'aud-6',
     type: 'audio',
-    title: 'Quando bate saudade à noite',
-    subtitle: 'Guia de acolhimento para momentos solitários antes de dormir.',
-    category: 'Noite e Acolhimento',
+    title: 'Cuando da nostalgia por la noche',
+    subtitle: 'Guía de contención para momentos de soledad antes de dormir.',
+    category: 'Noche y Contención',
     duration: '5 min',
     audioDuration: '05:15',
-    tags: ['áudio', 'noite', 'saudade', 'sono'],
-    content: 'Coloque para tocar na cama para acolher a solidão da noite e adormecer em paz.',
-    audioScript: `A noite tem o costume de amplificar as ausências. Quando a luz se apaga e o silêncio se instala, a saudade parece ocupar todo o espaço do quarto.
+    tags: ['audio', 'noche', 'nostalgia', 'sueño'],
+    content: 'Escucha en la cama para acoger la soledad de la noche y descansar en paz.',
+    audioScript: `La noche suele amplificar las ausencias. Cuando la luz se apaga y el silencio se instala, la nostalgia parece ocupar todo el espacio de la habitación.
 
-Não lute contra o que você sente. É permitido chorar. É permitido sentir falta daquele abraço, daquela risada, daquela companhia.
+No luches contra lo que sientes. Se vale llorar. Se vale extrañar ese abrazo, esa risa, esa compañía.
 
-Mas lembre-se: a noite passa. O sol vai nascer amanhã. E a cada dia que você atravessa com coragem, o seu coração vai ficando um pouquinho mais forte e cicatrizado.
+Pero recuerda: la noche pasa. El sol volverá a salir mañana. Y con cada día que atraviesas con valentía, tu corazón se vuelve un poco más fuerte y cicatrizado.
 
-Abrace o seu travesseiro com ternura. Diga a si mesma: "Eu estou segura, eu estou em paz, eu estou me curando". Durma bem.`,
+Abraza tu almohada con ternura. Dite a ti misma: "Estoy a salvo, estoy en paz, estoy sanando". Que duermas bien.`,
   },
   {
     id: 'aud-7',
     type: 'audio',
-    title: 'Antes de olhar o telefone de novo',
-    subtitle: 'Áudio relâmpago de 2 minutos para quebrar o ciclo compulsivo de checagem.',
-    category: 'Pausa e Foco',
+    title: 'Antes de mirar el teléfono otra vez',
+    subtitle: 'Audio relámpago de 2 minutos para romper el ciclo compulsivo de revisión.',
+    category: 'Pausa y Enfoque',
     duration: '2 min',
     audioDuration: '02:00',
-    tags: ['áudio', 'telefone', 'compulsão', 'foco'],
-    content: 'Áudio curto e direto para interromper o hábito automático de abrir redes e conversas.',
-    audioScript: `Pare a sua mão agora. Coloque o telefone sobre a mesa, com a tela virada para baixo.
+    tags: ['audio', 'teléfono', 'compulsión', 'enfoque'],
+    content: 'Audio breve y directo para interrumpir el hábito automático de abrir redes y chats.',
+    audioScript: `Detén tu mano ahora. Coloca el teléfono sobre la mesa, con la pantalla hacia abajo.
 
-O que você espera encontrar nessa tela neste exato segundo? Mais um motivo para ficar ansiosa? Uma visualização de story que não prova nada?
+¿Qué esperas encontrar en esa pantalla en este preciso segundo? ¿Otro motivo para ponerte ansiosa? ¿Una vista de historia que no demuestra nada?
 
-A sua vida não está acontecendo dentro dessa tela de vidro. A sua vida está no ar que você respira, no ambiente ao seu redor, nas coisas que você precisa realizar hoje.
+Tu vida no está ocurriendo dentro de esa pantalla de cristal. Tu vida está en el aire que respiras, en el espacio a tu alrededor, en las cosas que tienes por realizar hoy.
 
-Dê uma pausa de dez minutos. Olhe pela janela. Beba um gole de água. Você não precisa checar nada agora.`,
+Date una pausa de diez minutos. Mira por la ventana. Bebe un sorbo de agua. No necesitas revisar nada ahora.`,
   },
   {
     id: 'aud-8',
     type: 'audio',
-    title: 'Encerrando a semana com clareza',
-    subtitle: 'Reflexão de fechamento para celebrar vitórias invisíveis e recarregar energias.',
-    category: 'Revisão',
+    title: 'Cerrando la semana con claridad',
+    subtitle: 'Reflexión de cierre para celebrar victorias invisibles y renovar energías.',
+    category: 'Revisión',
     duration: '5 min',
     audioDuration: '04:50',
-    tags: ['áudio', 'semana', 'progresso', 'força'],
-    content: 'Ouça ao final de cada semana para reconhecer o caminho percorrido.',
-    audioScript: `Mais uma semana se encerra. E se você parar para pensar, quantas batalhas internas você venceu em silêncio nestes últimos sete dias?
+    tags: ['audio', 'semana', 'progreso', 'fuerza'],
+    content: 'Escucha al final de cada semana para reconocer el camino recorrido.',
+    audioScript: `Otra semana concluye. Y si te detienes a pensar, ¿cuántas batallas internas ganaste en silencio en estos últimos siete días?
 
-Quantas mensagens você não enviou? Quantas vezes você respirou fundo em vez de explodir? Quantos pequenos gestos de respeito por você mesma você teve?
+¿Cuántos mensajes no enviaste? ¿Cuántas veces respiraste hondo en lugar de explotar? ¿Cuántos pequeños gestos de respeto tuviste contigo misma?
 
-Essas vitórias não aparecem nas redes sociais, mas são elas que estão reconstruindo a mulher forte e segura que você é.
+Esas victorias no se ven en redes sociales, pero son las que están reconstruyendo a la mujer fuerte y segura que eres.
 
-Agradeça a si mesma por não ter desistido do seu processo. Tenha orgulho dos seus passos. Você está no caminho certo.`,
+Agradécete por no haber abandonado tu proceso. Siéntete orgullosa de tus pasos. Vas por buen camino.`,
   },
 
-  // --- CHECKLISTS INTERATIVOS (10 CHECKLISTS) ---
+  // --- CHECKLISTS INTERACTIVOS (10 CHECKLISTS) ---
   {
     id: 'chk-1',
     type: 'checklist',
-    title: 'Antes de mandar mensagem',
-    subtitle: 'Verificação indispensável antes de apertar o botão de envio.',
-    category: 'Comunicação',
+    title: 'Antes de mandar mensaje',
+    subtitle: 'Verificación indispensable antes de presionar el botón de enviar.',
+    category: 'Comunicación',
     duration: '2 min',
-    tags: ['checklist', 'mensagem', 'envio'],
-    content: 'Marque cada item com sinceridade para ter certeza de que o contato é saudável agora:',
+    tags: ['checklist', 'mensaje', 'envío'],
+    content: 'Marca cada punto con sinceridad para asegurarte de que el contacto sea sano ahora:',
     checklistItems: [
-      { id: 'c1-1', text: 'Existe um assunto prático ou objetivo claro além de apenas matar a saudade?' },
-      { id: 'c1-2', text: 'Eu estou preparada para lidar com uma resposta curta ou até com a ausência de resposta?' },
-      { id: 'c1-3', text: 'Eu já esperei pelo menos 30 minutos desde o primeiro impulso para refletir com calma?' },
-      { id: 'c1-4', text: 'O tom da mensagem é respeitoso, breve e não tem cobranças ou desabafos longos?' },
-      { id: 'c1-5', text: 'Essa mensagem preserva a minha dignidade independentemente da reação dele?' },
+      { id: 'c1-1', text: '¿Hay un asunto práctico u objetivo claro más allá de solo calmar la nostalgia?' },
+      { id: 'c1-2', text: '¿Estoy preparada para lidiar con una respuesta breve o incluso sin respuesta?' },
+      { id: 'c1-3', text: '¿Esperé al menos 30 minutos desde el primer impulso para reflexionar con calma?' },
+      { id: 'c1-4', text: '¿El tono es respetuoso, conciso y sin reproches ni desahogos largos?' },
+      { id: 'c1-5', text: '¿Este mensaje preserva mi dignidad sin importar cuál sea su reacción?' },
     ],
   },
   {
     id: 'chk-2',
     type: 'checklist',
-    title: 'Antes de responder uma mensagem dele',
-    subtitle: 'Critérios para não agir no calor da emoção quando ele te procurar.',
-    category: 'Comunicação',
+    title: 'Antes de responder un mensaje de él',
+    subtitle: 'Criterios para no actuar en caliente cuando te busque.',
+    category: 'Comunicación',
     duration: '2 min',
-    tags: ['checklist', 'resposta', 'calma'],
-    content: 'Antes de responder a um contato inesperado, confirme estes pontos:',
+    tags: ['checklist', 'respuesta', 'calma'],
+    content: 'Antes de responder a un contacto inesperado, confirma estos puntos:',
     checklistItems: [
-      { id: 'c2-1', text: 'Esperei a adrenalina baixar antes de desbloquear o telefone?' },
-      { id: 'c2-2', text: 'Li o que ele realmente disse, sem projetar significados que não estão no texto?' },
-      { id: 'c2-3', text: 'Minha resposta tem a mesma energia e tamanho da mensagem dele?' },
-      { id: 'c2-4', text: 'Não estou demonstrando carência excessiva nem entusiasmo exagerado?' },
-      { id: 'c2-5', text: 'Se a mensagem for confusa, perguntei qual é o objetivo concreto antes de me alongar?' },
+      { id: 'c2-1', text: '¿Esperé a que bajara la adrenalina antes de desbloquear el teléfono?' },
+      { id: 'c2-2', text: '¿Leí lo que realmente dijo, sin proyectar significados que no están en el texto?' },
+      { id: 'c2-3', text: '¿Mi respuesta tiene una energía y longitud similar a su mensaje?' },
+      { id: 'c2-4', text: '¿No estoy demostrando necesidad excesiva ni entusiasmo desmedido?' },
+      { id: 'c2-5', text: 'Si el mensaje es confuso, ¿pregunté cuál es el objetivo concreto antes de extenderme?' },
     ],
   },
   {
     id: 'chk-3',
     type: 'checklist',
-    title: 'Antes de um reencontro presencial',
-    subtitle: 'Cuidados essenciais para se proteger antes de vê-lo cara a cara.',
-    category: 'Encontros',
+    title: 'Antes de un reencuentro presencial',
+    subtitle: 'Cuidados esenciales para protegerte antes de verlo cara a cara.',
+    category: 'Encuentros',
     duration: '3 min',
-    tags: ['checklist', 'encontro', 'proteção'],
-    content: 'Tenha estes limites acordados com você mesma antes de sair de casa:',
+    tags: ['checklist', 'encuentro', 'protección'],
+    content: 'Ten estos acuerdos claros contigo misma antes de salir de casa:',
     checklistItems: [
-      { id: 'c3-1', text: 'O local escolhido é público, neutro e seguro para ambos?' },
-      { id: 'c3-2', text: 'Defini um horário prévio para o término do encontro para não me estender?' },
-      { id: 'c3-3', text: 'Tenho claro na minha mente que hoje NÃO irei para a casa dele?' },
-      { id: 'c3-4', text: 'Estou preparada para não tomar decisões definitivas sobre reatar no mesmo dia?' },
-      { id: 'c3-5', text: 'Tenho transporte garantido para ir e voltar por conta própria?' },
+      { id: 'c3-1', text: '¿El lugar elegido es público, neutro y seguro para ambos?' },
+      { id: 'c3-2', text: '¿Definí un horario previo para finalizar el encuentro y no alargarme de más?' },
+      { id: 'c3-3', text: '¿Tengo claro en mi mente que hoy NO iré a su casa?' },
+      { id: 'c3-4', text: '¿Estoy preparada para no tomar decisiones definitivas de volver en el mismo día?' },
+      { id: 'c3-5', text: '¿Tengo transporte asegurado para ir y regresar por mi propia cuenta?' },
     ],
   },
   {
     id: 'chk-4',
     type: 'checklist',
-    title: 'Depois do reencontro',
-    subtitle: 'Registro lúcido para avaliar como foi o encontro sem idealizações.',
-    category: 'Encontros',
+    title: 'Después del reencuentro',
+    subtitle: 'Registro lúcido para evaluar cómo fue el encuentro sin idealizaciones.',
+    category: 'Encuentros',
     duration: '2 min',
-    tags: ['checklist', 'avaliação', 'corpo'],
-    content: 'Avalie como você e ele se comportaram nas horas seguintes:',
+    tags: ['checklist', 'evaluación', 'cuerpo'],
+    content: 'Evalúa cómo se comportaron tú y él en las horas posteriores:',
     checklistItems: [
-      { id: 'c4-1', text: 'Senti o meu corpo tenso ou consegui me sentir confortável e respeitada?' },
-      { id: 'c4-2', text: 'Ele perguntou sobre mim ou só falou dos próprios problemas e conquistas?' },
-      { id: 'c4-3', text: 'Houve coerência entre o que ele falou e a atitude corporal que demonstrou?' },
-      { id: 'c4-4', text: 'Saí do encontro me sentindo com mais clareza ou ainda mais confusa do que antes?' },
-      { id: 'c4-5', text: 'Anotei os fatos principais no meu diário antes de ir dormir?' },
+      { id: 'c4-1', text: '¿Sentí mi cuerpo tenso o logré sentirme cómoda y respetada?' },
+      { id: 'c4-2', text: '¿Preguntó por mí o solo habló de sus propios asuntos y logros?' },
+      { id: 'c4-3', text: '¿Hubo coherencia entre lo que dijo y su lenguaje corporal?' },
+      { id: 'c4-4', text: '¿Salí del encuentro con mayor claridad o aún más confundida que antes?' },
+      { id: 'c4-5', text: '¿Anoté los hechos principales en mi diario antes de irme a dormir?' },
     ],
   },
   {
     id: 'chk-5',
     type: 'checklist',
-    title: 'Antes de pedir desculpas',
-    subtitle: 'Como pedir perdão com maturidade sem se diminuir.',
-    category: 'Comunicação',
+    title: 'Antes de pedir disculpas',
+    subtitle: 'Cómo pedir perdón con madurez sin hacerte pequeña.',
+    category: 'Comunicación',
     duration: '2 min',
-    tags: ['checklist', 'desculpas', 'perdão'],
-    content: 'Revise sua motivação antes de mandar um pedido de desculpas:',
+    tags: ['checklist', 'disculpas', 'perdón'],
+    content: 'Revisa tu motivación antes de enviar una disculpa:',
     checklistItems: [
-      { id: 'c5-1', text: 'Estou me desculpando por um erro meu real, e não para tentar reatar o contato à força?' },
-      { id: 'c5-2', text: 'Não estou esperando que ele peça desculpas de volta para me sentir justificada?' },
-      { id: 'c5-3', text: 'Minha mensagem é concisa, objetiva e assume a minha parte sem fazer rodeios?' },
-      { id: 'c5-4', text: 'Deixei claro que ele não tem obrigação de me responder nada imediatamente?' },
+      { id: 'c5-1', text: '¿Me estoy disculpando por un error real mío y no para forzar el contacto?' },
+      { id: 'c5-2', text: '¿No estoy esperando que él también se disculpe para sentirme justificada?' },
+      { id: 'c5-3', text: '¿Mi mensaje es conciso, objetivo y asume mi parte sin rodeos?' },
+      { id: 'c5-4', text: '¿Dejé claro que no tiene la obligación de responderme nada de inmediato?' },
     ],
   },
   {
     id: 'chk-6',
     type: 'checklist',
-    title: 'Antes de recomeçar (critérios de reconciliação)',
-    subtitle: 'Os 7 pilares fundamentais para saber se vale a pena reatar.',
-    category: 'Reconciliação',
+    title: 'Antes de recomenzar (criterios de reconciliación)',
+    subtitle: 'Los 7 pilares fundamentales para saber si vale la pena volver.',
+    category: 'Reconciliación',
     duration: '4 min',
-    tags: ['checklist', 'reconciliação', 'recomeço', 'futuro'],
-    content: 'Se ele propôs voltar, responda a estes 7 pontos cruciais:',
+    tags: ['checklist', 'reconciliación', 'recomenzar', 'futuro'],
+    content: 'Si propuso volver, responde a estos 7 puntos clave:',
     checklistItems: [
-      { id: 'c6-1', text: 'O motivo que causou o término foi discutido de forma aberta e sem acusações?' },
-      { id: 'c6-2', text: 'Ambos assumiram a responsabilidade por seus erros sem jogar a culpa no outro?' },
-      { id: 'c6-3', text: 'Existe disposição REAL dos dois lados para fazer diferente desta vez?' },
-      { id: 'c6-4', text: 'Há mudanças concretas observáveis além de promessas verbais bonitas?' },
-      { id: 'c6-5', text: 'Nossos limites e necessidades foram expressos com transparência?' },
-      { id: 'c6-6', text: 'Existe segurança emocional e respeito mútuo para reconstruir a confiança?' },
-      { id: 'c6-7', text: 'O ritmo do recomeço respeita o meu tempo de cicatrização?' },
+      { id: 'c6-1', text: '¿El motivo que causó la ruptura se habló de manera abierta y sin acusaciones?' },
+      { id: 'c6-2', text: '¿Ambos asumieron responsabilidad por sus errores sin culpar al otro?' },
+      { id: 'c6-3', text: '¿Existe disposición REAL de ambas partes para actuar de forma distinta esta vez?' },
+      { id: 'c6-4', text: '¿Hay cambios concretos observables más allá de palabras bonitas?' },
+      { id: 'c6-5', text: '¿Nuestros límites y necesidades quedaron expresados con total transparencia?' },
+      { id: 'c6-6', text: '¿Hay seguridad emocional y respeto mutuo para reconstruir la confianza?' },
+      { id: 'c6-7', text: '¿El ritmo de volver respeta mi propio tiempo de cicatrización?' },
     ],
   },
   {
     id: 'chk-7',
     type: 'checklist',
-    title: 'Quando ele pede espaço',
-    subtitle: 'Como reagir com elegância e força ao pedido de distância.',
-    category: 'Limites',
+    title: 'Cuando él pide espacio',
+    subtitle: 'Cómo reaccionar con elegancia y fuerza ante la petición de distancia.',
+    category: 'Límites',
     duration: '2 min',
-    tags: ['checklist', 'espaço', 'afastamento'],
-    content: 'Garanta que você está sustentando o espaço de forma saudável:',
+    tags: ['checklist', 'espacio', 'distancia'],
+    content: 'Asegúrate de estar sosteniendo el espacio de forma saludable:',
     checklistItems: [
-      { id: 'c7-1', text: 'Concordei em dar o espaço sem implorar, discutir ou tentar convencê-lo?' },
-      { id: 'c7-2', text: 'Interrompi completamente o envio de mensagens casuais ou links engraçados?' },
-      { id: 'c7-3', text: 'Parei de monitorar quando ele entra online no WhatsApp ou no Instagram?' },
-      { id: 'c7-4', text: 'Estou usando esse tempo para cuidar da minha saúde e dos meus objetivos?' },
+      { id: 'c7-1', text: '¿Acepté darle su espacio sin rogar, discutir ni intentar convencerlo?' },
+      { id: 'c7-2', text: '¿Interrumpí por completo el envío de mensajes casuales o enlaces graciosos?' },
+      { id: 'c7-3', text: '¿Dejé de monitorear cuándo se conecta en WhatsApp o Instagram?' },
+      { id: 'c7-4', text: '¿Estoy usando este tiempo para cuidar de mi salud y mis metas personales?' },
     ],
   },
   {
     id: 'chk-8',
     type: 'checklist',
-    title: 'Quando ele aparece e desaparece',
-    subtitle: 'Filtro para cortar a dependência de contato intermitente.',
-    category: 'Padrões',
+    title: 'Cuando él aparece y desaparece',
+    subtitle: 'Filtro para cortar la dependencia al contacto intermitente.',
+    category: 'Patrones',
     duration: '2 min',
-    tags: ['checklist', 'inconsistência', 'joguinhos'],
-    content: 'Se ele tem o hábito de sumir e reaparecer, cheque estes passos:',
+    tags: ['checklist', 'inconsistencia', 'juegos'],
+    content: 'Si tiene la costumbre de esfumarse y reaparecer, revisa estos pasos:',
     checklistItems: [
-      { id: 'c8-1', text: 'Não respondi imediatamente ao reaparecimento dele como se estivesse esperando?' },
-      { id: 'c8-2', text: 'Não alimentei conversas tarde da noite que não levam a nada de concreto?' },
-      { id: 'c8-3', text: 'Coloquei um limite claro sobre a necessidade de consistência e respeito?' },
-      { id: 'c8-4', text: 'Estou pronta para silenciar o contato caso o padrão continue se repetindo?' },
+      { id: 'c8-1', text: '¿No respondí de inmediato a su reaparición como si estuviera esperando?' },
+      { id: 'c8-2', text: '¿No alimenté conversaciones tarde por la noche que no conducen a nada concreto?' },
+      { id: 'c8-3', text: '¿Puse un límite claro sobre la necesidad de consistencia y respeto?' },
+      { id: 'c8-4', text: '¿Estoy lista para silenciar el contacto si el patrón se sigue repitiendo?' },
     ],
   },
   {
     id: 'chk-9',
     type: 'checklist',
-    title: 'Quando não há resposta',
-    subtitle: 'Protocolo de autocuidado para quando o outro escolhe o silêncio.',
+    title: 'Cuando no hay respuesta',
+    subtitle: 'Protocolo de autocuidado para cuando la otra persona elige el silencio.',
     category: 'Autocuidado',
     duration: '2 min',
-    tags: ['checklist', 'silêncio', 'acolhimento'],
-    content: 'Lembretes urgentes quando ele visualizou e não respondeu:',
+    tags: ['checklist', 'silencio', 'contención'],
+    content: 'Recordatorios urgentes para cuando vio el mensaje y no respondió:',
     checklistItems: [
-      { id: 'c9-1', text: 'NÃO enviei nenhuma mensagem adicional para cobrar ou reclamar?' },
-      { id: 'c9-2', text: 'Coloquei o celular longe do meu alcance pelas próximas 2 horas?' },
-      { id: 'c9-3', text: 'Lembrei que o silêncio dele é uma resposta completa e não um convite para implorar?' },
-      { id: 'c9-4', text: 'Fiz algo de bom por mim mesma hoje (banho relaxante, comida gostosa, caminhada)?' },
+      { id: 'c9-1', text: '¿NO envié ningún mensaje adicional para reclamar o exigir respuesta?' },
+      { id: 'c9-2', text: '¿Puse el celular lejos de mi alcance durante las próximas 2 horas?' },
+      { id: 'c9-3', text: '¿Recordé que su silencio es una respuesta completa y no una invitación a rogar?' },
+      { id: 'c9-4', text: '¿Hice algo bueno por mí hoy (un baño relajante, comida rica, una caminata)?' },
     ],
   },
   {
     id: 'chk-10',
     type: 'checklist',
-    title: 'Limites digitais que protegem',
-    subtitle: 'Checklist para blindar suas redes sociais contra gatilhos desnecessários.',
+    title: 'Límites digitales que protegen',
+    subtitle: 'Checklist para blindar tus redes sociales contra detonantes innecesarios.',
     category: 'Autocuidado',
     duration: '2 min',
-    tags: ['checklist', 'redes sociais', 'proteção'],
-    content: 'Marque o que você já colocou em prática para proteger sua mente:',
+    tags: ['checklist', 'redes sociales', 'protección'],
+    content: 'Marca lo que ya pusiste en práctica para proteger tu mente:',
     checklistItems: [
-      { id: 'c10-1', text: 'Arquivei a conversa no WhatsApp para não ver o nome dele toda hora?' },
-      { id: 'c10-2', text: 'Silenciei os stories e publicações dele no Instagram?' },
-      { id: 'c10-3', text: 'Desativei as notificações de redes sociais que me deixam em alerta?' },
-      { id: 'c10-4', text: 'Parei de checar a foto de perfil e o visto por último?' },
-      { id: 'c10-5', text: 'Pedi para minhas amigas não me contarem coisas que ele posta?' },
+      { id: 'c10-1', text: '¿Archivé la conversación en WhatsApp para no ver su nombre a cada instante?' },
+      { id: 'c10-2', text: '¿Silencié sus historias y publicaciones en Instagram?' },
+      { id: 'c10-3', text: '¿Desactivé las notificaciones de redes que me mantienen en alerta?' },
+      { id: 'c10-4', text: '¿Dejé de revisar su foto de perfil y su última conexión?' },
+      { id: 'c10-5', text: '¿Pedí a mis amistades que no me cuenten cosas que él publica?' },
     ],
   },
 ];

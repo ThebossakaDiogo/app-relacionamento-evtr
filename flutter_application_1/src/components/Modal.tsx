@@ -86,7 +86,7 @@ export const Modal: React.FC<ModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            aria-label="Fechar"
+            aria-label="Cerrar"
             style={{
               background: 'var(--primary-soft)',
               border: 'none',

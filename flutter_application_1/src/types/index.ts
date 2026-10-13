@@ -50,7 +50,7 @@ export interface JourneyDay {
 
 export interface DailyCheckin {
   date: string; // YYYY-MM-DD
-  mindLoad: 'Muito difícil' | 'Difícil' | 'Neutro' | 'Bem' | 'Muito bem';
+  mindLoad: 'Muy difícil' | 'Difícil' | 'Neutro' | 'Bien' | 'Muy bien' | 'Muito difícil' | 'Bem';
   dominantFeeling: string;
   contactState: string;
   needToday?: string;
